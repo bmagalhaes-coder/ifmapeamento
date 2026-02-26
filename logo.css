@@ -1,0 +1,45 @@
+/* Remove margens padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tela verde ocupando tudo */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url("fundoverdelogo.png");
+    background-size: cover;       /* cobre toda a tela */
+    background-position: center;  /* centraliza */
+    background-repeat: no-repeat; /* não repete */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 250px;
+    opacity: 1;
+}
+
+/* Centraliza conteúdo */
+.container {
+    text-align: center;
+}
+
+/* Ajusta tamanho da logo */
+.logo {
+    width: 450px;
+    max-width: 80%;
+}

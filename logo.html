@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Teste</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapeamento</title>
+    <link rel="stylesheet" href="logo.css">
 </head>
 <body>
-<!-- TESTE AGORA -->git statusywsgdfygdsu
+
+    <div class="container">
+        <img src="logo.png" alt="Logo Mapeamento" class="logo">
+    </div>
+
+    <script>
+        // Redireciona após 5 segundos (milissegundos)
+        setTimeout(function() {
+            window.location.href = "mapa1.html";
+        }, 5000);
+
+        // Após 3 segundos começa o fade out
+        setTimeout(() => {
+          const logo = document.querySelector('.logo');
+          logo.style.transition = 'opacity 1s ease'; // duração 1 segundo
+          logo.style.opacity = '0';                   // torna transparente
+          }, 3700);
+
+        // Após 5 segundos, redireciona para mapa1.html
+        setTimeout(() => {
+        window.location.href = "mapa1.html";
+        }, 5000);
+
+        // Redireciona imediatamente se clicar na tela
+        document.body.addEventListener('click', () => {
+        clearTimeout(redirectTimeout);
+        redirectToMapa();
+        });
+
+    </script>
+
 </body>
 </html>

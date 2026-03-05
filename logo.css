@@ -18,7 +18,7 @@ body {
 
 body {
     height: 100vh;
-    background-image: url("fundoverdelogo.png");
+    background-image: url("imagens/fundoverdelogo.png");
     background-size: cover;       /* cobre toda a tela */
     background-position: center;  /* centraliza */
     background-repeat: no-repeat; /* não repete */

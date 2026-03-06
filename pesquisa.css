@@ -1,152 +1,165 @@
-/* Configurações Gerais */
+:root {
+    --primary-green: #32CD32;
+    --dark-green: #28a428;
+    --bg-gray: #f0f2f5;
+    --text-dark: #1a1a1a;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
 body {
-    background-color: #f4f4f4; /* Fundo neutro para destacar o container */
+    background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* Header e Busca */
+/* --- Header: Alinhamento Lado a Lado --- */
 .header {
     padding: 15px 20px;
-    border-bottom: 1px solid #ddd;
+    background: white;
+    border-bottom: 1px solid #eee;
 }
 
 .header-content {
     display: flex;
+    flex-direction: row; /* Força ficar lado a lado sempre */
     align-items: center;
-    gap: 15px;
+    gap: 12px; /* Espaço entre logo e busca */
+    width: 100%;
+}
+
+.logo-container {
+    flex-shrink: 0; /* Impede a logo de diminuir */
 }
 
 .if-logo {
-    height: 40px;
+    height: 45px;
+    width: auto;
+    display: block;
 }
 
 .search-wrapper {
-    flex: 1;
+    flex: 1; /* Ocupa todo o espaço restante */
     position: relative;
     display: flex;
     align-items: center;
+    min-width: 0; /* Importante para o input não estourar o flex */
 }
 
 #searchInput {
     width: 100%;
-    padding: 10px 40px 10px 10px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    font-size: 16px;
+    padding: 12px 35px 12px 15px;
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    font-size: 14px; /* Diminuído levemente para caber mais texto */
     outline: none;
+    transition: all 0.2s ease;
+    background: #f9f9f9;
+    /* Impede o corte do texto */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#searchInput:focus {
+    border-color: var(--primary-green);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(50, 205, 50, 0.1);
 }
 
 .clear-btn {
     position: absolute;
-    right: 5px;
-    background: none;
+    right: 10px;
+    background: #ddd;
     border: none;
-    font-size: 24px;
-    color: #999;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     cursor: pointer;
-    display: none; /* Escondido por padrão, JS mostra */
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
 }
 
-/* Grid de Botões */
+/* --- Grid de Botões --- */
 .menu-list {
     padding: 20px;
     display: grid;
-    /* No PC: 4 colunas iguais */
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas no PC */
+    gap: 12px;
 }
 
-/* Estilo fiel à imagem (Botões Verdes) */
 .menu-item {
-    background-color: #32CD32; /* Verde vibrante */
-    color: black;
+    background-color: var(--primary-green);
+    color: white;
     border: none;
-    border-radius: 25px; /* Bordas bem arredondadas como na imagem */
-    padding: 15px 10px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
+    border-radius: 10px;
+    padding: 18px 8px;
+    font-size: 13px;
+    font-weight: 700;
     text-transform: uppercase;
-    transition: background 0.3s, transform 0.1s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
 }
 
 .menu-item:hover {
-    background-color: #28a428;
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
 }
 
-.menu-item:active {
-    transform: scale(0.98);
-}
+.hidden { display: none !important; }
 
-/* Classe para esconder itens no filtro */
-.hidden {
-    display: none !important;
-}
-
-/* Mensagem de erro */
 .sem-resultados {
     grid-column: 1 / -1;
     text-align: center;
     padding: 40px;
-    color: #666;
+    color: #888;
 }
 
-/* RESPONSIVIDADE */
+/* --- Responsividade Crítica --- */
 
-/* Tablet (2 colunas) */
+/* Tablet (3 colunas) */
 @media (max-width: 900px) {
-    .menu-list {
-        grid-template-columns: repeat(2, 1fr);
+    .menu-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Celular (2 colunas) */
+@media (max-width: 600px) {
+    .header { padding: 10px; }
+    .if-logo { height: 38px; } /* Logo um pouco menor no mobile */
+    
+    #searchInput {
+        font-size: 13px; /* Fonte menor para não cortar o placeholder */
+        padding: 10px 30px 10px 12px;
+    }
+
+    .menu-list { 
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 12px;
+        gap: 8px;
     }
 }
 
-/* Celular (1 coluna - idêntico à imagem) */
-@media (max-width: 600px) {
-    .container {
-        border: none;
-        box-shadow: none;
-    }
-    
-    .menu-list {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .menu-item {
-        border-radius: 12px; /* Ajuste leve para telas pequenas */
-        font-size: 16px;
-    }
-
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .search-wrapper {
-        width: 100%;
-    }
+/* Telas muito pequenas (iPhone SE / Relógios) */
+@media (max-width: 350px) {
+    .if-logo { height: 30px; }
+    #searchInput { font-size: 11px; }
 }

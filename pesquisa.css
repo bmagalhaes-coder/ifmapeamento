@@ -102,7 +102,7 @@ body {
 .menu-list {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas no PC */
+    grid-template-columns: repeat(6,1fr); /* 4 colunas no PC */
     gap: 12px;
 }
 

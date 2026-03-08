@@ -1,1 +1,224 @@
 
+/* Reset básico para remover margens padrão */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif; /* Fonte padrão limpa */
+
+}
+
+
+body {
+
+    background-color: #f5f5f5; /* Fundo cinza muito claro para contraste */
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 20px 0;
+
+}
+
+
+/* Container principal (mimetiza a moldura preta) */
+
+.container {
+
+    background-color: #fff;
+
+    width: 90%;
+
+    max-width: 400px; /* Largura similar a um celular */
+
+    border: 2px solid #000; /* Moldura preta da imagem */
+
+    border-radius: 8px; /* Cantos arredondados na moldura */
+
+    overflow: hidden; /* Garante que os filhos não saiam dos cantos */
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* Cabeçalho de Busca */
+
+.header {
+
+    background-color: #fff;
+
+    padding: 10px 15px;
+
+    border-bottom: 2px solid #000; /* Linha preta abaixo da busca */
+
+    position: sticky; /* Mantém o topo fixo ao rolar */
+
+    top: 0;
+
+    z-index: 10;
+
+}
+
+
+.header-content {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+}
+
+
+/* Logo do IF simplificado em SVG */
+
+.logo-container {
+
+    width: 30px;
+
+    height: 30px;
+
+    margin-right: 10px;
+
+}
+
+
+.if-logo {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/* Campo de Entrada (Input) */
+
+#searchInput {
+
+    flex-grow: 1; /* Ocupa todo o espaço disponível */
+
+    border: none;
+
+    font-size: 14px;
+
+    color: #555;
+
+    outline: none; /* Remove a borda de foco azul padrão */
+
+    padding: 5px 0;
+
+}
+
+
+#searchInput::placeholder {
+
+    color: #999;
+
+}
+
+
+/* Ícone de Fechar (X) */
+
+.clear-btn {
+
+    background: none;
+
+    border: none;
+
+    font-size: 24px;
+
+    color: #999;
+
+    cursor: pointer;
+
+    margin-left: 10px;
+
+    line-height: 1;
+
+}
+
+
+.clear-btn:hover {
+
+    color: #666;
+
+}
+
+
+/* Lista de Botões */
+
+.menu-list {
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px; /* Espaçamento uniforme entre os botões */
+
+    max-height: 80vh; /* Altura máxima para permitir rolagem */
+
+    overflow-y: auto; /* Rolagem vertical se a lista for longa */
+
+}
+
+
+/* Estilo dos Botões Verdes */
+
+.menu-item {
+
+    background-color: #32CD32; /* Verde brilhante da imagem */
+
+    color: #000; /* Texto preto */
+
+    border: none;
+
+    border-radius: 25px; /* Cantos muito arredondados */
+
+    padding: 15px 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    text-transform: uppercase; /* Todo texto em maiúsculas */
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para profundidade */
+
+    transition: background-color 0.2s, transform 0.1s; /* Animação suave */
+
+}
+
+
+/* Efeito de hover e clique */
+
+.menu-item:hover {
+
+    background-color: #2eb82e;
+
+}
+
+
+.menu-item:active {
+
+    transform: scale(0.98); /* Pequeno encolhimento ao clicar */
+
+}
+
+  

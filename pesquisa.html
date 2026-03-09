@@ -9,19 +9,19 @@
 <body>
 
     <div class="container">
-        <header class="header">
-    <div class="header-content">
-        <div class="logo-container">
-            <img src="imagens/if.png" alt="IF Logo" class="if-logo">
-        </div>
-        
-        <input type="text" id="searchInput" placeholder="Buscar sala, curso ou setor...">
-        
-        <button id="clearBtn" class="clear-btn" aria-label="Limpar busca">&times;</button>
-    </div>
+        <header class="header" id="headerFixo">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="imagens/if.png" alt="IF Logo" class="if-logo">
+                </div>
+                
+                <input type="text" id="searchInput" placeholder="Buscar sala, curso ou setor...">
+                
+                <button id="clearBtn" class="clear-btn" aria-label="Limpar busca">&times;</button>
+            </div>
         </header>
 
-        <main class="menu-list">
+        <main class="menu-list" id="menuList">
             <button class="menu-item">SAA</button>
             <button class="menu-item">CINE TEATRO</button>
             <button class="menu-item">IFCast</button>
@@ -40,7 +40,6 @@
         </main>
     </div>
 
+    <script src="codigos.js"></script>
 </body>
-              </html>
-                                               
-
+</html>

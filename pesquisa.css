@@ -15,7 +15,6 @@ body {
     background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    height: 100vh;
     overflow: hidden;
     padding: 10px;
 }
@@ -48,8 +47,8 @@ body {
 }
 
 .logo-container {
-    width: 28px;
-    height: 28px;
+    width: 38px;
+    height: 38px;
     flex-shrink: 0;
 }
 
@@ -72,9 +71,9 @@ body {
     background: none;
     border: none;
     font-size: 20px;
-    color: #999;
+    color: #f00000ee;
     cursor: pointer;
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 /* Ocultar botão X apenas em telas de PC/Notebook */

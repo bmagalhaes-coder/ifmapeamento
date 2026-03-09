@@ -1,8 +1,8 @@
 const salas = [
-    "SAA", "CINE TEATRO", "IFCast", "REFEITÓRIO", 
-    "LANCHONETE", "BIBLIOTECA", "DRG", "NRH", 
-    "DDE", "DGP/NGP", "COPA", "SERVIÇO SOCIAL", 
-    "DIRETORIA", "LAVABO", "COZINHA", "SALA 53"
+    "SAA", "Cine Teatro", "IFCast", "Refeitório", 
+    "Lanchonete", "Biblioteca", "DRG", "NRH", 
+    "DDE", "DGP/NGP", "Copa", "Serviço Social", 
+    "Diretoria", "Lavabo", "Cozinha", "Sala 52"
 ];
 
 const searchInput = document.getElementById('searchInput');

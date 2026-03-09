@@ -15,8 +15,7 @@ body {
     background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     padding: 10px;
 }
 
@@ -29,6 +28,8 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    height: fit-content;
+    max-height: 95vh;
 }
 
 .header {
@@ -71,26 +72,21 @@ body {
 .clear-btn {
     background: none;
     border: none;
-    font-size: 20px;
-    color: #f00000ee;
+    font-size: 24px;
+    color: #f00000;
     cursor: pointer;
     padding: 0 10px;
-}
-
-/* Ocultar botão X apenas em telas de PC/Notebook */
-@media (min-width: 1024px) {
-    .clear-btn {
-        display: none !important;
-    }
+    display: flex !important; /* Sempre visível */
+    align-items: center;
 }
 
 .menu-list {
     padding: 20px;
     display: grid;
     gap: 12px;
-    flex: 1;
     overflow-y: auto;
     grid-template-columns: 1fr;
+    align-content: start; /* Evita espaços verticais gigantes */
 }
 
 @media (min-width: 768px) {
@@ -113,9 +109,9 @@ body {
     color: white;
     border: none;
     border-radius: 12px;
-    height: 55px; /* Altura fixa para garantir o aspecto retangular */
+    height: 55px;
     width: 100%;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
@@ -125,7 +121,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 10px;
+    padding: 5px;
 }
 
 .menu-item:hover {

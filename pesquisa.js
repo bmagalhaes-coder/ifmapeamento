@@ -27,9 +27,6 @@ function filtrar() {
     const botoes = document.querySelectorAll('.menu-item');
     let encontrados = 0;
 
-    // Gerencia exibição do X (apenas se não for PC, onde ele deve sumir)
-    clearBtn.style.display = searchInput.value.length > 0 ? 'flex' : 'none';
-
     botoes.forEach(btn => {
         const nomeSala = normalizar(btn.textContent);
         if (nomeSala.includes(termo)) {
@@ -41,7 +38,7 @@ function filtrar() {
     });
 
     const erroExistente = document.querySelector('.sem-resultados');
-    if (encontrados === 0) {
+    if (encontrados === 0 && searchInput.value.length > 0) {
         if (!erroExistente) {
             const msg = document.createElement('div');
             msg.className = 'sem-resultados';
@@ -53,14 +50,9 @@ function filtrar() {
     }
 }
 
+// Botão X agora sempre volta para a página anterior (Mapa)
 clearBtn.onclick = () => {
-    if (searchInput.value.length > 0) {
-        searchInput.value = '';
-        filtrar();
-        searchInput.focus();
-    } else {
-        window.history.back();
-    }
+    window.history.back();
 };
 
 searchInput.oninput = filtrar;

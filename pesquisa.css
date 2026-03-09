@@ -15,28 +15,28 @@ body {
     background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    /* Reduzi o padding vertical para ficar mais próximo das bordas */
+    height: 100vh; /* Trava a altura da tela */
+    overflow: hidden; /* Evita a rolagem da página inteira */
     padding: 10px;
-    min-height: 100vh;
 }
 
 .container {
     width: 100%;
-    /* Aumentado para 1000px para aproveitar melhor a tela de PC */
-    max-width: 1000px; 
+    max-width: 1000px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Empilha header e lista */
     overflow: hidden;
 }
 
 .header {
-    position: sticky;
-    top: 0;
     padding: 15px;
     background: white;
     border-bottom: 1px solid #eee;
     z-index: 100;
+    flex-shrink: 0; /* Impede o header de encolher */
 }
 
 .header-content {
@@ -78,29 +78,30 @@ body {
     padding: 0 5px;
 }
 
-/* Estrutura de Grade Responsiva */
+/* Lista rolável */
 .menu-list {
     padding: 20px;
     display: grid;
     gap: 12px;
-    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    flex: 1; /* Ocupa o espaço restante */
+    overflow-y: auto; /* A rolagem acontece apenas aqui */
+    grid-template-columns: 1fr;
 }
 
-/* Tablet: 3 colunas */
+/* Responsividade: Tablet */
 @media (min-width: 768px) {
     .menu-list {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* PC/Notebook: 5 colunas */
+/* Responsividade: PC */
 @media (min-width: 1024px) {
     .menu-list {
         grid-template-columns: repeat(6, 1fr);
     }
     .container {
-        /* Garante que o container ocupe mais espaço na tela */
-        max-width: 95%; 
+        max-width: 95%; /* Reduz margens laterais no PC */
     }
 }
 
@@ -134,4 +135,5 @@ body {
     text-align: center;
     padding: 20px;
     color: #666;
-        }
+    grid-column: 1 / -1;
+    }

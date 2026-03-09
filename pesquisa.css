@@ -15,9 +15,8 @@ body {
     background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    /* height: 100vh;  <-- REMOVA ESTA LINHA */
-    min-height: 100vh; /* Adicione esta para o fundo cobrir tudo */
-    overflow-y: auto;  /* Permite rolar a página se houver muitos botões */
+    height: 100vh;
+    overflow: hidden;
     padding: 10px;
 }
 
@@ -27,11 +26,9 @@ body {
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    /* display: flex;        <-- REMOVA OU COMENTE */
-    /* flex-direction: column; <-- REMOVA OU COMENTE */
-    height: fit-content;    /* Faz o container envolver apenas o conteúdo */
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    margin-bottom: 20px;
 }
 
 .header {

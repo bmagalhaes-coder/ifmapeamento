@@ -15,20 +15,21 @@ body {
     background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    padding: 20px;
+    /* Reduzi o padding vertical para ficar mais próximo das bordas */
+    padding: 10px;
     min-height: 100vh;
 }
 
 .container {
     width: 100%;
-    max-width: 500px;
+    /* Aumentado para 1000px para aproveitar melhor a tela de PC */
+    max-width: 1000px; 
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     overflow: hidden;
 }
 
-/* Alteração: Cabeçalho fixo no topo */
 .header {
     position: sticky;
     top: 0;
@@ -77,11 +78,30 @@ body {
     padding: 0 5px;
 }
 
+/* Estrutura de Grade Responsiva */
 .menu-list {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 12px;
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+}
+
+/* Tablet: 3 colunas */
+@media (min-width: 768px) {
+    .menu-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* PC/Notebook: 6 colunas */
+@media (min-width: 1024px) {
+    .menu-list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .container {
+        /* Garante que o container ocupe mais espaço na tela */
+        max-width: 95%; 
+    }
 }
 
 .menu-item {
@@ -110,25 +130,8 @@ body {
 
 .hidden { display: none !important; }
 
-
-/* Layout responsivo com Grid */
-.menu-list {
-    display: grid;
-    grid-template-columns: 1fr; /* Padrão mobile: 1 coluna */
-    gap: 12px;
+.sem-resultados {
+    text-align: center;
     padding: 20px;
-}
-
-/* Tablet: 3 colunas */
-@media (min-width: 768px) {
-    .menu-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* PC/Notebook: 6 colunas */
-@media (min-width: 1024px) {
-    .menu-list {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    }
+    color: #666;
+        }

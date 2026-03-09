@@ -15,8 +15,8 @@ body {
     background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    height: 100vh; /* Trava a altura da tela */
-    overflow: hidden; /* Evita a rolagem da página inteira */
+    height: 100vh;
+    overflow: hidden;
     padding: 10px;
 }
 
@@ -27,7 +27,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     display: flex;
-    flex-direction: column; /* Empilha header e lista */
+    flex-direction: column;
     overflow: hidden;
 }
 
@@ -36,7 +36,7 @@ body {
     background: white;
     border-bottom: 1px solid #eee;
     z-index: 100;
-    flex-shrink: 0; /* Impede o header de encolher */
+    flex-shrink: 0;
 }
 
 .header-content {
@@ -78,30 +78,34 @@ body {
     padding: 0 5px;
 }
 
-/* Lista rolável */
+/* Ocultar botão X em telas de PC */
+@media (min-width: 1024px) {
+    .clear-btn {
+        display: none !important;
+    }
+}
+
 .menu-list {
     padding: 20px;
     display: grid;
     gap: 12px;
-    flex: 1; /* Ocupa o espaço restante */
-    overflow-y: auto; /* A rolagem acontece apenas aqui */
+    flex: 1;
+    overflow-y: auto;
     grid-template-columns: 1fr;
 }
 
-/* Responsividade: Tablet */
 @media (min-width: 768px) {
     .menu-list {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Responsividade: PC */
 @media (min-width: 1024px) {
     .menu-list {
         grid-template-columns: repeat(6, 1fr);
     }
     .container {
-        max-width: 95%; /* Reduz margens laterais no PC */
+        max-width: 95%;
     }
 }
 
@@ -110,13 +114,19 @@ body {
     color: white;
     border: none;
     border-radius: 12px;
-    padding: 16px;
+    /* Mantém o aspecto retangular independente da tela */
+    padding: 16px 10px;
+    min-height: 60px; 
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: 0 4px 0 var(--dark-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .menu-item:hover {
@@ -136,4 +146,4 @@ body {
     padding: 20px;
     color: #666;
     grid-column: 1 / -1;
-    }
+}

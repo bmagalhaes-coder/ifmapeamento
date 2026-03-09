@@ -106,3 +106,34 @@ body {
 }
 
 .hidden { display: none !important; }
+
+/* Adicione isso ao final do seu arquivo ou ajuste o que já existe: */
+
+body {
+    background-color: var(--bg-gray);
+    display: flex;
+    justify-content: center;
+    padding: 0; /* Remova o padding do body */
+    height: 100vh; /* Altura total da tela */
+    overflow: hidden; /* Impede a tela inteira de rolar */
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 0; /* Pode remover o border-radius se quiser tela cheia */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Organiza em coluna */
+    height: 100%; /* Ocupa toda a altura disponível */
+}
+
+.menu-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1; /* Ocupa o espaço restante */
+    overflow-y: auto; /* AQUI ESTÁ O SEGREDO: só rola a lista */
+}

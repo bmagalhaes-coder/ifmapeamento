@@ -1,4 +1,9 @@
-/* Reset e Configurações Globais */
+:root {
+    --primary-green: #32CD32;
+    --dark-green: #28a728;
+    --bg-gray: #e0e0e0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,29 +12,23 @@
 }
 
 body {
-    background-color: #e0e0e0; /* Fundo cinza para destacar o "celular" */
+    background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 15px;
     min-height: 100vh;
-    padding: 10px;
 }
 
-/* Container Estilo Smartphone */
 .container {
-    background-color: #ffffff;
     width: 100%;
-    max-width: 380px; 
-    height: 90vh; /* Altura fixa para criar o efeito de rolagem interna */
-    border: 8px solid #333; /* Moldura do aparelho */
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
+    max-width: 1100px;
+    background: white;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Cabeçalho Fixo */
+/* --- Cabeçalho e Barra de Busca (Estilo Luis) --- */
 .header {
     background-color: #fff;
     padding: 20px 15px 15px;
@@ -45,11 +44,17 @@ body {
 }
 
 .logo-container {
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     margin-right: 10px;
     display: flex;
     align-items: center;
+}
+
+.if-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 #searchInput {
@@ -59,6 +64,7 @@ body {
     font-size: 14px;
     outline: none;
     color: #333;
+    padding: 5px;
 }
 
 .clear-btn {
@@ -70,39 +76,26 @@ body {
     padding: 0 5px;
 }
 
-/* Lista com Rolagem */
+/* --- Grid de Botões (Estilo Luis) --- */
 .menu-list {
-    flex: 1;
-    overflow-y: auto; /* Permite rolar apenas os botões */
     padding: 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 12px;
 }
 
-/* Customização da Barra de Rolagem (Opcional) */
-.menu-list::-webkit-scrollbar {
-    width: 5px;
-}
-.menu-list::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
-}
-
-/* Botões Estilizados */
 .menu-item {
-    background-color: #32CD32;
-    color: #fff;
+    background-color: var(--primary-green);
+    color: white;
     border: none;
     border-radius: 12px;
     padding: 16px;
     font-size: 15px;
     font-weight: 700;
-    text-align: center;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 0 #28a728; /* Efeito 3D básico */
+    box-shadow: 0 4px 0 var(--dark-green); /* Efeito 3D */
 }
 
 .menu-item:hover {
@@ -112,5 +105,23 @@ body {
 
 .menu-item:active {
     transform: translateY(2px);
-    box-shadow: 0 1px 0 #28a728;
+    box-shadow: 0 1px 0 var(--dark-green);
 }
+
+.hidden { display: none !important; }
+
+.sem-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 900px) {
+    .menu-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .menu-list { grid-template-columns: repeat(2, 1fr); }
+        }

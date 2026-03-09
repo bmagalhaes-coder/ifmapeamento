@@ -1,7 +1,7 @@
 :root {
     --primary-green: #32CD32;
     --dark-green: #28a728;
-    --bg-gray: #e0e0e0;
+    --bg-gray: #f0f2f5;
 }
 
 * {
@@ -15,23 +15,23 @@ body {
     background-color: var(--bg-gray);
     display: flex;
     justify-content: center;
-    padding: 15px;
+    padding: 20px;
     min-height: 100vh;
 }
 
+/* Container branco, sem bordas pretas, estilo cartão */
 .container {
     width: 100%;
-    max-width: 1100px;
-    background: white;
+    max-width: 500px; /* Largura ideal para celular */
+    background: #ffffff;
     border-radius: 20px;
-    overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
-/* --- Cabeçalho e Barra de Busca (Estilo Luis) --- */
 .header {
-    background-color: #fff;
-    padding: 20px 15px 15px;
+    padding: 15px;
+    background: white;
     border-bottom: 1px solid #eee;
 }
 
@@ -40,15 +40,14 @@ body {
     align-items: center;
     background: #f0f0f0;
     padding: 8px 12px;
-    border-radius: 20px;
+    border-radius: 15px;
+    gap: 10px;
 }
 
 .logo-container {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
 }
 
 .if-logo {
@@ -63,7 +62,6 @@ body {
     background: transparent;
     font-size: 14px;
     outline: none;
-    color: #333;
     padding: 5px;
 }
 
@@ -76,11 +74,10 @@ body {
     padding: 0 5px;
 }
 
-/* --- Grid de Botões (Estilo Luis) --- */
 .menu-list {
     padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 12px;
 }
 
@@ -95,7 +92,7 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 0 var(--dark-green); /* Efeito 3D */
+    box-shadow: 0 4px 0 var(--dark-green);
 }
 
 .menu-item:hover {
@@ -109,19 +106,3 @@ body {
 }
 
 .hidden { display: none !important; }
-
-.sem-resultados {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 40px;
-    color: #888;
-}
-
-/* --- Responsividade --- */
-@media (max-width: 900px) {
-    .menu-list { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (max-width: 600px) {
-    .menu-list { grid-template-columns: repeat(2, 1fr); }
-        }

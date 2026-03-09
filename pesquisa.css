@@ -109,3 +109,26 @@ body {
 }
 
 .hidden { display: none !important; }
+
+
+/* Layout responsivo com Grid */
+.menu-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Padrão mobile: 1 coluna */
+    gap: 12px;
+    padding: 20px;
+}
+
+/* Tablet: 3 colunas */
+@media (min-width: 768px) {
+    .menu-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* PC/Notebook: 6 colunas */
+@media (min-width: 1024px) {
+    .menu-list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    }

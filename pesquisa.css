@@ -93,7 +93,7 @@ body {
     }
 }
 
-/* PC/Notebook: 6 colunas */
+/* PC/Notebook: 5 colunas */
 @media (min-width: 1024px) {
     .menu-list {
         grid-template-columns: repeat(6, 1fr);

@@ -2,7 +2,7 @@ const salas = [
     "SAA", "Cine Teatro", "IFCast", "Refeitório", 
     "Lanchonete", "Biblioteca", "DRG", "NRH", 
     "DDE", "DGP/NGP", "Copa", "Serviço Social", 
-    "Diretoria", "Lavabo", "Cozinha", "Sala 52"
+    "Diretoria", "Lavabo", "Cozinha", "Sala 53"
 ];
 
 const searchInput = document.getElementById('searchInput');
@@ -121,7 +121,7 @@ const dadosSalas = {
         local: "Bloco C - Anexo ao refeitório",
         descricao: "Cozinha industrial do campus."
     },
-    "Sala 52": {
+    "Sala 53": {
         local: "Bloco B - 2º andar",
         descricao: "Sala de aula padrão",
         capacidade: "40 alunos",

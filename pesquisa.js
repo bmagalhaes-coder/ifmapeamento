@@ -118,14 +118,45 @@ const dadosSalas = {
         descricao: "Banheiros e lavabos para eventos."
     },
     "Cozinha": {
-        local: "Bloco C - Anexo ao refeitório",
+        local: "Bloco A - Anexo ao refeitório",
         descricao: "Cozinha industrial do campus."
     },
     "Sala 53": {
-        local: "Bloco B - 2º andar",
-        descricao: "Sala de aula padrão",
-        capacidade: "40 alunos",
-        equipamentos: "Projetor, quadro branco, ar condicionado"
+        local: "Bloco C",
+        descricao: "Sala de aula compartilhada por dois cursos técnicos e turmas do Proeja (Programa Nacional de Integração da Educação Profissional com a Educação Básica na Modalidade de Educação de Jovens e Adultos).",
+        cursos: [
+            {
+                nome: "Edificações 2024",
+                horarios: [
+                    "Segunda: 07:10 às 12:30",
+                    "Terça: 07:10 às 18:20",
+                    "Quarta: 07:10 às 12:30",
+                    "Quinta: 07:10 às 12:30",
+                    "Sexta: 07:10 às 12:30"
+                ]
+            },
+            {
+                nome: "Informática 2024",
+                horarios: [
+                    "Segunda: 13:10 às 18:20",
+                    "Terça: 13:10 às 18:20",
+                    "Quarta: 13:10 às 18:20",
+                    "Quinta: 07:10 às 18:20",
+                    "Sexta: 13:10 às 18:20"
+                ]
+            },
+            {
+                nome: "Proeja 2025",
+                horarios: [
+                    "Segunda: 18:20 às 22:50",
+                    "Terça: 18:20 às 22:50",
+                    "Quarta: 18:20 às 22:50",
+                    "Quinta: 18:20 às 22:50",
+                    "Sexta: 18:20 às 22:50"
+                ]
+            }
+        ],
+        equipamentos: "Televisão, quadro, ar condicionado"
     }
 };
 
@@ -175,6 +206,12 @@ function getDiaAtual() {
     return diasSemana[diaIngles];
 }
 
+// Função para verificar se um horário corresponde ao dia atual
+function isDiaAtual(horario) {
+    const diaAtual = getDiaAtual();
+    return horario.startsWith(diaAtual);
+}
+
 // Função para mostrar informações da sala em pop-up
 function mostrarInfoSala(nomeSala) {
     const dados = dadosSalas[nomeSala] || {
@@ -192,17 +229,40 @@ function mostrarInfoSala(nomeSala) {
     if (dados.horarios) {
         horariosHTML = '<div class="modal-section"><h3>📅 Horários de Funcionamento</h3><ul>';
         for (const [dia, horario] of Object.entries(dados.horarios)) {
-            // Verifica se é o dia atual para destacar em vermelho
             const diaAtual = getDiaAtual();
             const isDiaAtual = dia.includes(diaAtual) || (diaAtual.includes('Segunda') && dia === 'Segunda a Sexta');
             
             if (isDiaAtual) {
-                horariosHTML += `<li style="color: #ff0000; font-weight: bold;"><strong style="color: #ff0000;">${dia}:</strong> ${horario}</li>`;
+                horariosHTML += `<li class="dia-atual"><strong>${dia}:</strong> ${horario}</li>`;
             } else {
                 horariosHTML += `<li><strong>${dia}:</strong> ${horario}</li>`;
             }
         }
         horariosHTML += '</ul></div>';
+    }
+    
+    // Construir HTML dos cursos para Sala 53
+    let cursosHTML = '';
+    if (dados.cursos) {
+        cursosHTML = '<div class="modal-section"><h3>📚 Cursos e Horários</h3>';
+        dados.cursos.forEach(curso => {
+            cursosHTML += `
+                <div class="curso-card">
+                    <h4>${curso.nome}</h4>
+                    <ul>
+            `;
+            
+            curso.horarios.forEach(horario => {
+                if (isDiaAtual(horario)) {
+                    cursosHTML += `<li class="dia-atual">🔴 ${horario}</li>`;
+                } else {
+                    cursosHTML += `<li>🕒 ${horario}</li>`;
+                }
+            });
+            
+            cursosHTML += '</ul></div>';
+        });
+        cursosHTML += '</div>';
     }
     
     modal.innerHTML = `
@@ -218,6 +278,8 @@ function mostrarInfoSala(nomeSala) {
                 </div>
                 
                 ${horariosHTML}
+                
+                ${cursosHTML}
                 
                 <div class="modal-section">
                     <h3>ℹ️ Sobre</h3>

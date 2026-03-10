@@ -76,7 +76,7 @@ body {
     color: #f00000;
     cursor: pointer;
     padding: 0 10px;
-    display: flex !important; /* Sempre visível */
+    display: flex !important;
     align-items: center;
 }
 
@@ -86,7 +86,7 @@ body {
     gap: 12px;
     overflow-y: auto;
     grid-template-columns: 1fr;
-    align-content: start; /* Evita espaços verticais gigantes */
+    align-content: start;
 }
 
 @media (min-width: 768px) {
@@ -226,7 +226,12 @@ body {
     padding-bottom: 5px;
 }
 
-/* Textos justificados */
+.modal-section h4 {
+    color: var(--dark-green);
+    margin: 0 0 8px 0;
+    font-size: 15px;
+}
+
 .modal-section p {
     color: #333;
     font-size: 14px;
@@ -264,7 +269,6 @@ body {
     font-weight: 600;
 }
 
-/* Estilo para o dia atual em vermelho - sem alterar o layout */
 .modal-section li.dia-atual,
 .modal-section li.dia-atual strong {
     color: #ff0000 !important;
@@ -286,4 +290,45 @@ body {
 .modal-section .local i {
     color: var(--primary-green);
     margin-right: 8px;
-    }
+}
+
+/* Estilo para cards de cursos */
+.curso-card {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-green);
+}
+
+.curso-card h4 {
+    color: var(--dark-green);
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.curso-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.curso-card li {
+    padding: 4px 0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.curso-card li.dia-atual {
+    color: #ff0000;
+    font-weight: 600;
+    background-color: rgba(255, 0, 0, 0.05);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 2px -8px;
+}
+
+        

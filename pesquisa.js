@@ -1,10 +1,10 @@
 const salas = [
-    "SAA", "Cine Teatro", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", 
-    "DRG", "NRH", "DDE", "DGP/NGP", "Copa", "Serviço Social", "Diretoria", 
-    "Lavabo", "Cozinha", "Sala 36", "Sala 37", "Sala 38", "Sala 39", "Sala 40", 
+    "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", 
+    "DRG", "NRH", "DDE", "DGP/NGP", "AEE", "Copa", "Serviço Social", "Diretoria", 
+    "Banheiro Feminino", "Banheiro Masculino", "Banheiro Feminino Assescivel", "Banheiro Masculino Assescivel", "Sala 36", "Sala 37", "Sala 38", "Sala 39", "Sala 40", 
     "Sala 41", "Sala 42", "Sala 43", "Sala 44", "Sala 45", "Sala 46", "Sala 47", 
     "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52", "Sala 53", "Sala 54", 
-    "Sala 55", "Sala 56", "Sala 58", "Sala 59", "Sala 60", "Psicologia", "Setor Médico"
+    "Sala 55", "Sala 56", "Sala 58", "Sala 59", "Sala 60", "Psicologia", "Setor Médico", "Quadra", "Dispensa da Quadra"
 ];
 
 const searchInput = document.getElementById('searchInput');

@@ -1,11 +1,11 @@
 const salas = [
-    "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", 
-    "DRG", "NRH", "DDE", "DGP/NGP", "AEE", "Copa", "Serviço Social", "Diretoria", 
-    "Banheiro Feminino", "Banheiro Masculino", "Banheiro Feminino Assescivel", "Banheiro Masculino Assescivel", "Sala 36", "Sala 37", "Sala 38", "Sala 39", "Sala 40", 
-    "Sala 41", "Sala 42", "Sala 43", "Sala 44", "Sala 45", "Sala 46", "Sala 47", 
-    "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52", "Sala 53", "Sala 54", 
-    "Sala 55", "Sala 56", "Sala 58", "Sala 59", "Sala 60", "Psicologia", "Setor Médico", "Quadra", "Dispensa da Quadra"
-];
+    "Sala de Reunião", "NTI/Atendimento", "NTI/RACK", "NEOF/NLCC/SCDP/Contabilidade", "Arquivo", "NRH", "Recpção/Espera", "DPG/NPGP", "Lavabo", "DRG", "Sala de Estudos Para Professores",
+    "Sala de Estar Para Professores", "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DRG", "NRH", "DDE", "DGP/NGP", "66 - AEE", "Copa", 
+    "Serviço Social", "Diretoria", "Banheiro Feminino", "Banheiro Masculino", "Banheiro Feminino Assescivel", "Banheiro Masculino Assescivel", "Sala 36", "Sala 37", "Sala 38", 
+    "Sala 39", "Sala 40", "Sala 41", "Sala 42", "Sala 43", "Sala 44", "Sala 45", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52", "Sala 53", "Sala 54", 
+    "Sala 55", "Sala 56", "Sala 58", "Sala 59", "Sala 60", "Psicologia", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "64 - Robótica", "65 - Línguas", 
+    "68 - Incubadora", "02 - Games", "03 - CAE", "03 - Psicóloga", "03 - Sertor Médico", "06 - Serviço Social", "07 - Sala dos Professores/DERI/PRONATEC/NPPG", 
+    "08 - Protocolo com almoxarifado", "10 - DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente", "Diretoria", "Espaço Infantil" ];
 
 const searchInput = document.getElementById('searchInput');
 const menuList = document.getElementById('menuList');
@@ -26,8 +26,8 @@ const dadosSalas = {
             "Quarta": "07:00 às 23:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
         },
         descricao: "Responsável por prestar atendimento direto ao aluno assistindo-o e orientando-o em casos de indisciplina, saída antecipada e ocorrências diversas.",
-        observacoes: "Local de armazenamento de itens perdidos no campus. Qualquer objeto achado de titular desconhecido deve ser entregue neste departamento."
-    },
+        observacoes: "Local de armazenamento de itens perdidos no campus. Qualquer objeto achado de titular desconhecido deve ser entregue neste departamento." },
+
     "Sala 53": {
         local: "Bloco C",
         descricao: "Sala de aula compartilhada por dois cursos técnicos e turmas do Proeja.",
@@ -35,29 +35,198 @@ const dadosSalas = {
         cursos: [
             { nome: "Edificações 2024", horarios: ["Segunda: 07:10 às 12:30", "Terça: 07:10 às 18:20", "Quarta: 07:10 às 12:30", "Quinta: 07:10 às 12:30", "Sexta: 07:10 às 12:30"] },
             { nome: "Informática 2024", horarios: ["Segunda: 13:10 às 18:20", "Terça: 13:10 às 18:20", "Quarta: 13:10 às 18:20", "Quinta: 07:10 às 18:20", "Sexta: 13:10 às 18:20"] },
-            { nome: "Proeja 2025", horarios: ["Segunda: 18:20 às 22:50", "Terça: 18:20 às 22:50", "Quarta: 18:20 às 22:50", "Quinta: 18:20 às 22:50", "Sexta: 18:20 às 22:50"] }
-        ],
-        equipamentos: "Televisão, quadro, ar condicionado"
+            { nome: "Proeja 2025", horarios: ["Segunda: 18:20 às 22:50", "Terça: 18:20 às 22:50", "Quarta: 18:20 às 22:50", "Quinta: 18:20 às 22:50", "Sexta: 18:20 às 22:50"] } ],
+        equipamentos: "Televisão, quadro, ar condicionado"},
+
+    "Cine Teatro": {
+        local: "Bloco A - Térreo",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 22:00", "Terça": "08:00 às 22:00",
+            "Quarta": "08:00 às 22:00", "Quinta": "08:00 às 22:00", "Sexta": "08:00 às 22:00", "Sábado": "Fechado"
+        },
+        descricao: "Espaço cultural para apresentações.",
+        observacoes: "Equipamentos: Projetor, Som, Poltronas"
     },
-    "Cine Teatro": { local: "Bloco A - Térreo", horarios: { "Segunda a Sexta": "08:00 às 22:00" }, descricao: "Espaço cultural para apresentações.", equipamentos: "Projetor, Som, Poltronas" },
-    "IFCast": { local: "Bloco D - Sala 12", horarios: { "Agendado": "Consultar DDE" }, descricao: "Estúdio de podcast.", equipamentos: "Microfones, Mesa de som" },
-    "Refeitório": { local: "Bloco C - Térreo", horarios: { "Segunda a Sexta": "11:00 às 14:00 / 17:00 às 20:00" }, descricao: "Alimentação escolar.", equipamentos: "Mesas, Balcões térmicos" },
-    "Lanchonete": { local: "Bloco B - Térreo", horarios: { "Segunda a Sexta": "07:00 às 22:00" }, descricao: "Venda de lanches.", equipamentos: "Estufas, Geladeiras" },
-    "Biblioteca": { local: "Bloco A - 2º andar", horarios: { "Segunda a Sexta": "08:00 às 21:00" }, descricao: "Pesquisa e estudo.", equipamentos: "Computadores, Mesas" },
-    "DRG": { local: "Administrativo", horarios: { "Comercial": "08:00 às 18:00" }, descricao: "Diretoria Geral.", equipamentos: "Computadores" },
-    "NRH": { local: "Administrativo", horarios: { "Comercial": "08:00 às 18:00" }, descricao: "Recursos Humanos.", equipamentos: "Arquivos" },
-    "DDE": { local: "Administrativo", horarios: { "Comercial": "08:00 às 18:00" }, descricao: "Diretoria de Ensino.", equipamentos: "Computadores" },
-    "DGP/NGP": { local: "Administrativo", horarios: { "Comercial": "08:00 às 18:00" }, descricao: "Gestão de Pessoas.", equipamentos: "Computadores" },
-    "Copa": { local: "Bloco C", horarios: { "Livre": "Uso comum" }, descricao: "Espaço para refeições rápidas.", equipamentos: "Micro-ondas, Geladeira" },
-    "Serviço Social": { local: "Bloco B", horarios: { "Segunda a Sexta": "09:00 às 17:00" }, descricao: "Apoio ao estudante.", equipamentos: "Mesa de atendimento" },
-    "Diretoria": { local: "Administrativo", horarios: { "Comercial": "08:00 às 18:00" }, descricao: "Gabinete.", equipamentos: "Mesa de reunião" },
-    "Lavabo": { local: "Bloco A", horarios: { "Livre": "Período letivo" }, descricao: "Sanitários.", equipamentos: "Pias, Espelhos" },
-    "Cozinha": { local: "Bloco A", horarios: { "Restrito": "Funcionários" }, descricao: "Preparo de alimentos.", equipamentos: "Fogão industrial" },
-    "Psicologia": { local: "Bloco B", horarios: { "Agendado": "Ver coordenação" }, descricao: "Atendimento psicológico.", equipamentos: "Divã, Mesa" },
-    "Setor Médico": { local: "Bloco A", horarios: { "Segunda a Sexta": "07:00 às 19:00" }, descricao: "Primeiros socorros.", equipamentos: "Maca, Maleta médica" },
-    "Sala 36": { local: "A preencher", horarios: { "A preencher": "--" }, descricao: "A preencher" },
-    "Sala 52": { local: "A preencher", horarios: { "A preencher": "--" }, descricao: "A preencher" },
-    "Sala 60": { local: "A preencher", horarios: { "A preencher": "--" }, descricao: "A preencher" }
+
+    "IFCast": {
+        local: "Bloco D - Sala 12",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "Consultar DDE", "Terça": "Consultar DDE",
+            "Quarta": "Consultar DDE", "Quinta": "Consultar DDE", "Sexta": "Consultar DDE", "Sábado": "Fechado"
+        },
+        descricao: "Estúdio de podcast.",
+        observacoes: "Equipamentos: Microfones, Mesa de som"
+    },
+
+    "Refeitório": {
+        local: "Bloco C - Térreo",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "11:00-14:00/17:00-20:00", "Terça": "11:00-14:00/17:00-20:00",
+            "Quarta": "11:00-14:00/17:00-20:00", "Quinta": "11:00-14:00/17:00-20:00", "Sexta": "11:00-14:00/17:00-20:00", "Sábado": "Fechado"
+        },
+        descricao: "Alimentação escolar.",
+        observacoes: "Equipamentos: Mesas, Balcões térmicos"
+    },
+
+    "Lanchonete": {
+        local: "Bloco B - Térreo",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "07:00 às 22:00", "Terça": "07:00 às 22:00",
+            "Quarta": "07:00 às 22:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
+        },
+        descricao: "Venda de lanches.",
+        observacoes: "Equipamentos: Estufas, Geladeiras"
+    },
+
+    "Biblioteca": {
+        local: "Bloco A - 2º andar",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 21:00", "Terça": "08:00 às 21:00",
+            "Quarta": "08:00 às 21:00", "Quinta": "08:00 às 21:00", "Sexta": "08:00 às 21:00", "Sábado": "Fechado"
+        },
+        descricao: "Pesquisa e estudo.",
+        observacoes: "Equipamentos: Computadores, Mesas"
+    },
+
+    "DRG": {
+        local: "Administrativo",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 18:00", "Terça": "08:00 às 18:00",
+            "Quarta": "08:00 às 18:00", "Quinta": "08:00 às 18:00", "Sexta": "08:00 às 18:00", "Sábado": "Fechado"
+        },
+        descricao: "Diretoria Geral.",
+        observacoes: "Equipamentos: Computadores"
+    },
+
+    "NRH": {
+        local: "Administrativo",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 18:00", "Terça": "08:00 às 18:00",
+            "Quarta": "08:00 às 18:00", "Quinta": "08:00 às 18:00", "Sexta": "08:00 às 18:00", "Sábado": "Fechado"
+        },
+        descricao: "Recursos Humanos.",
+        observacoes: "Equipamentos: Arquivos"
+    },
+
+    "DDE": {
+        local: "Administrativo",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 18:00", "Terça": "08:00 às 18:00",
+            "Quarta": "08:00 às 18:00", "Quinta": "08:00 às 18:00", "Sexta": "08:00 às 18:00", "Sábado": "Fechado"
+        },
+        descricao: "Diretoria de Ensino.",
+        observacoes: "Equipamentos: Computadores"
+    },
+
+    "DGP/NGP": {
+        local: "Administrativo",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 18:00", "Terça": "08:00 às 18:00",
+            "Quarta": "08:00 às 18:00", "Quinta": "08:00 às 18:00", "Sexta": "08:00 às 18:00", "Sábado": "Fechado"
+        },
+        descricao: "Gestão de Pessoas.",
+        observacoes: "Equipamentos: Computadores"
+    },
+
+    "Copa": {
+        local: "Bloco C",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "Uso comum", "Terça": "Uso comum",
+            "Quarta": "Uso comum", "Quinta": "Uso comum", "Sexta": "Uso comum", "Sábado": "Fechado"
+        },
+        descricao: "Espaço para refeições rápidas.",
+        observacoes: "Equipamentos: Micro-ondas, Geladeira"
+    },
+
+    "Serviço Social": {
+        local: "Bloco B",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "09:00 às 17:00", "Terça": "09:00 às 17:00",
+            "Quarta": "09:00 às 17:00", "Quinta": "09:00 às 17:00", "Sexta": "09:00 às 17:00", "Sábado": "Fechado"
+        },
+        descricao: "Apoio ao estudante.",
+        observacoes: "Equipamentos: Mesa de atendimento"
+    },
+
+    "Diretoria": {
+        local: "Administrativo",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 18:00", "Terça": "08:00 às 18:00",
+            "Quarta": "08:00 às 18:00", "Quinta": "08:00 às 18:00", "Sexta": "08:00 às 18:00", "Sábado": "Fechado"
+        },
+        descricao: "Gabinete.",
+        observacoes: "Equipamentos: Mesa de reunião"
+    },
+
+    "Lavabo": {
+        local: "Bloco A",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "Período letivo", "Terça": "Período letivo",
+            "Quarta": "Período letivo", "Quinta": "Período letivo", "Sexta": "Período letivo", "Sábado": "Fechado"
+        },
+        descricao: "Sanitários.",
+        observacoes: "Equipamentos: Pias, Espelhos"
+    },
+
+    "Cozinha": {
+        local: "Bloco A",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "Funcionários", "Terça": "Funcionários",
+            "Quarta": "Funcionários", "Quinta": "Funcionários", "Sexta": "Funcionários", "Sábado": "Fechado"
+        },
+        descricao: "Preparo de alimentos.",
+        observacoes: "Equipamentos: Fogão industrial"
+    },
+
+    "Psicologia": {
+        local: "Bloco B",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "Ver coordenação", "Terça": "Ver coordenação",
+            "Quarta": "Ver coordenação", "Quinta": "Ver coordenação", "Sexta": "Ver coordenação", "Sábado": "Fechado"
+        },
+        descricao: "Atendimento psicológico.",
+        observacoes: "Equipamentos: Divã, Mesa"
+    },
+
+    "Setor Médico": {
+        local: "Bloco A",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "07:00 às 19:00", "Terça": "07:00 às 19:00",
+            "Quarta": "07:00 às 19:00", "Quinta": "07:00 às 19:00", "Sexta": "07:00 às 19:00", "Sábado": "Fechado"
+        },
+        descricao: "Primeiros socorros.",
+        observacoes: "Equipamentos: Maca, Maleta médica"
+    },
+
+    "Sala 36": {
+        local: "A preencher",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "-", "Terça": "-",
+            "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado"
+        },
+        descricao: "A preencher",
+        observacoes: "-"
+    },
+
+    "Sala 52": {
+        local: "A preencher",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "-", "Terça": "-",
+            "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado"
+        },
+        descricao: "A preencher",
+        observacoes: "-"
+    },
+
+    "Sala 60": {
+        local: "A preencher",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "-", "Terça": "-",
+            "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado"
+        },
+        descricao: "A preencher",
+        observacoes: "-"
+    }
 };
 
 function renderizarSalas() {

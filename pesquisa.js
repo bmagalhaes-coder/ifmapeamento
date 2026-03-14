@@ -20,7 +20,8 @@ const diasSemana = {
 
 const dadosSalas = {
 
-/* --- SALAS ADMINISTRATIVAS E APOIO --- */
+/* --- 1° ANDAR / TÉRREO --- */
+
 "SAA": {
     local: "Sala 55 - Bloco C - Térreo",
     horarios: {
@@ -48,22 +49,10 @@ const dadosSalas = {
     descricao: "Sala técnica de redes",
     observacoes: "Acesso restrito"
 },
-"NEOF/NLCC/SCDP/Contabilidade": {
-    local: "2° Andar",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Setores financeiros e contábeis",
-    observacoes: "-"
-},
 "Arquivo": {
     local: "Bloco Administrativo",
     horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
     descricao: "Arquivo central",
-    observacoes: "-"
-},
-"NRH": {
-    local: "2° Andar",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Núcleo de Recursos Humanos",
     observacoes: "-"
 },
 "Recpção/Espera": {
@@ -72,22 +61,10 @@ const dadosSalas = {
     descricao: "A preencher",
     observacoes: "-"
 },
-"DPG/NPGP": {
-    local: "2° Andar",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
 "Lavabo": {
     local: "Geral",
     horarios: { "Domingo": "Fechado", "Segunda": "Período Letivo", "Terça": "Período Letivo", "Quarta": "Período Letivo", "Quinta": "Período Letivo", "Sexta": "Período Letivo", "Sábado": "Fechado" },
     descricao: "Lavatórios",
-    observacoes: "-"
-},
-"DRG": {
-    local: "2° Andar",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Diretoria Geral",
     observacoes: "-"
 },
 "Sala de Estudos Para Professores": {
@@ -108,18 +85,6 @@ const dadosSalas = {
     descricao: "A preencher",
     observacoes: "-"
 },
-"DDE": {
-    local: "2° Andar",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Diretoria de Ensino",
-    observacoes: "-"
-},
-"DGP/NGP": {
-    local: "2° Andar",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Gestão de Pessoas",
-    observacoes: "-"
-},
 "66 - AEE": {
     local: "Bloco C",
     horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
@@ -136,12 +101,6 @@ const dadosSalas = {
     local: "Térreo",
     horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
     descricao: "A preencher",
-    observacoes: "-"
-},
-"Diretoria": {
-    local: "2° Andar",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Gabinete da Diretoria",
     observacoes: "-"
 },
 "Banheiro Feminino": {
@@ -169,7 +128,7 @@ const dadosSalas = {
     observacoes: "-"
 },
 
-/* --- SALAS DE AULA --- */
+/* --- SALAS DE AULA (TÉRREO) --- */
 "Sala 36": { local: "Bloco A", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
 "Sala 37": { local: "Bloco A", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
 "Sala 38": { local: "Bloco A", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
@@ -198,7 +157,6 @@ const dadosSalas = {
         { nome: "Proeja 2025", horarios: ["Segunda: 18:20 às 22:50", "Terça: 18:20 às 22:50", "Quarta: 18:20 às 22:50", "Quinta: 18:20 às 22:50", "Sexta: 18:20 às 22:50"] } ],
     equipamentos: "Televisão, quadro, ar condicionado"},
 
-
 "Sala 54": { local: "Bloco C", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
 "Sala 55": { local: "Bloco C", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
 "Sala 56": { local: "Bloco C", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
@@ -206,7 +164,6 @@ const dadosSalas = {
 "Sala 59": { local: "Bloco C", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
 "Sala 60": { local: "Bloco C", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
 
-/* --- LABORATÓRIOS E OUTROS --- */
 "Psicologia": {
     local: "Térreo",
     horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
@@ -237,85 +194,51 @@ const dadosSalas = {
     descricao: "A preencher",
     observacoes: "-"
 },
-"64 - Robótica": {
-    local: "Bloco C",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Laboratório de Robótica",
-    observacoes: "-"
-},
-"65 - Línguas": {
-    local: "Bloco C",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Laboratório de Línguas",
-    observacoes: "-"
-},
-"68 - Incubadora": {
-    local: "Bloco C",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"02 - Games": {
-    local: "Bloco A",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"03 - CAE": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"03 - Psicóloga": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"03 - Sertor Médico": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"06 - Serviço Social": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"07 - Sala dos Professores/DERI/PRONATEC/NPPG": {
-    local: "Bloco A",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "Complexo de salas",
-    observacoes: "-"
-},
-"08 - Protocolo com almoxarifado": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"10 - DRCA/Controle Acadêmico": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"Almoxarifado de Material de Expediente": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
-"Espaço Infantil": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
 
+/* --- 2° ANDAR --- */
+
+"NEOF/NLCC/SCDP/Contabilidade": {
+    local: "2° Andar",
+    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
+    descricao: "Setores financeiros e contábeis",
+    observacoes: "-"
+},
+"NRH": {
+    local: "2° Andar",
+    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
+    descricao: "Núcleo de Recursos Humanos",
+    observacoes: "-"
+},
+"DPG/NPGP": {
+    local: "2° Andar",
+    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
+    descricao: "A preencher",
+    observacoes: "-"
+},
+"DRG": {
+    local: "2° Andar",
+    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
+    descricao: "Diretoria Geral",
+    observacoes: "-"
+},
+"DDE": {
+    local: "2° Andar",
+    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
+    descricao: "Diretoria de Ensino",
+    observacoes: "-"
+},
+"DGP/NGP": {
+    local: "2° Andar",
+    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
+    descricao: "Gestão de Pessoas",
+    observacoes: "-"
+},
+"Diretoria": {
+    local: "2° Andar",
+    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
+    descricao: "Gabinete da Diretoria",
+    observacoes: "-"
+}
 
 };
 
@@ -376,77 +299,4 @@ function mostrarInfoSala(nomeSala) {
     };
     
     const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.id = 'modalInfo';
-    
-    let horariosHTML = '';
-    if (dados.horarios) {
-        horariosHTML = '<div class="modal-section"><h3>📅 Horários de Funcionamento</h3><ul>';
-        for (const [dia, horario] of Object.entries(dados.horarios)) {
-            const diaAtual = getDiaAtual();
-            const isHoje = dia.includes(diaAtual) || (diaAtual !== 'Sábado' && diaAtual !== 'Domingo' && dia === 'Segunda a Sexta');
-            horariosHTML += `<li class="${isHoje ? 'dia-atual' : ''}"><strong>${dia}:</strong> ${horario}</li>`;
-        }
-        horariosHTML += '</ul></div>';
-    }
-    
-    let cursosHTML = '';
-    if (dados.cursos) {
-        cursosHTML = '<div class="modal-section"><h3>📚 Cursos e Horários</h3>';
-        dados.cursos.forEach(curso => {
-            cursosHTML += `<div class="curso-card"><h4>${curso.nome}</h4><ul>`;
-            curso.horarios.forEach(h => {
-                cursosHTML += `<li class="${isDiaAtual(h) ? 'dia-atual' : ''}">${isDiaAtual(h) ? '🔴' : '🕒'} ${h}</li>`;
-            });
-            cursosHTML += '</ul></div>';
-        });
-        cursosHTML += '</div>';
-    }
-
-    let obsHTML = dados.observacoes ? `
-        <div class="modal-section">
-            <h3>📌 Observações</h3>
-            <p>${dados.observacoes}</p>
-        </div>` : '';
-
-    modal.innerHTML = `
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>${nomeSala}</h2>
-                <span class="close-modal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>📍 Localização</h3>
-                    <p><span class="info-label">Sala:</span> ${dados.local}</p>
-                </div>
-                ${horariosHTML}
-                ${cursosHTML}
-                <div class="modal-section">
-                    <h3>ℹ️ Sobre</h3>
-                    <p>${dados.descricao}</p>
-                </div>
-                ${obsHTML}
-                ${dados.equipamentos ? `
-                <div class="modal-section">
-                    <h3>🖥️ Equipamentos</h3>
-                    <p>${dados.equipamentos}</p>
-                </div>` : ''}
-            </div>
-        </div>
-    `;
-    
-    document.body.appendChild(modal);
-    modal.style.display = 'flex';
-    
-    modal.querySelector('.close-modal').onclick = () => modal.remove();
-    modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
-}
-
-clearBtn.onclick = () => {
-    searchInput.value = '';
-    filtrar();
-};
-
-searchInput.oninput = filtrar;
-document.addEventListener('DOMContentLoaded', renderizarSalas);
+    modal

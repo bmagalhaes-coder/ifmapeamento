@@ -1,7 +1,7 @@
 const salas = [
     "Sala de Reunião", "NTI/Atendimento", "NTI/RACK", "NEOF/NLCC/SCDP/Contabilidade", "Arquivo", "NRH", "Recpção/Espera", "DPG/NPGP", "Lavabo", "DRG", "Sala de Estudos Para Professores",
     "Sala de Estar Para Professores", "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DRG", "NRH", "DDE", "DGP/NGP", "66 - AEE", "Copa", 
-    "Serviço Social", "Diretoria", "Banheiro Feminino", "Banheiro Masculino", "Banheiro Feminino Acessivel", "Banheiro Masculino Acessivel", "Sala 36", "Sala 37", "Sala 38", 
+    "Serviço Social", "Diretoria", "Banheiros Femininos", "Banheiros Masculinos", "Banheiros Femininos Acessíveis", "Banheiros Masculinos Acessíveis", "Sala 36", "Sala 37", "Sala 38", 
     "Sala 39", "Sala 40", "Sala 41", "Sala 42", "Sala 43", "Sala 44", "Sala 45", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52", "Sala 53", "Sala 54", 
     "Sala 55", "Sala 56", "Sala 58", "Sala 59", "Sala 60", "Psicologia", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "64 - Robótica", "65 - Línguas", 
     "68 - Incubadora", "02 - Games", "03 - CAE", "03 - Psicóloga", "03 - Sertor Médico", "06 - Serviço Social", "07 - Sala dos Professores/DERI/PRONATEC/NPPG", 
@@ -26,7 +26,7 @@ const dadosSalas = {
     local: "Sala 55 - Bloco C - Térreo",
     horarios: {
         "Domingo": "Fechado", "Segunda": "07:00 às 22:00", "Terça": "07:00 às 22:00",
-        "Quarta": "07:00 às 23:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
+        "Quarta": "07:00 às 22:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
     },
     descricao: "Responsável por prestar atendimento direto ao aluno assistindo-o e orientando-o em casos de indisciplina, saída antecipada e ocorrências diversas.",
     observacoes: "Local de armazenamento de itens perdidos no campus. Qualquer objeto achado de titular desconhecido deve ser entregue neste departamento." },
@@ -62,68 +62,61 @@ const dadosSalas = {
     observacoes: "-"
 },
 "Lavabo": {
-    local: "Geral",
-    horarios: { "Domingo": "Fechado", "Segunda": "Período Letivo", "Terça": "Período Letivo", "Quarta": "Período Letivo", "Quinta": "Período Letivo", "Sexta": "Período Letivo", "Sábado": "Fechado" },
-    descricao: "Lavatórios",
+    local: "2° Andar",
+    descricao: "-",
     observacoes: "-"
 },
 "Sala de Estudos Para Professores": {
-    local: "Bloco de Professores",
+    local: "2° Andar",
     horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
     descricao: "A preencher",
     observacoes: "-"
 },
 "Sala de Estar Para Professores": {
-    local: "Bloco de Professores",
+    local: "2° Andar",
     horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
     descricao: "A preencher",
     observacoes: "-"
 },
 "Camarim": {
-    local: "Anexo Cine Teatro",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
+    local: "Na lateral do Cine Teatro",
     descricao: "A preencher",
     observacoes: "-"
 },
 "66 - AEE": {
-    local: "Bloco C",
+    local: "1° Andar",
     horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
     descricao: "Atendimento Educacional Especializado",
     observacoes: "-"
 },
-"Copa": {
-    local: "Geral",
-    horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
-    descricao: "A preencher",
-    observacoes: "-"
-},
+
 "Serviço Social": {
     local: "Térreo",
     horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" },
     descricao: "A preencher",
     observacoes: "-"
 },
-"Banheiro Feminino": {
-    local: "Geral",
-    horarios: { "Domingo": "Fechado", "Segunda": "Período Letivo", "Terça": "Período Letivo", "Quarta": "Período Letivo", "Quinta": "Período Letivo", "Sexta": "Período Letivo", "Sábado": "Fechado" },
+"Banheiros Femininos": {
+    local: "Lateral direita do hall de entrada <br> Lateral direita do 2° andar <br> Lateral esquerda da lanchonete <br> Bloco C",
+    horarios: { "Geral": "Sempre aberto" },
     descricao: "Sanitário Feminino",
     observacoes: "-"
 },
-"Banheiro Masculino": {
-    local: "Geral",
-    horarios: { "Domingo": "Fechado", "Segunda": "Período Letivo", "Terça": "Período Letivo", "Quarta": "Período Letivo", "Quinta": "Período Letivo", "Sexta": "Período Letivo", "Sábado": "Fechado" },
+"Banheiros Masculinos": {
+    local: "Lateral esquerda do hall de entrada <br> Lateral esquerda do 2° andar <br> Lateral direita da lanchonete <br> Bloco C",
+    horarios: { "Geral": "Sempre aberto" }, 
     descricao: "Sanitário Masculino",
     observacoes: "-"
 },
-"Banheiro Feminino Acessivel": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "Período Letivo", "Terça": "Período Letivo", "Quarta": "Período Letivo", "Quinta": "Período Letivo", "Sexta": "Período Letivo", "Sábado": "Fechado" },
+"Banheiros Femininos Acessíveis": {
+    local: "Lateral direita do hall de entrada <br> Bloco C",
+    horarios: { "Geral": "Sempre aberto" }, 
     descricao: "Sanitário Feminino Adaptado",
     observacoes: "-"
 },
-"Banheiro Masculino Acessivel": {
-    local: "Térreo",
-    horarios: { "Domingo": "Fechado", "Segunda": "Período Letivo", "Terça": "Período Letivo", "Quarta": "Período Letivo", "Quinta": "Período Letivo", "Sexta": "Período Letivo", "Sábado": "Fechado" },
+"Banheiros Masculinos Acessíveis": {
+    local: "Lateral esquerda do hall de entrada <br> Bloco C",
+    horarios: { "Geral": "Sempre aberto" }, 
     descricao: "Sanitário Masculino Adaptado",
     observacoes: "-"
 },
@@ -150,12 +143,12 @@ const dadosSalas = {
 "Sala 53": {
     local: "Bloco C - Térreo",
     descricao: "Sala de aula compartilhada por dois cursos técnicos e turmas do Proeja.",
-    observacoes: "Local de armazenamento de itens perdidos no campus. Qualquer objeto achado de titular desconhecido deve ser entregue neste departamento.",
     cursos: [
         { nome: "Edificações 2024", horarios: ["Segunda: 07:10 às 12:30", "Terça: 07:10 às 18:20", "Quarta: 07:10 às 12:30", "Quinta: 07:10 às 12:30", "Sexta: 07:10 às 12:30"] },
         { nome: "Informática 2024", horarios: ["Segunda: 13:10 às 18:20", "Terça: 13:10 às 18:20", "Quarta: 13:10 às 18:20", "Quinta: 07:10 às 18:20", "Sexta: 13:10 às 18:20"] },
         { nome: "Proeja 2025", horarios: ["Segunda: 18:20 às 22:50", "Terça: 18:20 às 22:50", "Quarta: 18:20 às 22:50", "Quinta: 18:20 às 22:50", "Sexta: 18:20 às 22:50"] } ],
-    equipamentos: "Televisão, quadro, ar condicionado"},
+    equipamentos: "Televisão, quadro, ar condicionado"
+},
 
 "Sala 54": { local: "Bloco C", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
 "Sala 55": { local: "Bloco C", horarios: { "Domingo": "Fechado", "Segunda": "-", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "-", "Sábado": "Fechado" }, descricao: "A preencher", observacoes: "-" },
@@ -246,6 +239,7 @@ const dadosSalas = {
 
 function renderizarSalas() {
     menuList.innerHTML = '';
+    
     // Ordena as salas em ordem alfabética antes de renderizar
     [...salas].sort().forEach(sala => {
         const btn = document.createElement('button');
@@ -294,30 +288,38 @@ function getDiaAtual() {
 }
 
 // --- FUNÇÃO DO POP-UP (MODAL) ---
-
 function mostrarInfoSala(nomeSala) {
     const dados = dadosSalas[nomeSala] || {
         local: "Informações não disponíveis",
         horarios: {},
-        descricao: "Detalhes desta sala serão atualizados em breve.",
+        descricao: "Detalhes deste local serão atualizados em breve.",
         observacoes: "-"
     };
 
     const diaHoje = getDiaAtual();
-
-    // Cria a estrutura do Modal
     const modal = document.createElement('div');
     modal.className = 'modal';
-    modal.style.display = 'flex'; // Exibe o modal
+    modal.style.display = 'flex';
 
-    let horariosHTML = '<ul>';
-    if (dados.horarios && Object.keys(dados.horarios).length > 0) {
+    // Lógica única para conteúdo de "horariosHTML"
+    let horariosHTML = '';
+
+    if (dados.horarios && dados.horarios["Geral"] === "Sempre aberto") {
+        // Caso específico dos banheiros
+        horariosHTML = `<div class="badge-aberto">Sempre Aberto</div>`;
+        
+    } else if (dados.horarios && Object.keys(dados.horarios).length > 0) {
+        // Caso dos horários semanais padrão
+        horariosHTML = '<ul>';
         for (let dia in dados.horarios) {
             const classeHoje = (dia === diaHoje) ? 'dia-atual' : '';
             horariosHTML += `<li class="${classeHoje}"><strong>${dia}:</strong> ${dados.horarios[dia]}</li>`;
         }
+        horariosHTML += '</ul>';
+        
     } else if (dados.cursos) {
-        // Se a sala tiver cursos (ex: Sala 53)
+        // Caso da Sala 53 com cursos
+        horariosHTML = '<ul>';
         dados.cursos.forEach(curso => {
             horariosHTML += `<div class="curso-card"><h4>${curso.nome}</h4><ul>`;
             curso.horarios.forEach(h => {
@@ -326,8 +328,11 @@ function mostrarInfoSala(nomeSala) {
             });
             horariosHTML += `</ul></div>`;
         });
+        horariosHTML += '</ul>';
+        
+    } else {
+        horariosHTML = '<p>Horários não definidos.</p>';
     }
-    horariosHTML += '</ul>';
 
     modal.innerHTML = `
         <div class="modal-content">
@@ -358,7 +363,6 @@ function mostrarInfoSala(nomeSala) {
 
     document.body.appendChild(modal);
 
-    // Fechar modal ao clicar no X ou fora dele
     modal.querySelector('.close-modal').onclick = () => modal.remove();
     modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
 }
@@ -375,5 +379,5 @@ clearBtn.addEventListener('click', () => {
     searchInput.focus();
 });
 
-// Inicia o site 
+// Inicia o app
 renderizarSalas();

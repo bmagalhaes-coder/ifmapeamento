@@ -242,8 +242,11 @@ const dadosSalas = {
 
 };
 
+// --- FUNÇÕES DE INICIALIZAÇÃO E FILTRO ---
+
 function renderizarSalas() {
     menuList.innerHTML = '';
+    // Ordena as salas em ordem alfabética antes de renderizar
     [...salas].sort().forEach(sala => {
         const btn = document.createElement('button');
         btn.className = 'menu-item';
@@ -268,6 +271,7 @@ function filtrar() {
         }
     });
 
+    // Gerencia mensagem de "não encontrado"
     const erroExistente = document.querySelector('.sem-resultados');
     if (encontrados === 0 && searchInput.value.length > 0) {
         if (!erroExistente) {
@@ -281,22 +285,95 @@ function filtrar() {
     }
 }
 
+// --- FUNÇÕES AUXILIARES DE DATA ---
+
 function getDiaAtual() {
     const hoje = new Date();
     const diaIngles = hoje.toLocaleDateString('en-US', { weekday: 'long' });
     return diasSemana[diaIngles];
 }
 
-function isDiaAtual(horario) {
-    const diaAtual = getDiaAtual();
-    return horario.startsWith(diaAtual);
-}
+// --- FUNÇÃO DO POP-UP (MODAL) ---
 
 function mostrarInfoSala(nomeSala) {
     const dados = dadosSalas[nomeSala] || {
         local: "Informações não disponíveis",
-        descricao: "Detalhes desta sala serão atualizados em breve."
+        horarios: {},
+        descricao: "Detalhes desta sala serão atualizados em breve.",
+        observacoes: "-"
     };
-    
+
+    const diaHoje = getDiaAtual();
+
+    // Cria a estrutura do Modal
     const modal = document.createElement('div');
-    modal
+    modal.className = 'modal';
+    modal.style.display = 'flex'; // Exibe o modal
+
+    let horariosHTML = '<ul>';
+    if (dados.horarios && Object.keys(dados.horarios).length > 0) {
+        for (let dia in dados.horarios) {
+            const classeHoje = (dia === diaHoje) ? 'dia-atual' : '';
+            horariosHTML += `<li class="${classeHoje}"><strong>${dia}:</strong> ${dados.horarios[dia]}</li>`;
+        }
+    } else if (dados.cursos) {
+        // Se a sala tiver cursos (ex: Sala 53)
+        dados.cursos.forEach(curso => {
+            horariosHTML += `<div class="curso-card"><h4>${curso.nome}</h4><ul>`;
+            curso.horarios.forEach(h => {
+                const eHoje = h.startsWith(diaHoje);
+                horariosHTML += `<li class="${eHoje ? 'dia-atual' : ''}">${h}</li>`;
+            });
+            horariosHTML += `</ul></div>`;
+        });
+    }
+    horariosHTML += '</ul>';
+
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>${nomeSala}</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>📍 LOCALIZAÇÃO</h3>
+                    <p class="local">${dados.local}</p>
+                </div>
+                <div class="modal-section">
+                    <h3>📝 DESCRIÇÃO</h3>
+                    <p>${dados.descricao}</p>
+                </div>
+                <div class="modal-section">
+                    <h3>⏰ HORÁRIOS / CURSOS</h3>
+                    ${horariosHTML}
+                </div>
+                <div class="modal-section">
+                    <h3>⚠️ OBSERVAÇÕES</h3>
+                    <p>${dados.observacoes}</p>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Fechar modal ao clicar no X ou fora dele
+    modal.querySelector('.close-modal').onclick = () => modal.remove();
+    modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+}
+
+// --- EVENTOS ---
+
+// Filtra enquanto digita
+searchInput.addEventListener('input', filtrar);
+
+// Limpa a busca
+clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    filtrar();
+    searchInput.focus();
+});
+
+// Inicia o site 
+renderizarSalas();

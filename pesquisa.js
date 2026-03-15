@@ -1,9 +1,8 @@
-// Lista única de salas (sem duplicatas)
 const salas = [
     "Sala de Reunião", "NTI/Atendimento", "NTI/RACK", "NEOF/NLCC/SCDP/Contabilidade", "Arquivo", "NRH",
     "Recpção/Espera", "DPG/NPGP", "Lavabo", "DRG", "Sala de Estudos Para Professores", "Sala de Estar Para Professores",
     "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DDE", "DGP/NGP",
-    "AEE", "Copa", "Serviço Social", "Diretoria", "Banheiros Femininos", "Banheiros Masculinos",
+    "AEE/NAPNE", "Copa", "Serviço Social", "Diretoria", "Banheiros Femininos", "Banheiros Masculinos",
     "Banheiros Femininos Acessíveis", "Banheiros Masculinos Acessíveis", "Laboratório de Máquinas Elétricas",
     "Laboratório de Medidas Elétricas", "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)",
     "Fábrica de Inovações", "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico",
@@ -27,7 +26,7 @@ const diasSemana = {
     'Wednesday': 'Quarta', 'Thursday': 'Quinta', 'Friday': 'Sexta', 'Saturday': 'Sábado'
 };
 
-// Objeto com todas as informações das salas (corrigido e padronizado)
+// Objeto com todas as informações das salas
 const dadosSalas = {
     /* --- 1° ANDAR --- */
     "Sala de Reunião": {
@@ -176,15 +175,15 @@ const dadosSalas = {
     },
 
     /* --- TÉRREO --- */
-    "AEE": {
+    "AEE/NAPNE": {
         local: "Sala 66 - Térreo",
         horarios: {
             "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
-        descricao: "Atendimento Educacional Especializado - Apoio pedagógico a alunos com necessidades específicas.",
-        equipamentos: "Materiais pedagógicos adaptados, recursos de acessibilidade, computadores com softwares especiais."
+        descricao: "NAPNE (Núcleo de Apoio às Pessoas com Necessidades Educacionais Específicas) é o setor responsável por promover a inclusão e gerenciar o AEE (Atendimento Educacional Especializado). Eles atuam na quebra de barreiras físicas, pedagógicas e atitudinais, garantindo o acesso e a permanência de alunos com deficiência, TEA ou altas habilidades.",
+        equipamentos: "Materiais pedagógicos adaptados, recursos de acessibilidade, abafadores de som, etc."
     },
     "SAA": {
         local: "Sala 55 - Bloco C - Térreo",
@@ -203,9 +202,8 @@ const dadosSalas = {
             "Quinta": "07:00 às 12:00 e 14:00 às 22:00", "Sexta": "07:00 às 12:00 e 14:00 às 22:00", "Sábado": "Fechado"
         },
         descricao: "Setor responsável pelo apoio social aos estudantes, incluindo programas de assistência estudantil, auxílios e orientação social.",
-        observacoes: "Atendimento individual ou familiar mediante agendamento."
     },
-    "Psicologia": {
+    "Psicóloga": {
         local: "Térreo",
         horarios: {
             "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
@@ -213,7 +211,7 @@ const dadosSalas = {
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "Atendimento psicológico para estudantes e servidores.",
-        observacoes: "Atendimento confidencial, agendamento via SAA."
+        observacoes: "Atendimento confidencial."
     },
     "Setor Médico": {
         local: "Térreo",
@@ -222,8 +220,8 @@ const dadosSalas = {
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
-        descricao: "Atendimento médico básico, primeiros socorros e encaminhamentos.",
-        equipamentos: "Macas, materiais de primeiros socorros, medicamentos básicos."
+        descricao: "Criado para o atendimento médico básico, primeiros socorros e encaminhamentos, além disso é o local onde os discentes devem pegar atestados caso estejam passando mal.",
+        equipamentos: "Maca, materiais de primeiros socorros, medicamentos básicos."
     },
 
     /* --- Banheiros e outras áreas --- */
@@ -252,10 +250,9 @@ const dadosSalas = {
         equipamentos: "Barras de apoio, pia rebaixada, campainha de emergência."
     },
     "Cine Teatro": {
-        local: "Térreo, próximo ao hall de entrada",
+        local: "Próximo a lateral do hall de entrada (Térreo)",
         horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 22:00", "Terça": "08:00 às 22:00",
-            "Quarta": "08:00 às 22:00", "Quinta": "08:00 às 22:00", "Sexta": "08:00 às 22:00", "Sábado": "Fechado"
+            "Geral": "Aberto em dias de evento, fora isso é necessário a autorização do SAA ou de um superior para entrar."
         },
         descricao: "Espaço multiuso para apresentações, palestras, formaturas e eventos culturais com capacidade para 200 pessoas.",
         equipamentos: "Projetor, tela retrátil, sistema de som profissional, palco, iluminação cênica, camarins."
@@ -263,8 +260,7 @@ const dadosSalas = {
     "Camarim": {
         local: "Na lateral do palco do Cine Teatro (Térreo)",
         horarios: {
-            "Domingo": "Fechado", "Segunda": "Sob agendamento", "Terça": "Sob agendamento",
-            "Quarta": "Sob agendamento", "Quinta": "Sob agendamento", "Sexta": "Sob agendamento", "Sábado": "Fechado"
+            "Geral": "Aberto em dias de evento."
         },
         descricao: "Espaço para preparação dos artistas antes das apresentações no Cine Teatro.",
         equipamentos: "Espelhos iluminados, cabideiros, pia, bancada, cadeiras.",
@@ -272,10 +268,6 @@ const dadosSalas = {
     },
     "IFCast": {
         local: "Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 18:00", "Terça": "08:00 às 18:00",
-            "Quarta": "08:00 às 18:00", "Quinta": "08:00 às 18:00", "Sexta": "08:00 às 18:00", "Sábado": "Fechado"
-        },
         descricao: "Estúdio de podcast e produção de conteúdo audiovisual do campus.",
         equipamentos: "Microfones profissionais, mesa de som, computador para edição, câmeras, isolamento acústico."
     },
@@ -672,21 +664,30 @@ function mostrarInfoSala(nomeSala) {
     };
 
     const diaHoje = getDiaAtual();
+    
+// Construir HTML dos horários de forma organizada
+let horariosHTML = '';
 
-    // Construir HTML dos horários de forma organizada
-    let horariosHTML = '';
+if (dados.horarios && dados.horarios["Geral"]) {
+    const valorOriginal = dados.horarios["Geral"];
+    const valorGeral = valorOriginal.toLowerCase();
 
-    // Caso especial: horário geral (sempre aberto, ou entrada restrita)
-    if (dados.horarios && dados.horarios["Geral"]) {
-        const valorGeral = dados.horarios["Geral"];
-        if (valorGeral === "Sempre aberto" || valorGeral === "Sempre Aberto") {
-            horariosHTML = `<div class="badge-aberto">🟢 Sempre Aberto</div>`;
-        } else if (valorGeral.includes("autorização")) {
-            horariosHTML = `<div class="badge-aberto" style="background:#ff9800;">🔒 ${valorGeral}</div>`;
+    if (valorGeral === "sempre aberto") {
+        horariosHTML = `<div class="badge-aberto">🟢 Sempre Aberto</div>`;
+
+    } else if (valorGeral.includes("autoriza")) {
+
+        // Caso especial: frase de evento (sem cadeado)
+        if (valorGeral.includes("dias de evento")) {
+            horariosHTML = `<div class="badge-aberto" style="background:#ff9800;">${valorOriginal}</div>`;
         } else {
-            horariosHTML = `<p>${valorGeral}</p>`;
+            horariosHTML = `<div class="badge-aberto" style="background:#ff9800;">🔒 ${valorOriginal}</div>`;
         }
+
+    } else {
+        horariosHTML = `<p>${valorOriginal}</p>`;
     }
+}
     // Se tem cursos (salas de aula com múltiplos horários)
     else if (dados.cursos && dados.cursos.length > 0) {
         horariosHTML = '<div class="cursos-container">';

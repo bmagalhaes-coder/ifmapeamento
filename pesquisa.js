@@ -26,23 +26,28 @@ const diasSemana = {
     'Wednesday': 'Quarta', 'Thursday': 'Quinta', 'Friday': 'Sexta', 'Saturday': 'Sábado'
 };
 
-// Objeto com todas as informações das salas
 const dadosSalas = {
     /* --- 1° ANDAR --- */
-    "Sala de Reunião": {
+      "Copa": {
         local: "1° Andar",
-        horarios: { "Geral": "-" },
-        descricao: "Sala equipada para reuniões administrativas e pedagógicas.",
-        observacoes: "Agendamento prévio necessário."
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Copa para uso dos servidores.",
+        equipamentos: "Micro-ondas, cadeira, mesa, geladeira, filtro de água."
+    }
+    "DDE/DAP": {
+        local: "Sala 20 - 1° Andar",
+        horarios: { "Geral": "" },
+        descricao: "O Departamento de Desenvolvimento Educacional (DDE) e o Departamento de Administração e ....",
+        observacoes: "-"
     },
-    "NTI/Atendimento": {
-        local: "1° Andar",
+    "CTIC": {
+        local: "Sala 21 - 1° Andar",
         horarios: {
             "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
-        descricao: "Núcleo de Tecnologia da Informação - Setor responsável pelo suporte técnico, manutenção de equipamentos e sistemas institucionais.",
+        descricao: "Coordenadoria de Tecnologia da Informação e Comunicação  - Setor responsável pelo suporte técnico, manutenção de equipamentos e sistemas institucionais.",
         observacoes: "Abrir chamado via sistema para atendimento especializado."
     },
     "NTI/RACK": {
@@ -64,14 +69,14 @@ const dadosSalas = {
         descricao: "Arquivo central do campus, armazena documentos administrativos e acadêmicos de anos anteriores.",
         observacoes: "Solicitações de documentos devem ser feitas no setor responsável."
     },
-    "Recpção/Espera": {
-        local: "1° Andar",
+    "CAPI/SCDP/Balcão Digital": {
+        local: "Sala 26 - 1° Andar",
         horarios: {
             "Domingo": "Fechado", "Segunda": "07:00 às 22:00", "Terça": "07:00 às 22:00",
             "Quarta": "07:00 às 22:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
         },
-        descricao: "Área de recepção e espera para atendimento nos setores administrativos do 1º andar.",
-        observacoes: "Dispõe de assentos e bebedouro."
+        descricao: "-",
+        observacoes: "-"
     },
     "Lavabo": {
         local: "1° Andar",
@@ -88,24 +93,23 @@ const dadosSalas = {
         descricao: "Espaço silencioso destinado ao estudo e preparação de aulas pelos docentes.",
         equipamentos: "Computadores, impressora, mesa de reunião, armários individuais."
     },
-    "Sala de Estar Para Professores": {
+    "Sala dos Funcionários e Servidores": {
         local: "1° Andar",
         horarios: {
-            "Domingo": "Fechado", "Segunda": "07:00 às 22:00", "Terça": "07:00 às 22:00",
-            "Quarta": "07:00 às 22:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
+            "Geral": "Sempre Aberto"
         },
         descricao: "Sala de convivência para professores com área de descanso e café.",
         equipamentos: "Poltronas, sofás, micro-ondas, cafeteira, frigobar."
     },
-    "NEOF/NLCC/SCDP/Contabilidade": {
-        local: "1° Andar",
+    "Coordenações": {
+        local: "Sala 23 - 1° Andar",
         horarios: {
             "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
-        descricao: "Setores financeiros e contábeis: Núcleo de Execução Orçamentária, Núcleo de Licitações e Contratos, Setor de Contabilidade.",
-        observacoes: "Atendimento preferencialmente agendado."
+        descricao: "-",
+        observacoes: "-"
     },
     "NRH": {
         local: "1° Andar",
@@ -229,25 +233,25 @@ const dadosSalas = {
         local: "Lateral direita do hall de entrada (Térreo) <br> Lateral direita do 1° andar <br> Lateral esquerda da lanchonete (Térreo) <br> Bloco C",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Sanitário feminino contendo 5 cabines com vasos sanitários e pias com espelhos.",
-        equipamentos: "Secadores de mãos, papeleiras, lixeiras."
+        equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
     },
     "Banheiros Masculinos": {
         local: "Lateral esquerda do hall de entrada (Térreo) <br> Lateral esquerda do 1° andar <br> Lateral direita da lanchonete (Térreo) <br> Bloco C",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Sanitário masculino contendo mictórios e cabines com vasos sanitários, pias com espelhos.",
-        equipamentos: "Secadores de mãos, papeleiras, lixeiras."
+        equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
     },
     "Banheiros Femininos Acessíveis": {
-        local: "Lateral direita do hall de entrada (Térreo) <br> Bloco C",
+        local: "Lateral direita do hall de entrada (Térreo) <br> Lateral direita do 1° andar <br> Lateral esquerda da lanchonete (Térreo) <br> Bloco C",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Sanitário feminino adaptado com barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Barras de apoio, pia rebaixada, campainha de emergência."
+        equipamentos: "Barras de apoio, campainha de emergência, papel higienico, sabonete líquido, papeleiras, lixeira."
     },
     "Banheiros Masculinos Acessíveis": {
-        local: "Lateral esquerda do hall de entrada (Térreo) <br> Bloco C",
+        local: "Lateral esquerda do hall de entrada (Térreo) <br> Lateral esquerda do 1° andar <br> Lateral direita da lanchonete (Térreo) <br> Bloco C",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Sanitário masculino adaptado com barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Barras de apoio, pia rebaixada, campainha de emergência."
+        equipamentos: "Barras de apoio, papel higienico, sabonete líquido, papeleiras, lixeira."
     },
     "Cine Teatro": {
         local: "Próximo a lateral do hall de entrada (Térreo)",
@@ -326,7 +330,7 @@ const dadosSalas = {
     },
     "Espaço Infantil": {
         local: "Local atrás da escada - Térreo",
-        horarios: { "Geral": "Sempre Aberto" },
+        horarios: { "Geral": "Sempre aberto" },
         descricao: "Espaço lúdico para atendimento e acolhimento de crianças, sejam filhos de discentes ou de docentes.",
         equipamentos: "Brinquedos educativos, livros infantis, mesas e cadeiras infantis."
     },
@@ -597,12 +601,7 @@ const dadosSalas = {
         descricao: "Armazenamento e distribuição de materiais de expediente para os setores do campus.",
         equipamentos: "Prateleiras, estoque de papel, canetas, pastas e materiais diversos."
     },
-    "Copa": {
-        local: "Térreo",
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Copa para uso dos servidores e alunos.",
-        equipamentos: "Micro-ondas, geladeira, filtro de água."
-    }
+  
 };
 
 // --- FUNÇÕES DE INICIALIZAÇÃO E FILTRO ---
@@ -644,7 +643,7 @@ function filtrar() {
     } else if (erroExistente) {
         erroExistente.remove();
     }
-}
+    }
 
 // --- FUNÇÕES AUXILIARES DE DATA ---
 function getDiaAtual() {

@@ -1,14 +1,8 @@
 const salas = [
-    "Sala de Reunião", "NTI/Atendimento", "NTI/RACK", "NEOF/NLCC/SCDP/Contabilidade", "Arquivo", "NRH",
-    "Recpção/Espera", "DPG/NPGP", "Lavabo", "DRG", "Sala de Estudos Para Professores", "Sala de Estar Para Professores",
-    "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DDE", "DGP/NGP",
-    "AEE/NAPNE", "Copa", "Serviço Social", "Diretoria", "Banheiros Femininos", "Banheiros Masculinos",
-    "Banheiros Femininos Acessíveis", "Banheiros Masculinos Acessíveis", "Laboratório de Máquinas Elétricas",
-    "Laboratório de Medidas Elétricas", "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)",
-    "Fábrica de Inovações", "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico",
-    "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
+    "DDE/DAP", "CTIC", "NTI/RACK", "NEOF/NLCC/SCDP/Contabilidade", "Arquivo", "NRH",
+    "CAPI/SCDP/Balcão Digital", "DPG/NPGP", "Lavabo", "DRG", "Sala de Estudos Para Professores", "Sala dos Funcionários e Servidores", "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DDE", "DGP/NGP", "AEE/NAPNE", "Copa", "Serviço Social", "Diretoria", "Banheiros Femininos", "Banheiros Masculinos", "Banheiros Femininos Acessíveis", "Banheiros Masculinos Acessíveis", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
     "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60",
-    "Psicologia", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
+    "Psicóloga", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
     "Sala de Línguas", "Incubadora", "E - Games", "CAE", "Psicóloga", "Sala dos Professores/DERI/PRONATEC/NPPG",
     "Protocolo com almoxarifado", "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente", "Espaço Infantil"
 ];
@@ -33,10 +27,10 @@ const dadosSalas = {
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Copa para uso dos servidores.",
         equipamentos: "Micro-ondas, cadeira, mesa, geladeira, filtro de água."
-    }
+    },
     "DDE/DAP": {
         local: "Sala 20 - 1° Andar",
-        horarios: { "Geral": "" },
+        horarios: { "Geral": "Sempre aberto" },
         descricao: "O Departamento de Desenvolvimento Educacional (DDE) e o Departamento de Administração e ....",
         observacoes: "-"
     },
@@ -643,7 +637,7 @@ function filtrar() {
     } else if (erroExistente) {
         erroExistente.remove();
     }
-    }
+}
 
 // --- FUNÇÕES AUXILIARES DE DATA ---
 function getDiaAtual() {

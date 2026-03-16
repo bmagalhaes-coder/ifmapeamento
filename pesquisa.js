@@ -1,5 +1,5 @@
 const salas = [
-    "DDE/DAP", "CTIC", "NTI/RACK", "NEOF/NLCC/SCDP/Contabilidade", "Arquivo", "NRH",
+    "DDE/DAP", "CTIC", "NTI/RACK", "NEOF/NLCC/SCDP/Contabilidade", "Arquivo CGP", "NRH",
     "CAPI/SCDP/Balcão Digital", "DPG/NPGP", "Lavabo", "CCTTII/CEEC/CCSAQ", "Sala de Estudos Para Professores", "Sala dos Funcionários e Servidores", "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DDE", "DGP/NGP", "AEE/NAPNE", "Copa", "Serviço Social", "Diretoria", "Banheiros Femininos", "Banheiros Masculinos", "Banheiros Femininos Acessíveis", "Banheiros Masculinos Acessíveis", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
     "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60",
     "Psicóloga", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
@@ -53,15 +53,14 @@ const dadosSalas = {
         descricao: "Sala técnica de redes contendo servidores, switches e equipamentos de infraestrutura de TI do campus.",
         observacoes: "Acesso restrito apenas à equipe do NTI. Manutenções programadas são comunicadas previamente."
     },
-    "Arquivo": {
-        local: "1° Andar",
+    "Arquivo CGP": {
+        local: "Sala 24 - 1° Andar",
         horarios: {
             "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "Arquivo central do campus, armazena documentos administrativos e acadêmicos de anos anteriores.",
-        observacoes: "Solicitações de documentos devem ser feitas no setor responsável."
     },
     "CAPI/SCDP/Balcão Digital": {
         local: "Sala 26 - 1° Andar",
@@ -126,14 +125,13 @@ const dadosSalas = {
         observacoes: "-"
     },
     "CCTTII/CEEC/CCSAQ": {
-        local: "1° Andar",
+        local: "Sala 25 - 1° Andar",
         horarios: {
             "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "CCTTII (Coordenação de Curso Técnico em Informática): Responsável pelo curso técnico na área de informática. <br> CEEC (Coordenação de Especialização em Ensino de Ciências): Responsável pelo curso de especialização focado no ensino de ciências. <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas): Responsável pelo curso de nível superior em análises químicas.",
-        observacoes: "Agendamento com a secretaria da direção."
     },
     "DDE": {
         local: "1° Andar",

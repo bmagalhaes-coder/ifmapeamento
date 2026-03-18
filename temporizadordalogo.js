@@ -7,7 +7,7 @@
 
   //Após 5 segundos, redireciona para mapa1.html
   setTimeout(() => {
-    window.location.href = "mapa1.html";
+    window.location.href = "terreo.html";
     }, 4000);
 
   // Redireciona imediatamente se clicar na tela

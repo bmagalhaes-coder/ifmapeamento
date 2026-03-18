@@ -207,7 +207,7 @@ const dadosSalas = {
     },
     "IFCast": {
         local: "Térreo",
-        horarios: { "Geral": "Horário indefinido" },
+        horarios: { "Geral": "Entrada permitida somente para pessoas autorizadas." },
         descricao: "Estúdio de podcast e produção de conteúdo audiovisual do campus.",
         equipamentos: "Microfones profissionais, mesa de som, computador para edição, câmeras, isolamento acústico."
     },

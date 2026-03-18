@@ -1,10 +1,16 @@
 const salas = [
-    "DDE/DAP", "CTIC", "NTI/RACK", "NEOF/NLCC/SCDP/Contabilidade", "Arquivo CGP", "NRH",
-    "CAPI/SCDP/Balcão Digital", "DPG/NPGP", "Lavabo", "CCTTII/CEEC/CCSAQ", "Sala de Estudos Para Professores", "Sala dos Funcionários e Servidores", "SAA", "Cine Teatro", "Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DDE", "DGP/NGP", "AEE/NAPNE", "Copa", "Serviço Social", "Diretoria", "Banheiros Femininos", "Banheiros Masculinos", "Banheiros Femininos Acessíveis", "Banheiros Masculinos Acessíveis", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
+    "DDE/DAP", "CTIC", "Servidor CTIC", "Coordenações", "Arquivo CGP", "NRH", "CGP", "CAPI/SCDP/Balcão Digital",
+    "Sala de Vivência dos Servidores (em construção)", "CCTTII/CEEC/CCSAQ", "DAP", "Sala dos Funcionários e Servidores", 
+    "SAA","Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DGP/NGP", "AEE/NAPNE", "Copa", 
+    "Serviço Social", "Banheiros Femininos", "Banheiros Masculinos", "Banheiros Femininos Acessíveis", 
+    "Banheiros Masculinos Acessíveis", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", 
+    "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", 
+    "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Cine Teatro", 
+    "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
     "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60",
     "Psicóloga", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
-    "Sala de Línguas", "Incubadora", "E - Games", "CAE", "Psicóloga", "Sala dos Professores/DERI/PRONATEC/NPPG",
-    "Protocolo com almoxarifado", "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente", "Espaço Infantil"
+    "Sala de Línguas", "Incubadora", "E - Games", "CAE", "Psicóloga","Protocolo com almoxarifado","DPG/NPGP",
+    "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior",
 ];
 
 const searchInput = document.getElementById('searchInput');
@@ -25,8 +31,8 @@ const dadosSalas = {
       "Copa": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "Copa para uso dos servidores.",
-        equipamentos: "Micro-ondas, cadeira, mesa, geladeira, filtro de água."
+        descricao: "-",
+        equipamentos: "-"
     },
     "DDE/DAP": {
         local: "Sala 20 - 1° Andar",
@@ -42,16 +48,15 @@ const dadosSalas = {
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "Coordenadoria de Tecnologia da Informação e Comunicação  - Setor responsável pelo suporte técnico, manutenção de equipamentos e sistemas institucionais.",
-        observacoes: "Abrir chamado via sistema para atendimento especializado."
+        observacoes: "-"
     },
-    "NTI/RACK": {
+    "Servidor CTIC": {
         local: "1° Andar",
         horarios: {
             "Domingo": "Fechado", "Segunda": "Fechado", "Terça": "Fechado", "Quarta": "Fechado",
             "Quinta": "Fechado", "Sexta": "Fechado", "Sábado": "Fechado"
         },
-        descricao: "Sala técnica de redes contendo servidores, switches e equipamentos de infraestrutura de TI do campus.",
-        observacoes: "Acesso restrito apenas à equipe do NTI. Manutenções programadas são comunicadas previamente."
+        descricao: "-",
     },
     "Arquivo CGP": {
         local: "Sala 24 - 1° Andar",
@@ -60,7 +65,16 @@ const dadosSalas = {
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
-        descricao: "Arquivo central do campus, armazena documentos administrativos e acadêmicos de anos anteriores.",
+        descricao: "-.",
+    },
+        "CGP": {
+        local: "Sala 24 - 1° Andar",
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
+            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
+            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
+        },
+        descricao: "-.",
     },
     "CAPI/SCDP/Balcão Digital": {
         local: "Sala 26 - 1° Andar",
@@ -69,29 +83,26 @@ const dadosSalas = {
             "Quarta": "07:00 às 22:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
         },
         descricao: "-",
-        observacoes: "-"
     },
-    "Lavabo": {
+    "Sala de Vivência dos Servidores (em construção)": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "Lavabo para uso em eventos e reuniões no 1º andar.",
-        observacoes: "Manter limpo e organizado."
+        descricao: "-",
     },
-    "Sala de Estudos Para Professores": {
+    "DAP": {
         local: "1° Andar",
         horarios: {
             "Domingo": "Fechado", "Segunda": "07:00 às 22:00", "Terça": "07:00 às 22:00",
             "Quarta": "07:00 às 22:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
         },
-        descricao: "Espaço silencioso destinado ao estudo e preparação de aulas pelos docentes.",
-        equipamentos: "Computadores, impressora, mesa de reunião, armários individuais."
+        descricao: "-",
     },
     "Sala dos Funcionários e Servidores": {
         local: "1° Andar",
         horarios: {
             "Geral": "Sempre Aberto"
         },
-        descricao: "Sala de convivência para professores com área de descanso e café.",
+        descricao: "-",
         equipamentos: "Poltronas, sofás, micro-ondas, cafeteira, frigobar."
     },
     "Coordenações": {
@@ -102,7 +113,6 @@ const dadosSalas = {
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "-",
-        observacoes: "-"
     },
     "NRH": {
         local: "1° Andar",
@@ -112,7 +122,6 @@ const dadosSalas = {
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "Núcleo de Recursos Humanos - Responsável pela gestão de pessoal, férias, licenças e contracheques.",
-        observacoes: "-"
     },
     "DPG/NPGP": {
         local: "1° Andar",
@@ -122,7 +131,6 @@ const dadosSalas = {
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "Diretoria de Planejamento e Núcleo de Planejamento e Gestão de Projetos.",
-        observacoes: "-"
     },
     "CCTTII/CEEC/CCSAQ": {
         local: "Sala 25 - 1° Andar",
@@ -133,14 +141,14 @@ const dadosSalas = {
         },
         descricao: "CCTTII (Coordenação de Curso Técnico em Informática): Responsável pelo curso técnico na área de informática. <br> CEEC (Coordenação de Especialização em Ensino de Ciências): Responsável pelo curso de especialização focado no ensino de ciências. <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas): Responsável pelo curso de nível superior em análises químicas.",
     },
-    "DDE": {
+    "Coordenação Superior": {
         local: "1° Andar",
         horarios: {
             "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
-        descricao: "Diretoria de Ensino - Responsável pela gestão acadêmica e pedagógica.",
+        descricao: "-",
         observacoes: "-"
     },
     "DGP/NGP": {
@@ -153,23 +161,6 @@ const dadosSalas = {
         descricao: "Departamento de Gestão de Pessoas e Núcleo de Gestão de Pessoas.",
         observacoes: "-"
     },
-    "Diretoria": {
-        local: "1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "Gabinete da Diretoria - Chefia de gabinete e assessoria da direção.",
-        observacoes: "-"
-    },
-    "Sala dos Professores/DERI/PRONATEC/NPPG": {
-        local: "1° Andar",
-        horarios: { "Geral": "Sempre aberto durante funcionamento do campus" },
-        descricao: "Espaço múltiplo para professores, coordenações e programas institucionais.",
-        equipamentos: "Mesas de trabalho, computadores, armários, área de convivência."
-    },
-
     /* --- TÉRREO --- */
     "AEE/NAPNE": {
         local: "Sala 66 - Térreo",

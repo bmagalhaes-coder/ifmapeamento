@@ -27,150 +27,109 @@ const diasSemana = {
 };
 
 const dadosSalas = {
-    /* --- 1° ANDAR --- */
-      "Copa": {
+/* --- 1° ANDAR --- */
+    "Copa": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "-",
-        equipamentos: "-"
+        descricao: "Espaço destinado às refeições rápidas e descanso dos colaboradores, equipado para conservação e aquecimento de alimentos.",
+        equipamentos: "Micro-ondas, geladeira, cafeteira, mesa de apoio e pias."
     },
     "DDE/DAP": {
         local: "Sala 20 - 1° Andar",
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "O Departamento de Desenvolvimento Educacional (DDE) e o Departamento de Administração e ....",
-        observacoes: "-"
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "O Departamento de Desenvolvimento Educacional (DDE) e o Departamento de Administração e Planejamento (DAP) coordenam as políticas pedagógicas e a gestão orçamentária do campus.",
+        observacoes: "Atendimento administrativo central."
     },
     "CTIC": {
         local: "Sala 21 - 1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "Coordenadoria de Tecnologia da Informação e Comunicação  - Setor responsável pelo suporte técnico, manutenção de equipamentos e sistemas institucionais.",
-        observacoes: "-"
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Coordenadoria de Tecnologia da Informação e Comunicação - Setor responsável pelo suporte técnico, manutenção de equipamentos e sistemas institucionais.",
+        observacoes: "Suporte para rede Wi-Fi e sistemas acadêmicos."
     },
     "Servidor CTIC": {
         local: "1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "Fechado", "Terça": "Fechado", "Quarta": "Fechado",
-            "Quinta": "Fechado", "Sexta": "Fechado", "Sábado": "Fechado"
-        },
-        descricao: "-",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Sala técnica que abriga o datacenter, servidores de rede e equipamentos de conectividade central do campus.",
+        equipamentos: "Racks de servidores, switches core, nobreaks de alta capacidade e sistema de climatização de precisão."
     },
     "Arquivo CGP": {
         local: "Sala 24 - 1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "-.",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Local de guarda e organização de documentos históricos e ativos da Coordenadoria de Gestão de Pessoas.",
+        equipamentos: "Arquivos deslizantes, estantes metálicas e mesas de consulta."
     },
-        "CGP": {
+    "CGP": {
         local: "Sala 24 - 1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "-.",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Coordenadoria de Gestão de Pessoas - Responsável pela vida funcional dos servidores, processos de contratação e capacitação.",
+        equipamentos: "Computadores, impressoras e armários de arquivos funcionais."
     },
     "CAPI/SCDP/Balcão Digital": {
         local: "Sala 26 - 1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "07:00 às 22:00", "Terça": "07:00 às 22:00",
-            "Quarta": "07:00 às 22:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
-        },
-        descricao: "-",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
+        equipamentos: "Terminais de atendimento, impressoras e notebooks."
     },
     "Sala de Vivência dos Servidores (em construção)": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "-",
+        descricao: "Espaço em fase de implementação destinado à integração, repouso e lazer dos servidores durante intervalos.",
+        equipamentos: "Mobiliário básico em instalação (poltronas e mesas)."
     },
     "DAP": {
         local: "1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "07:00 às 22:00", "Terça": "07:00 às 22:00",
-            "Quarta": "07:00 às 22:00", "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
-        },
-        descricao: "-",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Departamento de Administração e Planejamento - Gerencia as compras, contratos, patrimônio e finanças da instituição.",
+        equipamentos: "Estações de trabalho, arquivos e sistemas de gestão orçamentária."
     },
     "Sala dos Funcionários e Servidores": {
         local: "1° Andar",
-        horarios: {
-            "Geral": "Sempre Aberto"
-        },
-        descricao: "-",
+        horarios: { "Geral": "Sempre Aberto" },
+        descricao: "Área de convivência e apoio para os funcionários terceirizados e servidores da instituição.",
         equipamentos: "Poltronas, sofás, micro-ondas, cafeteira, frigobar."
     },
     "Coordenações": {
         local: "Sala 23 - 1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "-",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Espaço compartilhado entre coordenadores de diferentes eixos tecnológicos para planejamento e atendimento.",
+        equipamentos: "Mesas de reunião, computadores e armários de documentos pedagógicos."
     },
     "NRH": {
         local: "1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
+        horarios: { "Geral": "Horário indefinido" },
         descricao: "Núcleo de Recursos Humanos - Responsável pela gestão de pessoal, férias, licenças e contracheques.",
+        equipamentos: "Terminais de acesso ao SIAPE, impressoras e arquivos de fichas financeiras."
     },
     "DPG/NPGP": {
         local: "1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
+        horarios: { "Geral": "Horário indefinido" },
         descricao: "Diretoria de Planejamento e Núcleo de Planejamento e Gestão de Projetos.",
+        equipamentos: "Quadros de monitoramento de projetos, computadores e mesas de reunião."
     },
     "CCTTII/CEEC/CCSAQ": {
         local: "Sala 25 - 1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "CCTTII (Coordenação de Curso Técnico em Informática): Responsável pelo curso técnico na área de informática. <br> CEEC (Coordenação de Especialização em Ensino de Ciências): Responsável pelo curso de especialização focado no ensino de ciências. <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas): Responsável pelo curso de nível superior em análises químicas.",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "CCTTII (Coordenação de Curso Técnico em Informática) <br> CEEC (Coordenação de Especialização em Ensino de Ciências) <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas).",
+        equipamentos: "Computadores de gestão acadêmica e arquivos de planos de ensino."
     },
     "Coordenação Superior": {
         local: "1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "-",
-        observacoes: "-"
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Gabinete responsável pela articulação e gestão das coordenações de cursos de nível superior e pós-graduação.",
+        observacoes: "Atendimento a coordenadores e docentes da graduação."
     },
     "DGP/NGP": {
         local: "1° Andar",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
+        horarios: { "Geral": "Horário indefinido" },
         descricao: "Departamento de Gestão de Pessoas e Núcleo de Gestão de Pessoas.",
-        observacoes: "-"
+        observacoes: "Centralização de processos relativos à vida funcional do servidor."
     },
     /* --- TÉRREO --- */
     "AEE/NAPNE": {
         local: "Sala 66 - Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "NAPNE (Núcleo de Apoio às Pessoas com Necessidades Educacionais Específicas) é o setor responsável por promover a inclusão e gerenciar o AEE (Atendimento Educacional Especializado). Eles atuam na quebra de barreiras físicas, pedagógicas e atitudinais, garantindo o acesso e a permanência de alunos com deficiência, TEA ou altas habilidades.",
-        equipamentos: "Materiais pedagógicos adaptados, recursos de acessibilidade, abafadores de som, etc."
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "NAPNE (Núcleo de Apoio às Pessoas com Necessidades Educacionais Específicas).",
+        equipamentos: "Materiais pedagógicos adaptados, recursos de acessibilidade."
     },
     "SAA": {
         local: "Sala 55 - Bloco C - Térreo",
@@ -188,26 +147,19 @@ const dadosSalas = {
             "Terça": "07:00 às 12:00 e 14:00 às 22:00", "Quarta": "07:00 às 12:00 e 14:00 às 22:00",
             "Quinta": "07:00 às 12:00 e 14:00 às 22:00", "Sexta": "07:00 às 12:00 e 14:00 às 22:00", "Sábado": "Fechado"
         },
-        descricao: "Setor responsável pelo apoio social aos estudantes, incluindo programas de assistência estudantil, auxílios e orientação social.",
+        descricao: "Setor voltado à garantia de direitos e bem-estar dos estudantes, realizando triagens para auxílios e programas de assistência.",
+        equipamentos: "Mobiliário para atendimento individual sigiloso, computadores e telefone."
     },
     "Psicóloga": {
         local: "Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
+        horarios: { "Geral": "Horário indefinido" },
         descricao: "Atendimento psicológico para estudantes e servidores.",
         observacoes: "Atendimento confidencial."
     },
     "Setor Médico": {
         local: "Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "Criado para o atendimento médico básico, primeiros socorros e encaminhamentos, além disso é o local onde os discentes devem pegar atestados caso estejam passando mal.",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Criado para o atendimento médico básico e primeiros socorros.",
         equipamentos: "Maca, materiais de primeiros socorros, medicamentos básicos."
     },
 
@@ -255,6 +207,7 @@ const dadosSalas = {
     },
     "IFCast": {
         local: "Térreo",
+        horarios: { "Geral": "Horário indefinido" },
         descricao: "Estúdio de podcast e produção de conteúdo audiovisual do campus.",
         equipamentos: "Microfones profissionais, mesa de som, computador para edição, câmeras, isolamento acústico."
     },
@@ -284,11 +237,12 @@ const dadosSalas = {
             "Quarta": "08:00 às 21:00", "Quinta": "08:00 às 21:00", "Sexta": "08:00 às 21:00", "Sábado": "Fechado"
         },
         descricao: "Acervo bibliográfico físico, sala de estudos individual e em grupo.",
-        equipamentos: "Computadores, cadeiras, mesas, estantes, acervo de livros, periódicos e TCCs."
+        equipamentos: "Computadores, cadeiras, mesas, estantes, acervo de livros, periódicos e TCCs.",
+        observacoes: "Mantenha o silêncio, sem ruídos altos para não retirar a concentração dos outros."
     },
     "Quadra": {
         local: "Área Externa",
-        horarios: { "Geral": "-" },
+        horarios: { "Geral": "Conforme cronograma de aulas de Educação Física" },
         descricao: "Quadra poliesportiva coberta para aulas de educação física, treinos e eventos esportivos.",
         equipamentos: "Tabelas de basquete, traves de futsal, redes de vôlei, arquibancada.",
         observacoes: "Discentes só podem adentrar o local se um docente também estiver na quadra."
@@ -331,7 +285,7 @@ const dadosSalas = {
         descricao: "Práticas com instrumentos de medição elétrica e calibração.",
         equipamentos: "Multímetros, osciloscópios, geradores de função, fontes de alimentação, pontas de prova diversas."
     },
-        "Laboratório de Física e Eletrônica": {
+    "Laboratório de Física e Eletrônica": {
         local: "Sala 38 - Bloco A (Térreo)",
         horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
         descricao: "Criado para experimentos de física e circuitos de potência.",
@@ -353,7 +307,7 @@ const dadosSalas = {
         local: "Sala 41 - Bloco A (Térreo)",
         horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
         descricao: "Criado para práticas de química geral, orgânica e analítica.",
-        equipamentos: "Capelas, bancadas com pontos de água e gás, vidrarias diversas, balanças analíticas, reagentes."
+        equipamentos: "Capelas, bancadas com pontos de água e gás, vidrarias diversas, balanças analíticas, reagentes, mesas e cadeiras."
     },
     "Laboratório de Biologia": {
         local: "Sala 42 - Bloco A - Térreo",
@@ -364,8 +318,8 @@ const dadosSalas = {
     "Laboratório de Desenho Técnico": {
         local: "Sala 43 - Bloco A - Térreo",
         horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
-        descricao: "Criado para práticas de desenho auxiliado por computador e desenho manual.",
-        equipamentos: "Pranchetas, computadores com software CAD, plotter, instrumentos de desenho."
+        descricao: "Ambiente equipado com pranchas apropriadas para o desenvolvimento de projetos gráficos e desenhos industriais manuais.",
+        equipamentos: "Pranchas de desenho com réguas paralelas, banquetas, luminárias articuladas e projetor multimídia."
     },
     "Laboratórios de Informática": {
         local: "Sala 44 e 45 - Bloco A - Térreo",
@@ -647,30 +601,32 @@ function mostrarInfoSala(nomeSala) {
 
     const diaHoje = getDiaAtual();
     
-// Construir HTML dos horários de forma organizada
-let horariosHTML = '';
+    // Lógica de estilização dos badges
+    if (dados.horarios && dados.horarios["Geral"]) {
+        const valorOriginal = dados.horarios["Geral"];
+        const valorGeral = valorOriginal.toLowerCase();
 
-if (dados.horarios && dados.horarios["Geral"]) {
-    const valorOriginal = dados.horarios["Geral"];
-    const valorGeral = valorOriginal.toLowerCase();
+        if (valorGeral === "sempre aberto") {
+            horariosHTML = `<div class="badge-aberto">🟢 Sempre Aberto</div>`;
 
-    if (valorGeral === "sempre aberto") {
-        horariosHTML = `<div class="badge-aberto">🟢 Sempre Aberto</div>`;
+        } else if (valorGeral.includes("indefinido")) {
 
-    } else if (valorGeral.includes("autoriza")) {
+            horariosHTML = `<div class="badge-aberto" style="background: rgba(41, 171, 2, 0.3);">🕒 ${valorOriginal}</div>`;
 
-        // Caso especial: frase de evento (sem cadeado)
-        if (valorGeral.includes("dias de evento")) {
-            horariosHTML = `<div class="badge-aberto" style="background:#ff9800;">${valorOriginal}</div>`;
+        } else if (valorGeral.includes("autoriza") || valorGeral.includes("fechado")) {
+            
+            // Mantém o Laranja para avisos de acesso restrito
+            if (valorGeral.includes("dias de evento")) {
+                horariosHTML = `<div class="badge-aberto" style="background: rgba(41, 171, 2, 0.3);">📅 ${valorOriginal}</div>`;
+            } else {
+                horariosHTML = `<div class="badge-aberto" style="background: rgba(41, 171, 2, 0.3);">🔒 ${valorOriginal}</div>`;
+            }
+
         } else {
-            horariosHTML = `<div class="badge-aberto" style="background:#ff9800;">🔒 ${valorOriginal}</div>`;
+            horariosHTML = `<p>${valorOriginal}</p>`;
         }
-
-    } else {
-        horariosHTML = `<p>${valorOriginal}</p>`;
     }
-}
-    // Se tem cursos (salas de aula com múltiplos horários)
+    // Se tem cursos
     else if (dados.cursos && dados.cursos.length > 0) {
         horariosHTML = '<div class="cursos-container">';
         dados.cursos.forEach(curso => {
@@ -683,7 +639,7 @@ if (dados.horarios && dados.horarios["Geral"]) {
         });
         horariosHTML += '</div>';
     }
-    // Se tem horários semanais normais
+    // Se tem horários semanais
     else if (dados.horarios && Object.keys(dados.horarios).length > 0 && !dados.horarios["Geral"]) {
         horariosHTML = '<ul>';
         for (let dia in dados.horarios) {
@@ -694,10 +650,10 @@ if (dados.horarios && dados.horarios["Geral"]) {
     }
     // Fallback
     else {
-        horariosHTML = '<p>Horários não definidos.</p>';
+        horariosHTML = `<div class="badge-aberto" style="background:#607d8b;">🕒 Horário não definido</div>`;
     }
 
-    // Equipamentos (se existir)
+    // --- O restante do código do modal (Equipamentos, Localização, etc) permanece IGUAL ---
     let equipamentosHTML = '';
     if (dados.equipamentos && dados.equipamentos !== '-') {
         equipamentosHTML = `
@@ -708,7 +664,6 @@ if (dados.horarios && dados.horarios["Geral"]) {
         `;
     }
 
-    // Criar elemento modal
     const modal = document.createElement('div');
     modal.className = 'modal';
     modal.style.display = 'flex';
@@ -730,7 +685,7 @@ if (dados.horarios && dados.horarios["Geral"]) {
                 </div>
                 ${equipamentosHTML}
                 <div class="modal-section">
-                    <h3>⏰ HORÁRIOS / CURSOS</h3>
+                    <h3>⏰ HORÁRIOS</h3>
                     ${horariosHTML}
                 </div>
                 <div class="modal-section">
@@ -742,8 +697,6 @@ if (dados.horarios && dados.horarios["Geral"]) {
     `;
 
     document.body.appendChild(modal);
-
-    // Fechar modal
     modal.querySelector('.close-modal').onclick = () => modal.remove();
     modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
 }

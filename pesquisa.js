@@ -496,7 +496,6 @@ const dadosSalas = {
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "Centro de atendimento estudantil - Suporte às atividades acadêmicas.",
-        observacoes: "-"
     },
     "Psicóloga": {
         local: "Sala 03 - Térreo",
@@ -526,7 +525,6 @@ const dadosSalas = {
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "Diretoria de Registro e Controle Acadêmico - Emissão de documentos, matrículas e histórico escolar.",
-        observacoes: "-"
     },
     "Almoxarifado de Material de Expediente": {
         local: "Térreo",
@@ -669,32 +667,34 @@ function mostrarInfoSala(nomeSala) {
     modal.style.display = 'flex';
 
     modal.innerHTML = `
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>${nomeSala}</h2>
-                <span class="close-modal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="modal-section">
-                    <h3>📍 LOCALIZAÇÃO</h3>
-                    <p class="local">${dados.local}</p>
-                </div>
-                <div class="modal-section">
-                    <h3>📝 DESCRIÇÃO</h3>
-                    <p>${dados.descricao}</p>
-                </div>
-                ${equipamentosHTML}
-                <div class="modal-section">
-                    <h3>⏰ HORÁRIOS</h3>
-                    ${horariosHTML}
-                </div>
-                <div class="modal-section">
-                    <h3>⚠️ OBSERVAÇÕES</h3>
-                    <p>${dados.observacoes || '-'}</p>
-                </div>
-            </div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>${nomeSala}</h2>
+            <span class="close-modal">&times;</span>
         </div>
-    `;
+        <div class="modal-body">
+            <div class="modal-section">
+                <h3>📍 LOCALIZAÇÃO</h3>
+                <p class="local">${dados.local}</p>
+            </div>
+            <div class="modal-section">
+                <h3>📝 DESCRIÇÃO</h3>
+                <p>${dados.descricao}</p>
+            </div>
+            ${equipamentosHTML}
+            <div class="modal-section">
+                <h3>⏰ HORÁRIOS</h3>
+                ${horariosHTML}
+            </div>
+            ${dados.observacoes && dados.observacoes !== '' ? `
+            <div class="modal-section">
+                <h3>⚠️ OBSERVAÇÕES</h3>
+                <p>${dados.observacoes}</p>
+            </div>
+            ` : ''}
+        </div>
+    </div>
+`;
 
     document.body.appendChild(modal);
     modal.querySelector('.close-modal').onclick = () => modal.remove();

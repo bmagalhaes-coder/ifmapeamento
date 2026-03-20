@@ -113,3 +113,19 @@ transition:0.2s;
 transform:scale(1.03);
 background:linear-gradient(135deg,#20d600,#13a800);
 }
+/* Configuração para telas de PC/Notebook (geralmente acima de 1024px) */
+@media (min-width: 1024px) {
+    .mapa-container {
+        align-items: center;
+        height: 80vh; /* Limita a altura para não precisar de scroll infinito */
+    }
+
+    .mapa {
+        /* Se a imagem for vertical e você quiser GIRAR para ficar deitada: */
+        transform: rotate(-90deg); 
+        
+        /* Ajustes de tamanho para não cortar ao girar */
+        max-width: 80vh; 
+        height: auto;
+    }
+}

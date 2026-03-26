@@ -118,7 +118,7 @@ background:linear-gradient(135deg,#20d600,#13a800);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Garante que o container não ocupe a tela toda */
+    height: 91vh; /* Garante que o container não ocupe a tela toda */
     padding: 10px;
     overflow: hidden;
 }

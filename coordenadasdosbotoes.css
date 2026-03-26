@@ -1,0 +1,32 @@
+/* Container que segura a imagem e os botões */
+.mapa-container {
+    position: relative; /* FUNDAMENTAL: define a imagem como ponto de referência */
+    display: inline-block; /* Ajusta o tamanho do container ao tamanho da imagem */
+    margin: 20px auto;
+    border: 2px solid #ccc;
+}
+
+.mapa {
+    display: block;
+    max-width: 100%; /* Ajusta a imagem à tela */
+    height: auto;
+}
+
+/* Estilo do botão que será criado pelo JS */
+.botao-sala {
+    position: absolute; /* Permite usar top e left para posicionar */
+    padding: 8px 12px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transform: translate(-50%, -50%); /* Centraliza o botão exatamente no ponto X,Y */
+    transition: transform 0.2s;
+}
+
+.botao-sala:hover {
+    background-color: #e64a19;
+    transform: translate(-50%, -50%) scale(1.1);
+}

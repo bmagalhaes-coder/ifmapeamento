@@ -1,40 +1,37 @@
-// 1. Seleciona o container do seu mapa
-const container = document.querySelector('.mapa-container');
+const botoesTerreo = [
+    // x: da esquerda pro lado, y: do topo pra baixo, w: largura, h: altura, fs: tamanho da fonte (em pixels)
+    { nome: "Sala de\nEstudos", x: 6.7, y: 35.5, w: 18, h: 10, fs: 3, link: "-" },
+    { nome: "Refeitório", x: 36.5, y: 76.7, w: 70, h: 25, fs: 12, link: "-" },
+    { nome: "Biblioteca", x: 10.48, y: 39, w: 70, h: 25, fs: 12, link: "-" }
+];
 
-/**
- * Função para criar um botão em uma coordenada específica
- * @param {number} x - Posição horizontal (em pixels)
- * @param {number} y - Posição vertical (em pixels)
- * @param {string} nome - Texto que aparecerá no botão
- */
-function criarBotaoNoMapa(x, y, nome) {
-    // Cria o elemento
-    const btn = document.createElement('button');
-    
-    // Adiciona a classe que estilizamos no CSS
-    btn.className = 'botao-sala';
-    btn.innerText = nome;
-    
-    // Define a posição baseada nos parâmetros
-    btn.style.left = x + 'px';
-    btn.style.top = y + 'px';
-    
-    // Adiciona uma ação de clique (exemplo)
-    btn.onclick = () => alert(`Você clicou na ${nome}`);
-    
-    // Coloca o botão dentro do mapa
-    container.appendChild(btn);
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector('.mapa-container');
 
-// 2. EXEMPLO: Criando botões em pontos específicos
-// Você deve ajustar esses números (X, Y) conforme o seu desenho
-criarBotaoNoMapa(150, 100, "Sala 01");
+    botoesTerreo.forEach(info => {
+        const btn = document.createElement('button');
+        btn.className = 'ponto-mapa';
+        btn.innerText = info.nome;
 
-// FERRAMENTA DE AJUDA: Clique na imagem e veja a coordenada no console (F12)
-container.addEventListener('click', function(e) {
-    const rect = container.getBoundingClientRect();
-    const x = Math.round(e.clientX - rect.left);
-    const y = Math.round(e.clientY - rect.top);
-    
-    console.log(`Coordenada clicada: criarBotaoNoMapa(${x}, ${y}, "Nova Sala");`);
+        // Posicionamento
+        btn.style.left = `${info.x}%`;
+        btn.style.top = `${info.y}%`;
+
+        // Ajuste de Tamanho do Botão (Largura e Altura)
+        if (info.w) btn.style.width = `${info.w}px`;
+        if (info.h) btn.style.height = `${info.h}px`;
+
+        // --- NOVO: Ajuste do Tamanho da Letra ---
+        if (info.fs) {
+            btn.style.fontSize = `${info.fs}px`;
+        } else {
+            btn.style.fontSize = `12px`; // Tamanho padrão caso esqueça de colocar no JS
+        }
+
+        btn.onclick = () => {
+            if (info.link) window.location.href = info.link;
+        };
+
+        container.appendChild(btn);
+    });
 });

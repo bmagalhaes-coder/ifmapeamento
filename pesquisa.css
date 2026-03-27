@@ -126,7 +126,7 @@ body {
 
 .menu-item:hover {
     background-color: #2eb82e;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .menu-item:active {

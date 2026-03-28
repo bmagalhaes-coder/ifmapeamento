@@ -1,3 +1,9 @@
+.mapa-wrapper {
+    position: relative; /* âncora para os botões absolutos */
+    display: inline-block; /* abraça exatamente a imagem */
+    line-height: 0; /* evita espaço extra embaixo da imagem */
+}
+
 .ponto-mapa {
     position: absolute;
     background-color: rgb(22, 207, 62);
@@ -9,13 +15,12 @@
     transition: transform 0.2s, background-color 0.2s;
     font-weight: bold;
     z-index: 10;
-    
-    /* Centralização do texto */
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    white-space: nowrap; /* Impede que o texto quebre linha */
+    white-space: nowrap;
     padding: 2px 5px;
     box-sizing: border-box;
 }

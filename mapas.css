@@ -12,16 +12,22 @@ min-height:100vh;
 
 /* mapa */
 
-.mapa-container{
-display:flex;
-justify-content:center;
-padding:20px;
+.mapa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 90vh;
+    overflow: hidden;
 }
 
-.mapa{
-width:100%;
-max-width:1000px;
-height:auto;
+.mapa {
+    display: block;      /* remove espaço fantasma do inline */
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 /* BOTÕES DOS ANDARES */

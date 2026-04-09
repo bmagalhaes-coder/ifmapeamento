@@ -27,6 +27,29 @@ const diasSemana = {
 };
 
 const dadosSalas = {
+
+/* --- Banheiros sem botão --- */
+"Banheiro\nFeminino": {
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Sanitário feminino contendo 5 cabines com vasos sanitários e pias com espelhos.",
+        equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
+    },
+    "Banheiro\nMasculino": {
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Sanitário masculino contendo mictórios e cabines com vasos sanitários, pias com espelhos.",
+        equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
+    },
+    "Banheiro F.\nAcessível": {
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Sanitário feminino adaptado com barras de apoio e espaço para manobras com cadeiras de rodas.",
+        equipamentos: "Barras de apoio, campainha de emergência, papel higienico, sabonete líquido, papeleiras, lixeira."
+    },
+    "Banheiro M.\nAcessível": {
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Sanitário masculino adaptado com barras de apoio e espaço para manobras com cadeiras de rodas.",
+        equipamentos: "Barras de apoio, papel higienico, sabonete líquido, papeleiras, lixeira."
+    },
+    
 /* --- 1° ANDAR --- */
     "Copa": {
         local: "1° Andar",

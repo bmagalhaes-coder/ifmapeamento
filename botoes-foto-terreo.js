@@ -27,7 +27,7 @@ const botoesTerreo = [
   { nome: "Laboratório de Química",       x: 55.0, y: 85.0, w: 10.0, h: 3.5, fs: 1.7 },
   { nome: "Laboratório de Biologia",      x: 65.0, y: 85.0, w: 10.0, h: 3.5, fs: 1.7 },
   { nome: "Lab. Desenho Técnico",         x: 75.0, y: 85.0, w: 10.0, h: 3.5, fs: 0.8 },
-  { nome: "Laboratórios de Informática",  x: 85.0, y: 85.0, w: 10.0, h: 3.5, fs: 0.8 },
+  { nome: "Laboratório de Informática",  x: 85.0, y: 85.0, w: 10.0, h: 3.5, fs: 0.8 },
   { nome: "Lab. Produção Mecânica",       x: 85.0, y: 95.0, w: 10.0, h: 3.5, fs: 0.8 }*/
 
   //Bloco B
@@ -43,13 +43,14 @@ const botoesTerreo = [
   { nome: "Banheiro\nMasculino",          x: 67.1,  y: 63.46, w: 5, h: 2.3, fs: 0.9 },
 
   //Bloco C
-  { nome: "SAA",                          x: 83.63, y: 54.7,  w: 5, h: 2.3, fs: 0.9 },
-/*{ nome: "Sala 56",                      x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 58",                      x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 59",                      x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },*/
-  { nome: "Sala 60",                      x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Banheiro\nFeminino",           x: 83.63, y: 69,    w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Banheiro\nMasculino",          x: 83.63, y: 63.17, w: 5, h: 2.3, fs: 0.9 },
+/*{ nome: "Laboratório de Produção Mecânica", x: 83.63, y: 54.7,  w: 5, h: 2.3, fs: 0.9 },*/
+  { nome: "SAA",                              x: 83.63, y: 54.7,  w: 5, h: 2.3, fs: 0.9 },
+/*{ nome: "Laboratório de Soldagem",                          x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 58",                          x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 59",                          x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },*/
+  { nome: "Sala 60",                          x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Banheiro\nFeminino",               x: 83.63, y: 69,    w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Banheiro\nMasculino",              x: 83.63, y: 63.17, w: 5, h: 2.3, fs: 0.9 },
 
   // Banheiros acessíveis próximos ao hall e à cantina
 /*{ nome: "Banheiro F.\nAcessível",     x: 4.93, y: 70.0, w: 10.0, h: 3.5, fs: 0.9 },

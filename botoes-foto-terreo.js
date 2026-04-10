@@ -31,28 +31,28 @@ const botoesTerreo = [
   { nome: "Lab. Produção Mecânica",       x: 85.0, y: 95.0, w: 10.0, h: 3.5, fs: 0.8 }*/
 
   //Bloco B
-  { nome: "Sala 46",                      x: 67.09, y: 47.6,  w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 47",                      x: 67.09, y: 51.7,  w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 48",                      x: 67.09, y: 55.8,  w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 49",                      x: 67.09, y: 60,    w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 50",                      x: 67.09, y: 72.7,  w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 51",                      x: 67.09, y: 77.1,  w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 52",                      x: 67.09, y: 81.4,  w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 53",                      x: 67.09, y: 85.55, w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Banheiro\nFeminino",           x: 67.1,  y: 69.15, w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Banheiro\nMasculino",          x: 67.1,  y: 63.46, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 46",                      x: 67.37, y: 47.63, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 47",                      x: 67.37, y: 51.81, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 48",                      x: 67.37, y: 56.,   w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 49",                      x: 67.37, y: 60.11, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 50",                      x: 67.37, y: 73.1,  w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 51",                      x: 67.37, y: 77.53,  w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 52",                      x: 67.37, y: 81.75,  w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 53",                      x: 67.37, y: 85.9, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Banheiro\nFeminino",           x: 67.37,  y: 69.39, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Banheiro\nMasculino",          x: 67.37,  y: 63.53, w: 5, h: 2.3, fs: 0.9 },
 
   //Bloco C
-/*{ nome: "Laboratório de Produção Mecânica", x: 83.63, y: 54.7,  w: 5, h: 2.3, fs: 0.9 },*/
-  { nome: "SAA",                              x: 83.63, y: 54.7,  w: 5, h: 2.3, fs: 0.9 },
-/*{ nome: "Laboratório de Soldagem",                          x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 58",                          x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Sala 59",                          x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },*/
-  { nome: "Sala 60",                          x: 83.63, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Banheiro\nFeminino",               x: 83.63, y: 69,    w: 5, h: 2.3, fs: 0.9 },
-  { nome: "Banheiro\nMasculino",              x: 83.63, y: 63.17, w: 5, h: 2.3, fs: 0.9 },
+/*{ nome: "Laboratório de Produção Mecânica", x: 83.77, y: 54.7,  w: 5, h: 2.3, fs: 0.9 },*/
+  { nome: "SAA",                              x: 83.77, y: 55.87,  w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Laboratório de Soldagem",          x: 83.77, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 58",                          x: 83.77, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 59",                          x: 83.77, y: 84.25, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Sala 60",                          x: 83.77, y: 81.3, w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Banheiro\nFeminino",               x: 83.77, y: 69.284,    w: 5, h: 2.3, fs: 0.9 },
+  { nome: "Banheiro\nMasculino",              x: 83.77, y: 63.53, w: 5, h: 2.3, fs: 0.9 },
 
-  // Banheiros acessíveis próximos ao hall e à cantina
+  // Banheiros acessíveis ou não próximos ao hall e à cantina
 /*{ nome: "Banheiro F.\nAcessível",     x: 4.93, y: 70.0, w: 10.0, h: 3.5, fs: 0.9 },
   { nome: "Banheiro M.\nAcessível",     x: 4.93, y: 80.0, w: 10.0, h: 3.5, fs: 0.9 },
   { nome: "Banheiro F.\nAcessível",     x: 4.93, y: 70.0, w: 10.0, h: 3.5, fs: 0.9 },

@@ -29,3 +29,9 @@
     background-color: rgb(28, 214, 3);
     transform: translate(-50%, -50%) scale(1.05);
 }
+
+#botao-bege {
+    background-color: #F3F4C7; /* Cor bege da imagem */
+    color: transparent; /* Esconde o "-" se não quiser que apareça texto */
+    border: none;
+}

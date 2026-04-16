@@ -28,26 +28,52 @@ const diasSemana = {
 
 const dadosSalas = {
 
-/* --- Banheiros sem botão --- */
+/* --- Banheiros com chuveiro sem botão proximos a quadra --- */
+"Banheiro F.\ncom chuveiro": {
+        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
+        descricao: "Sanitário feminino contendo 4 chuveiros, 2 pias e 2 cabines com um vaso sanitário em cada uma.",
+        equipamentos: "Papel higienico, sabonete líquido, lixeira."
+    },
+    "Banheiro M.\ncom chuveiro": {
+        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
+        descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
+        equipamentos: "Papel higienico, sabonete líquido, lixeira."
+    },
+
+/* --- Banheiros sem botão proximos ao hall e a cantina --- */
 "Banheiro\nFeminino": {
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário feminino contendo 5 cabines com vasos sanitários e pias com espelhos.",
+        descricao: "Sanitário feminino contendo 5 pias e 5 cabines com um vaso sanitário em cada.",
         equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
     },
     "Banheiro\nMasculino": {
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário masculino contendo mictórios e cabines com vasos sanitários, pias com espelhos.",
+        descricao: "Sanitário masculino contendo mictórios, 5 pias e 5 cabines com um vaso sanitário em cada.",
         equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
     },
+
+/* --- Banheiros adaptados sem botão proximos ao hall e a cantina --- */
     "Banheiro F.\nAcessível": {
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário feminino adaptado com barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Barras de apoio, campainha de emergência, papel higienico, sabonete líquido, papeleiras, lixeira."
+        descricao: "Local com uma pia e um sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
     "Banheiro M.\nAcessível": {
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário masculino adaptado com barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Barras de apoio, papel higienico, sabonete líquido, papeleiras, lixeira."
+        descricao: "Local com uma pia e um sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
+    },
+    
+    /* --- Banheiros sem botão no bloco B e C --- */
+    "Banheiro F.\ne Acessível": {
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Local com 5 cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
+    },
+    "Banheiro M.\ne Acessível": {
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Local com mictórios, cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
     
 /* --- 1° ANDAR --- */
@@ -219,6 +245,15 @@ const dadosSalas = {
         descricao: "Espaço multiuso para apresentações, palestras, formaturas e eventos culturais com capacidade para 200 pessoas.",
         equipamentos: "Projetor, tela retrátil, sistema de som profissional, palco, iluminação cênica, camarins."
     },
+    "Cabine de Controle": {
+        local: "Próximo a lateral do hall de entrada (Térreo)",
+        horarios: {
+            "Geral": "Aberto em dias de evento, fora isso é necessário a autorização do SAA ou de um superior para entrar."
+        },
+        descricao: "Espaço multiuso para apresentações, palestras, formaturas e eventos culturais com capacidade para 200 pessoas.",
+        equipamentos: "Projetor, tela retrátil, sistema de som profissional, palco, iluminação cênica, camarins.",
+        observacoes: "Somente pessoas autorizadas."
+    },
     "Camarim": {
         local: "Na lateral do palco do Cine Teatro (Térreo)",
         horarios: {
@@ -236,12 +271,8 @@ const dadosSalas = {
     },
     "Refeitório": {
         local: "Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "10:00 às 14:00 e 18:00 às 20:00",
-            "Terça": "10:00 às 14:00 e 18:00 às 20:00", "Quarta": "10:00 às 14:00 e 18:00 às 20:00",
-            "Quinta": "10:00 às 14:00 e 18:00 às 20:00", "Sexta": "10:00 às 14:00 e 18:00 às 20:00", "Sábado": "Fechado"
-        },
-        descricao: "Refeitório principal do campus, serve refeições para alunos e servidores.",
+        horarios: {"Geral": "Sempre Aberto"},
+        descricao: "Serve lanches, almoço e jantar aos alunos e servidores.",
         equipamentos: "Mesas coletivas, balcão de distribuição, bebedouros."
     },
     "Lanchonete": {
@@ -263,30 +294,25 @@ const dadosSalas = {
         equipamentos: "Computadores, cadeiras, mesas, estantes, acervo de livros, periódicos e TCCs.",
         observacoes: "Mantenha o silêncio, sem ruídos altos para não retirar a concentração dos outros."
     },
-    "Quadra": {
+    "Quadra\nPoliesportiva": {
         local: "Área Externa",
         horarios: { "Geral": "Conforme cronograma de aulas de Educação Física" },
-        descricao: "Quadra poliesportiva coberta para aulas de educação física, treinos e eventos esportivos.",
+        descricao: "Quadra coberta para diversas aulas práticas de educação física, treinos e eventos esportivos.",
         equipamentos: "Tabelas de basquete, traves de futsal, redes de vôlei, arquibancada.",
         observacoes: "Discentes só podem adentrar o local se um docente também estiver na quadra."
     },
     "Dispensa da Quadra": {
         local: "Área Externa",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "07:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "07:00 às 12:00 e 14:00 às 18:00", "Quarta": "07:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "07:00 às 12:00 e 14:00 às 18:00", "Sexta": "07:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
+        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
         descricao: "Depósito de materiais esportivos e equipamentos da quadra.",
-        equipamentos: "Bolas, coletes, cones, apitos, redes, etc.",
-        observacoes: "Discentes só podem entrar ou retirar algo de dentro com a autorização do docente responsável."
+        equipamentos: "Bolas, coletes, cones, apitos, redes, etc."
     },
     "Dispensa da Cozinha": {
         local: "Anexo interno à cozinha (Térreo)",
         horarios: { "Geral": "Fechado" },
         descricao: "Depósito de alimentos não perecíveis, utensílios e materiais de limpeza da cozinha.",
         equipamentos: "Prateleiras metálicas, freezer, câmara fria.",
-        observacoes: "Só é permitida a entrada de pessoal autorizado."
+        observacoes: "Entrada permitida somente para pessoas autorizadas."
     },
     "Espaço Infantil": {
         local: "Local atrás da escada - Térreo",

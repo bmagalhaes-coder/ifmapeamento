@@ -1,8 +1,8 @@
 const botoesTerreo = [
-    // A
-    { nome: "Livros fora\ndo sistema",      x: 3.6, y: 33.6, w: 2.8, h: 1.6, fs: 0.6 },
-    { nome: "Livros fora\ndo sistema",      x: 3.6, y: 36.3, w: 2.8, h: 1.6, fs: 0.6 },
-    { nome: "Sala de\nEstudos",             x: 3.6, y: 39.1, w: 2.8, h: 1.6, fs: 0.6 },
+    // a esquerda do hall
+    { nome: "Livros fora\ndo sistema",      x: 3.6, y: 33.6, w: 2.8, h: 1.6, fs: 0.5 },
+    { nome: "Livros fora\ndo sistema",      x: 3.6, y: 36.3, w: 2.8, h: 1.6, fs: 0.5 },
+    { nome: "Sala de\nEstudos",             x: 3.6, y: 39.1, w: 2.8, h: 1.6, fs: 0.5 },
     { nome: "Biblioteca",                   x: 7.6, y: 43.0, w: 9.7, h: 3.5, fs: 1.7 },
 
     // Próximo a quadra
@@ -12,14 +12,16 @@ const botoesTerreo = [
     { nome: "Banheiro M.\ncom chuveiro",    x: 59.1,  y: 10.54, w: 8,    h: 2.5,  fs: 1.05 },
     { nome: "Piscina",                      x: 39.7,  y: 10.6, w: 9.7,  h: 4,    fs: 1.7 },
 
+    //a direita do hall
     { nome: "Cine Teatro",                  x: 7.6, y: 91, w: 9.7, h: 3.5, fs: 1.5 },
     { nome: "Cabine de Controle",           x: 7.44, y: 83.15, w: 6, h: 1, fs: 0.6 }, 
     { nome: "Camarim",                      x: 15.5, y: 97.75, w: 3.5, h: 1.2, fs: 0.7 },
 
+    //a frente do hall
     { nome: "Sala de Línguas",              x: 29.9, y: 76.54, w: 6.7, h: 1.8, fs: 0.8 },
     { nome: "Sala de\nrobótica",            x: 35.71, y: 76.45, w: 3.8, h: 1.8, fs: 0.8 },
     { nome: "AEE\nNAPNE",                   x: 39.7, y: 71.15, w: 3.1, h: 1.8, fs: 0.7 },
-    { nome: "Incubadora",                   x: 28.1, y: 73.9, w: 2.99, h: 1.8, fs: 0.8 },
+    { nome: "Incub-\nadora",                   x: 28.1, y: 73.9, w: 2.99, h: 1.8, fs: 0.8 },
     { nome: "Refeitório",                   x: 35.31, y: 86.7, w: 10.0, h: 3.5, fs: 1.7 },
     { nome: "IFCast",                       x: 28.11, y: 71, w: 2.99, h: 1.8, fs: 0.9 },
 
@@ -56,6 +58,9 @@ const botoesTerreo = [
     { nome: "Sala 60",                      x: 83.59, y: 81.3,  w: 5, h: 2.3, fs: 0.8 },
     { nome: "Banheiro F.\ne Acessível",     x: 83.59, y: 69.28, w: 5, h: 2.3, fs: 0.8 },
     { nome: "Banheiro M.\ne Acessível",     x: 83.59, y: 63.53, w: 5, h: 2.3, fs: 0.8 },
+
+    //Bloco D
+    { nome: "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",     x: 96.2, y: 66.85, w: 3, h: 28, fs: 1.2 },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {

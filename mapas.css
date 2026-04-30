@@ -137,14 +137,25 @@ background:linear-gradient(135deg,#20d600,#13a800);
     object-fit: contain;
 }
 
-/* Configuração de Rotação (Apenas onde você quer o mapa deitado) */
 @media (min-width: 768px) { 
-    /* 768px engloba Tablets e PCs */
-    
+    .mapa-container {
+        /* Permite que a imagem rotacionada apareça sem ser cortada */
+        overflow: visible; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .mapa.rotacionar {
         transform: rotate(-90deg);
-        /* Quando giramos, o que era largura vira altura e vice-versa */
-        max-width: 70vh; 
-        max-height: 90vw;
+        
+        /* IMPORTANTE: */
+        /* Como giramos, precisamos limitar a largura da imagem 
+           pela ALTURA disponível na tela (vh) para não cortar. */
+        max-width: 80vh; 
+        max-height: 80vw; /* E a altura pela largura da tela */
+        
+        width: auto;
+        height: auto;
     }
 }

@@ -1,6 +1,16 @@
 const botoesTerreo = [
-    { nome: "Banheiro F.\ne Acessível",                  x: 23.5, y: 91, w: 16, h: 5, fs: 2.33 },
-    { nome: "Banheiro M.\ne Acessível",                  x: 23.5, y: 9.3, w: 16, h: 5, fs: 2.33 },
+    { nome: "Banheiro F.\ne Acessível",                  x: 23.5,  y: 91, w: 16, h: 5, fs: 2.33 },
+    { nome: "Banheiro M.\ne Acessível",                  x: 23.5,  y: 9.3,w: 16, h: 5, fs: 2.33 },
+    { nome: "Copa",                                      x: 42.3,  y: 91, w: 16, h: 5, fs: 2.33 },
+    { nome: "Sala dos\nFuncionários\ne Servidores",      x: 60.33, y: 91, w: 16, h: 6, fs: 2.33 },
+    { nome: "DAP",                                       x: 73,    y: 75, w: 16, h: 5, fs: 2.33 },
+    { nome: "Sala de\nVivência dos\nServidores",         x: 45.6,  y: 75, w: 16, h: 6, fs: 2.33 },
+    { nome: "Coordenação\nSuperior",                     x: 75.6,  y: 60.6, w: 17,h: 5,fs: 2.33 },
+    { nome: "CGP",                                       x: 75.6,  y: 50.7, w: 16,h: 5,fs: 2.33 },
+    { nome: "CAPI/SCDP\nBalcão Digital",                 x: 75.6,  y: 42, w: 17.5,h: 5,fs: 2.33 },
+    { nome: "CCTTII\nCEEC\nCCSAQ",                       x: 79.5,  y: 32.5, w: 11,h: 6,fs: 2.33 },
+    { nome: "Arquivo\nCGP",                              x: 65,    y: 33.9, w: 12,h: 5,fs: 2.33 },
+    { nome: "Coordenações",                              x: 73,    y: 22, w: 18, h: 5, fs: 2.33 },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {

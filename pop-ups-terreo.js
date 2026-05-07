@@ -1,0 +1,1 @@
+// joga aqui a foto da parte do mapa + os botoes do pop up aqui, conecta esse aquivo com terreo.html e botoes-fotos.css

@@ -1,4 +1,4 @@
-const botoesTerreo = [
+/*const botoesTerreo = [
     // a esquerda do hall
     { nome: "Livros fora\ndo sistema",      x: 3.6, y: 33.6, w: 2.8, h: 1.6, fs: 0.5 },
     { nome: "Livros fora\ndo sistema",      x: 3.6, y: 36.3, w: 2.8, h: 1.6, fs: 0.5 },
@@ -58,6 +58,9 @@ const botoesTerreo = [
     { nome: "Sala 60",                      x: 83.59, y: 81.3,  w: 5, h: 2.3, fs: 0.8 },
     { nome: "Banheiro F.\ne Acessível",     x: 83.59, y: 69.28, w: 5, h: 2.3, fs: 0.8 },
     { nome: "Banheiro M.\ne Acessível",     x: 83.59, y: 63.53, w: 5, h: 2.3, fs: 0.8 },
+    { nome: "Banheiro F.\ncom chuveiro",    x: 28.11, y: 71, w: 2.99, h: 1.8, fs: 0.9 }, 
+    { nome: "Banheiro M.\ncom chuveiro",     x: 83.59, y: 63.53, w: 5, h: 2.3, fs: 0.8 },
+
 
     //Bloco D
     { nome: "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",     x: 96.2, y: 66.85, w: 3, h: 28, fs: 1.2 },
@@ -101,4 +104,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
         wrapper.appendChild(btn);
     });
-});
+});*/

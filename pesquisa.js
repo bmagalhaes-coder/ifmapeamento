@@ -27,7 +27,49 @@ const diasSemana = {
 };
 
 const dadosSalas = {
-
+/*salas com botão no mapa com \n, diferente do botão na pesquisa*/
+"Sala dos\nFuncionários\ne Servidores": {
+        local: "1° Andar",
+        horarios: { "Geral": "Sempre Aberto" },
+        descricao: "Área de convivência e apoio para os funcionários terceirizados e servidores da instituição.",
+        equipamentos: "Poltronas, sofás, micro-ondas, cafeteira, frigobar."
+    },  
+"Sala de\nVivência dos\nServidores": {
+        local: "1° Andar",
+        horarios: { "Geral": "Sempre Aberto" },
+        descricao: "Área de convivência para servidores da instituição.",
+        equipamentos: "-"
+    },
+    "Coordenação\nSuperior": {
+        local: "1° Andar",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Gabinete responsável pela articulação e gestão das coordenações de cursos de nível superior e pós-graduação.",
+        observacoes: "Atendimento a coordenadores e docentes da graduação."
+    },
+        "CAPI/SCDP\nBalcão Digital": {
+        local: "Sala 26 - 1° Andar",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
+        equipamentos: "Terminais de atendimento, impressoras e notebooks."
+    },
+        "CCTTII\nCEEC\nCCSAQ": {
+        local: "Sala 25 - 1° Andar",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "CCTTII (Coordenação de Curso Técnico em Informática) <br> CEEC (Coordenação de Especialização em Ensino de Ciências) <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas).",
+        equipamentos: "Computadores de gestão acadêmica e arquivos de planos de ensino."
+    },
+        "Arquivo\nCGP": {
+        local: "Sala 24 - 1° Andar",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Local de guarda e organização de documentos históricos e ativos da Coordenadoria de Gestão de Pessoas.",
+        equipamentos: "Arquivos deslizantes, estantes metálicas e mesas de consulta."
+    },
+        "Coordenações": {
+        local: "Sala 23 - 1° Andar",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Espaço compartilhado entre coordenadores de diferentes eixos tecnológicos para planejamento e atendimento.",
+        equipamentos: "Mesas de reunião, computadores e armários de documentos pedagógicos."
+    },
 /* --- Banheiros com chuveiro sem botão proximos a quadra --- */
 "Banheiro F.\ncom chuveiro": {
         horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },

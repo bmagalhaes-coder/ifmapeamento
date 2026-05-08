@@ -28,6 +28,12 @@ const diasSemana = {
 
 const dadosSalas = {
 /*salas com botão no mapa com \n, diferente do botão na pesquisa*/
+"Servidor\nCTIC": {
+    local: "1° Andar",
+    horarios: { "Geral": "Horário indefinido" },
+    descricao: "Sala técnica que abriga o datacenter, servidores de rede e equipamentos de conectividade central do campus.",
+    equipamentos: "Racks de servidores, switches core, nobreaks de alta capacidade e sistema de climatização de precisão."
+},
 "Sala dos\nFuncionários\ne Servidores": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre Aberto" },

@@ -2,8 +2,8 @@ const salas = [
     "DDE/DAP", "CTIC", "Servidor CTIC", "Coordenações", "Arquivo CGP", "NRH", "CGP", "CAPI/SCDP/Balcão Digital",
     "Sala de Vivência dos Servidores (em construção)", "CCTTII/CEEC/CCSAQ", "DAP", "Sala dos Funcionários e Servidores", 
     "SAA","Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DGP/NGP", "AEE/NAPNE", "Copa", 
-    "Serviço Social", "Banheiros Femininos", "Banheiros Masculinos", "Banheiros Femininos Acessíveis", 
-    "Banheiros Masculinos Acessíveis", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", 
+    "Serviço Social", "Banheiro Feminino com Chuveiro", "Banheiro Masculino com Chuveiro", "Banheiro Feminino e Acessível", 
+    "Banheiro Masculino e Acessível", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", 
     "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", 
     "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Cine Teatro", 
     "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
@@ -27,7 +27,7 @@ const diasSemana = {
 };
 
 const dadosSalas = {
-/*salas com botão no mapa com \n, diferente do botão na pesquisa*/
+/*salas sem botão na pesquisa, mas com botão no mapa por terem \n e abreviações, se não o botão fica grande, para aparecerem no mapa basta alterar a lista de nomes de salas no topo desse arquivo*/
 "Servidor\nCTIC": {
     local: "1° Andar",
     horarios: { "Geral": "Horário indefinido" },
@@ -46,85 +46,63 @@ const dadosSalas = {
         descricao: "Área de convivência para servidores da instituição.",
         equipamentos: "-"
     },
-    "Coordenação\nSuperior": {
+"Coordenação\nSuperior": {
         local: "1° Andar",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "Gabinete responsável pela articulação e gestão das coordenações de cursos de nível superior e pós-graduação.",
         observacoes: "Atendimento a coordenadores e docentes da graduação."
     },
-        "CAPI/SCDP\nBalcão Digital": {
+"CAPI/SCDP\nBalcão Digital": {
         local: "Sala 26 - 1° Andar",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
         equipamentos: "Terminais de atendimento, impressoras e notebooks."
     },
-        "CCTTII\nCEEC\nCCSAQ": {
+"CAPI/SCDP\nBalcão\nDigital": {
+        local: "Sala 26 - 1° Andar",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
+        equipamentos: "Terminais de atendimento, impressoras e notebooks."
+    },
+"CCTTII\nCEEC\nCCSAQ": {
         local: "Sala 25 - 1° Andar",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "CCTTII (Coordenação de Curso Técnico em Informática) <br> CEEC (Coordenação de Especialização em Ensino de Ciências) <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas).",
         equipamentos: "Computadores de gestão acadêmica e arquivos de planos de ensino."
     },
-        "Arquivo\nCGP": {
+"Arquivo\nCGP": {
         local: "Sala 24 - 1° Andar",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "Local de guarda e organização de documentos históricos e ativos da Coordenadoria de Gestão de Pessoas.",
         equipamentos: "Arquivos deslizantes, estantes metálicas e mesas de consulta."
     },
-        "Coordenações": {
-        local: "Sala 23 - 1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "Espaço compartilhado entre coordenadores de diferentes eixos tecnológicos para planejamento e atendimento.",
-        equipamentos: "Mesas de reunião, computadores e armários de documentos pedagógicos."
-    },
-/* --- Banheiros com chuveiro sem botão proximos a quadra --- */
-"Banheiro F.\ncom chuveiro": {
-        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
-        descricao: "Sanitário feminino contendo 4 chuveiros, 2 pias e 2 cabines com um vaso sanitário em cada uma.",
-        equipamentos: "Papel higienico, sabonete líquido, lixeira."
-    },
-    "Banheiro M.\ncom chuveiro": {
-        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
-        descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
-        equipamentos: "Papel higienico, sabonete líquido, lixeira."
-    },
-
-/* --- Banheiros sem botão proximos ao hall e a cantina --- */
-"Banheiro\nFeminino": {
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário feminino contendo 5 pias e 5 cabines com um vaso sanitário em cada.",
-        equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
-    },
-    "Banheiro\nMasculino": {
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário masculino contendo mictórios, 5 pias e 5 cabines com um vaso sanitário em cada.",
-        equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
-    },
-
-/* --- Banheiros adaptados sem botão proximos ao hall e a cantina --- */
-    "Banheiro F.\nAcessível": {
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Local com uma pia e um sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
-    },
-    "Banheiro M.\nAcessível": {
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Local com uma pia e um sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
-        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
-    },
-    
-    /* --- Banheiros sem botão no bloco B e C --- */
     "Banheiro F.\ne Acessível": {
+        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Local com 5 cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
         equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
     "Banheiro M.\ne Acessível": {
+        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Local com mictórios, cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
         equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
-    
-/* --- 1° ANDAR --- */
+    "Banheiro F. com Chuveiro": {
+        local: "Próximo à quadra",
+        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
+        descricao: "Sanitário feminino contendo 4 chuveiros, 2 pias e 2 cabines com um vaso sanitário em cada uma.",
+        equipamentos: "Papel higienico, sabonete líquido, lixeira."
+    },
+
+    "Banheiro M. com Chuveiro": {
+        local: "Próximo à quadra",
+        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
+        descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
+        equipamentos: "Papel higienico, sabonete líquido, lixeira."
+    },
+// salas com botões no mapa e na pesquisa
+// 1° ANDAR
     "Copa": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre aberto" },
@@ -221,7 +199,7 @@ const dadosSalas = {
         descricao: "Departamento de Gestão de Pessoas e Núcleo de Gestão de Pessoas.",
         observacoes: "Centralização de processos relativos à vida funcional do servidor."
     },
-    /* --- TÉRREO --- */
+    /* TÉRREO */
     "AEE/NAPNE": {
         local: "Sala 66 - Térreo",
         horarios: { "Geral": "Horário indefinido" },
@@ -260,30 +238,32 @@ const dadosSalas = {
         equipamentos: "Maca, materiais de primeiros socorros, medicamentos básicos."
     },
 
-    /* --- Banheiros e outras áreas --- */
-    "Banheiros Femininos": {
-        local: "Lateral direita do hall de entrada (Térreo) <br> Lateral direita do 1° andar <br> Lateral esquerda da lanchonete (Térreo) <br> Bloco C",
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário feminino contendo 5 cabines com vasos sanitários e pias com espelhos.",
-        equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
+    // Banheiros e outras áreas
+    "Banheiro Feminino com Chuveiro": {
+        local: "Próximo à quadra",
+        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
+        descricao: "Sanitário feminino contendo 4 chuveiros, 2 pias e 2 cabines com um vaso sanitário em cada uma.",
+        equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
-    "Banheiros Masculinos": {
-        local: "Lateral esquerda do hall de entrada (Térreo) <br> Lateral esquerda do 1° andar <br> Lateral direita da lanchonete (Térreo) <br> Bloco C",
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário masculino contendo mictórios e cabines com vasos sanitários, pias com espelhos.",
-        equipamentos: "Papel higienico, sabonete líquido, papeleiras, lixeiras."
+
+    "Banheiro Masculino com Chuveiro": {
+        local: "Próximo à quadra",
+        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
+        descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
+        equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
-    "Banheiros Femininos Acessíveis": {
-        local: "Lateral direita do hall de entrada (Térreo) <br> Lateral direita do 1° andar <br> Lateral esquerda da lanchonete (Térreo) <br> Bloco C",
+    
+    "Banheiro Feminino e Acessível": {
+        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário feminino adaptado com barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Barras de apoio, campainha de emergência, papel higienico, sabonete líquido, papeleiras, lixeira."
+        descricao: "Local com 5 cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
-    "Banheiros Masculinos Acessíveis": {
-        local: "Lateral esquerda do hall de entrada (Térreo) <br> Lateral esquerda do 1° andar <br> Lateral direita da lanchonete (Térreo) <br> Bloco C",
+    "Banheiro Masculino e Acessível": {
+        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
         horarios: { "Geral": "Sempre aberto" },
-        descricao: "Sanitário masculino adaptado com barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Barras de apoio, papel higienico, sabonete líquido, papeleiras, lixeira."
+        descricao: "Local com mictórios, cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
     "Cine Teatro": {
         local: "Próximo a lateral do hall de entrada (Térreo)",
@@ -369,7 +349,7 @@ const dadosSalas = {
         equipamentos: "Brinquedos educativos, livros infantis, mesas e cadeiras infantis."
     },
 
-    /* --- Laboratórios do bloco A --- */
+    //Laboratórios do bloco A
     "Laboratório de Máquinas Elétricas": {
         local: "Sala 36 - Bloco A - Térreo",
         horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
@@ -425,7 +405,7 @@ const dadosSalas = {
         equipamentos: "Computadores, televisões, gabinetes, mouses e teclados em ambas as salas, totalizando aproximadamente 80 máquinas."
     },
 
-    /* --- Salas de aula do bloco B e C --- */
+    // Salas de aula do bloco B e C
     "Sala 46": {
         local: "Bloco B - Térreo",
         descricao: "Sala de aula teórica.",
@@ -636,7 +616,7 @@ const dadosSalas = {
   
 };
 
-// --- FUNÇÕES DE INICIALIZAÇÃO E FILTRO ---
+//FUNÇÕES DE INICIALIZAÇÃO E FILTRO
 function renderizarSalas() {
     menuList.innerHTML = '';
     // Ordena as salas em ordem alfabética
@@ -650,13 +630,56 @@ function renderizarSalas() {
 }
 
 function filtrar() {
-    const termo = normalizar(searchInput.value);
+    const termo = normalizar(searchInput.value.trim());
     const botoes = document.querySelectorAll('.menu-item');
     let encontrados = 0;
 
     botoes.forEach(btn => {
-        const nomeSala = normalizar(btn.textContent);
-                if (nomeSala.includes(termo)) {
+        const nomeSala = btn.textContent;
+        const dados = dadosSalas[nomeSala] || {};
+
+        // Junta TODOS os textos pesquisáveis
+        let textoPesquisa = nomeSala;
+
+        // descrição
+        if (dados.descricao) {
+            textoPesquisa += ' ' + dados.descricao;
+        }
+
+        // equipamentos
+        if (dados.equipamentos) {
+            textoPesquisa += ' ' + dados.equipamentos;
+        }
+
+        // observações
+        if (dados.observacoes) {
+            textoPesquisa += ' ' + dados.observacoes;
+        }
+
+        // localização
+        if (dados.local) {
+            textoPesquisa += ' ' + dados.local;
+        }
+
+        // cursos
+        if (dados.cursos) {
+            dados.cursos.forEach(curso => {
+                textoPesquisa += ' ' + curso.nome;
+            });
+        }
+
+        // horários
+        if (dados.horarios) {
+            for (let dia in dados.horarios) {
+                textoPesquisa += ' ' + dia + ' ' + dados.horarios[dia];
+            }
+        }
+
+        // normaliza tudo
+        textoPesquisa = normalizar(textoPesquisa);
+
+        // verifica busca
+        if (textoPesquisa.includes(termo)) {
             btn.classList.remove('hidden');
             encontrados++;
         } else {
@@ -664,7 +687,9 @@ function filtrar() {
         }
     });
 
+    // mensagem de nenhum resultado
     const erroExistente = document.querySelector('.sem-resultados');
+
     if (encontrados === 0 && searchInput.value.length > 0) {
         if (!erroExistente) {
             const msg = document.createElement('div');
@@ -676,15 +701,14 @@ function filtrar() {
         erroExistente.remove();
     }
 }
-
-// --- FUNÇÕES AUXILIARES DE DATA ---
+// FUNÇÕES AUXILIARES DE DATA
 function getDiaAtual() {
     const hoje = new Date();
     const diaIngles = hoje.toLocaleDateString('en-US', { weekday: 'long' });
     return diasSemana[diaIngles];
 }
 
-// --- FUNÇÃO DO POP-UP (MODAL) ---
+// FUNÇÃO DO POP-UP (MODAL)
 function mostrarInfoSala(nomeSala) {
     const dados = dadosSalas[nomeSala] || {
         local: "Informações não disponíveis",
@@ -748,7 +772,7 @@ function mostrarInfoSala(nomeSala) {
         horariosHTML = `<div class="badge-aberto" style="background:#607d8b;">🕒 Horário não definido</div>`;
     }
 
-    // --- O restante do código do modal (Equipamentos, Localização, etc) permanece IGUAL ---
+    // O restante do código do modal (Equipamentos, Localização, etc) permanece IGUAL
     let equipamentosHTML = '';
     if (dados.equipamentos && dados.equipamentos !== '-') {
         equipamentosHTML = `
@@ -798,7 +822,7 @@ function mostrarInfoSala(nomeSala) {
     modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
 }
 
-// --- EVENTOS ---
+// EVENTOS
 searchInput.addEventListener('input', filtrar);
 clearBtn.addEventListener('click', () => {
     searchInput.value = '';

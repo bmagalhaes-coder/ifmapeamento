@@ -10,7 +10,7 @@ const botoesGirado = [
     { nome: "CAPI/SCDP\nBalcão\nDigital", x: 35.67, y: 35.6, w: 13, h: 5, fs: 1 },
     { nome: "CCTTII\nCEEC\nCCSAQ", x: 18.5, y: 33.5, w: 12, h: 5, fs: 1 },
     { nome: "Arquivo\nCGP", x: 21.7, y: 41.5, w: 10.5, h: 5, fs: 1 },
-    { nome: "Coordenações", x: 0.2, y: 37.5, w: 15.8, h: 3, fs: 1 },
+    { nome: "Coordenações", x: 0.2, y: 37.5, w: 15.8, h: 3, fs: 0.8 },
     { nome: "CTIC", x: -22.5, y: 43, w: 12, h: 3.5, fs: 1.2 },
     { nome: "Servidor\nCTIC", x: -29.57, y: 35, w: 12, h: 4.5, fs: 1 },
     { nome: "DDE/DAP", x: -22.5, y: 54.1, w: 15, h: 3.5, fs: 1.2 },

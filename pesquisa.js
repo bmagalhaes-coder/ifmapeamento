@@ -601,7 +601,7 @@ const dadosSalas = {
             "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
-        descricao: "Diretoria de Registro e Controle Acadêmico - Emissão de documentos, matrículas e histórico escolar.",
+        descricao: "Diretoria de Registro e Controle Acadêmico - Emissão de documentos, matrículas e histórico escolar, qualquer problema com documentação deve ser resolvido aqui, como no caso da entrega de boletins e históricos escolares.",
     },
     "Almoxarifado de Material de Expediente": {
         local: "Térreo",

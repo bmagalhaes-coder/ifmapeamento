@@ -1,3 +1,4 @@
+//coordenadas dos botões que mostram os pop-ups com os recortes  do mapa do terreo
 const botoesparaverpopup = [
     {
         nome: "B",

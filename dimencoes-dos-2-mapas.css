@@ -159,3 +159,20 @@ background:linear-gradient(135deg,#20d600,#13a800);
         height: auto;
     }
 }
+
+/* impede o zoom exagerado SOMENTE no térreo */
+
+@media (min-width: 768px){
+
+    .mapa-terreo{
+        max-width: 100% !important;
+        max-height: 85vh !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        transform: none !important;
+        object-fit: contain;
+    }
+
+}

@@ -101,6 +101,13 @@ const dadosSalas = {
         descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
         equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
+
+    "Livros fora\ndo sistema": {
+        local: "Próximo à quadra",
+        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
+        equipamentos: "Papel higienico, sabonete líquido, lixeira."
+    },
 // salas com botões no mapa e na pesquisa
 // 1° ANDAR
     "Copa": {

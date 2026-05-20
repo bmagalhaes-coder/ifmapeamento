@@ -180,3 +180,42 @@
 
     background: #2fb300;
 }
+
+.ponto-mapa-terreo{
+    background: transparent !important;
+    color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.ponto-mapa-terreo:hover{
+    background: transparent !important;
+    color: transparent !important;
+    transform: translate(-50%, -50%) !important;
+    box-shadow: none !important;
+}
+
+/* botões sobre as imagens dos popups */
+
+.popup-conteudo{
+    position: relative;
+}
+
+.botao-popup{
+
+    position: absolute;
+
+    background: rgb(61, 221, 21);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    z-index: 10000;
+
+    cursor: pointer;
+
+    transform: translate(-50%, -50%);
+}

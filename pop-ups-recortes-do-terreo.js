@@ -1,105 +1,70 @@
-//coordenadas dos botões que mostram os pop-ups com os recortes  do mapa do terreo
+// ==========================================
+// BOTÕES SOBRE OS RECORTES DO MAPA DO TÉRREO
+// ==========================================
+
 const botoesparaverpopup = [
-    {
-        nome: "B",
-        x: 7.55,
-        y: 41.7,
-        w: 12,
-        h: 20,
-        imagem: "imagens/biblioteca.png"
-    },
 
-    {
-        nome: "Q",
-        x: 55.85,
-        y: 9.9,
-        w: 58.7,
-        h: 20.3,
-        imagem: "imagens/quadra.png"
-    },
+    { nome:"B",  x:7.55, y:41.7,  w:12,   h:20,   imagem:"imagens/biblioteca.png" },
+    { nome:"Q",  x:55.85,y:9.9,   w:58.7, h:20.3, imagem:"imagens/quadra.png" },
+    { nome:"ci", x:9.99, y:90.4,  w:16.5, h:20,   imagem:"imagens/cineteatro.png" },
+    { nome:"H",  x:9.8,  y:65.86, w:19.5, h:23,   imagem:"imagens/hall.png" },
+    { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   imagem:"imagens/cantina.png" },
+    { nome:"R",  x:35,   y:86.5,  w:14,   h:11.5, imagem:"imagens/refeitorio.png" },
+    { nome:"AB", x:60.7, y:66.6,  w:24,   h:45.6, imagem:"imagens/blocoAeB.png" },
+    { nome:"CD", x:89.5, y:66.5,  w:23,   h:34,   imagem:"imagens/blocoCeD.png" },
 
-    {
-        nome: "ci",
-        x: 9.99,
-        y: 90.4,
-        w: 16.5,
-        h: 20,
-        imagem: "imagens/cineteatro.png"
-    },
-
-    {
-        nome: "H",
-        x: 9.8,
-        y: 65.86,
-        w: 19.5,
-        h: 23,
-        imagem: "imagens/hall.png"
-    },
-
-    {
-        nome: "Ca",
-        x: 34,
-        y: 65.89,
-        w: 16.5,
-        h: 25,
-        imagem: "imagens/cantina.png"
-    },
-
-    {
-        nome: "R",
-        x: 35,
-        y: 86.5,
-        w: 14,
-        h: 11.5,
-        imagem: "imagens/refeitorio.png"
-    },
-
-    {
-        nome: "AB",
-        x: 60.7,
-        y: 66.6,
-        w: 24,
-        h: 45.6,
-        imagem: "imagens/blocoAeB.png"
-    },
-
-    {
-        nome: "CD",
-        x: 89.5,
-        y: 66.5,
-        w: 23,
-        h: 34,
-        imagem: "imagens/blocoCeD.png"
-    }
 ];
+
+// ====================================================
+// BOTÕES DAS SALAS SOBRE OS RECORTES DO MAPA DO TERREO 
+// ====================================================
+
+const botoesDosPopups = {
+
+    "imagens/cineteatro.png": [
+        { nome:"Cine Teatro",            x:40.5, y:55, w:36, h:9, fs:24 },
+        { nome:"Camarim",                x:78.25, y:89.3, w:15, h:6, fs:13 },
+        { nome:"Cabine de Controle",     x:40.1, y:15.08, w:32, h:5, fs:13 },
+    ],
+
+    "imagens/biblioteca.png": [
+        { nome:"Biblioteca",                x:48, y:55, w:46, h:9, fs:24 },
+        { nome: "Livros fora\ndo sistema",  x: 19, y: 10.3, w: 21, h: 7, fs: 10},
+        { nome: "Livros fora\ndo sistema",  x: 19, y: 23.5, w: 21, h: 7, fs: 10},
+        { nome: "Sala de\nEstudos",         x: 19, y: 37, w: 21.1, h: 7, fs: 10},
+    ]
+
+};
+
+// ======================================
+// INÍCIO
+// ======================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.querySelector('.mapa-container');
-    const img = container.querySelector('.mapa');
+    const img = document.querySelector('.mapa');
 
-    // Wrapper
+    // wrapper
     const wrapper = document.createElement('div');
+
     wrapper.className = 'mapa-wrapper';
 
     img.parentNode.insertBefore(wrapper, img);
+
     wrapper.appendChild(img);
 
-    // ======================================
-    // CRIA POPUP
-    // ======================================
-
+    // popup
     const popup = document.createElement('div');
+
     popup.className = 'popup-mapa';
 
     popup.innerHTML = `
         <div class="popup-conteudo">
 
-            <button class="fechar-popup">
-             X
-            </button>
+            <button class="fechar-popup">X</button>
 
-            <img class="imagem-popup" src="" alt="Mapa ampliado">
+            <img class="imagem-popup">
 
         </div>
     `;
@@ -107,50 +72,104 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(popup);
 
     const imagemPopup = popup.querySelector('.imagem-popup');
-    const fecharPopup = popup.querySelector('.fechar-popup');
+    const popupConteudo = popup.querySelector('.popup-conteudo');
 
-    // Fecha popup
-    fecharPopup.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
+    // ======================================
+    // FECHAR POPUP
+    // ======================================
 
-    // Fecha clicando fora
-    popup.addEventListener('click', (e) => {
-        if (e.target === popup) {
+    popup.querySelector('.fechar-popup')
+        .addEventListener('click', () => {
+
             popup.classList.remove('ativo');
+
+        });
+
+    popup.addEventListener('click', e => {
+
+        if(e.target === popup){
+
+            popup.classList.remove('ativo');
+
         }
+
     });
 
     // ======================================
-    // CRIA BOTÕES
+    // FUNÇÃO CRIAR BOTÃO
+    // ======================================
+function criarBotao(info, classe){
+
+    const btn = document.createElement('button');
+
+    btn.className = classe;
+
+    btn.innerText = info.nome;
+
+    btn.style.left = `${info.x}%`;
+    btn.style.top = `${info.y}%`;
+    btn.style.width = `${info.w}%`;
+    btn.style.height = `${info.h}%`;
+
+    if(info.fs){
+        btn.style.fontSize = `${info.fs}px`;
+    }
+
+    btn.style.fontWeight = 'bold';
+    
+
+    return btn;
+}
+    // ======================================
+    // BOTÕES DO MAPA
     // ======================================
 
     botoesparaverpopup.forEach(info => {
 
-        const btn = document.createElement('button');
+        const btn = criarBotao(
+            info,
+            'ponto-mapa ponto-mapa-terreo'
+        );
 
-        btn.className = 'ponto-mapa';
-        btn.innerText = info.nome;
-
-        btn.style.left = `${info.x}%`;
-        btn.style.top = `${info.y}%`;
-        btn.style.width = `${info.w}%`;
-        btn.style.height = `${info.h}%`;
-
-        // Clique
         btn.addEventListener('click', () => {
 
             imagemPopup.src = info.imagem;
 
+            // remove antigos
+            popup.querySelectorAll('.botao-popup')
+                .forEach(btn => btn.remove());
+
+            // pega botões da imagem
+            const botoes = botoesDosPopups[info.imagem];
+
+            // cria botões do popup
+            if(botoes){
+
+                botoes.forEach(infoBtn => {
+
+                    const novoBotao = criarBotao(
+                        infoBtn,
+                        'botao-popup'
+                    );
+
+                    popupConteudo.appendChild(novoBotao);
+
+                });
+
+            }
+
             popup.classList.add('ativo');
+
         });
 
         wrapper.appendChild(btn);
+
     });
+
 });
 
 
-/*const botoesTerreo = [
+/*const botoesTerreo = [ 
     // a esquerda do hall
     { nome: "Livros fora\ndo sistema",      x: 3.6, y: 33.6, w: 2.8, h: 1.6, fs: 0.5 },
     { nome: "Livros fora\ndo sistema",      x: 3.6, y: 36.3, w: 2.8, h: 1.6, fs: 0.5 },
@@ -216,44 +235,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Bloco D
     { nome: "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",     x: 96.2, y: 66.85, w: 3, h: 28, fs: 1.2 },
-];
-
-document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector('.mapa-container');
-    const img = container.querySelector('.mapa');
-
-    // Cria o wrapper para conter a imagem e os botões
-    const wrapper = document.createElement('div');
-    wrapper.className = 'mapa-wrapper';
-    img.parentNode.insertBefore(wrapper, img);
-    wrapper.appendChild(img);
-
-    botoesTerreo.forEach(info => {
-        const btn = document.createElement('button');
-        btn.className = 'ponto-mapa';
-        btn.innerText = info.nome;
-
-        // Lógica para o botão bege específico
-        if (info.nome === "-") {
-            btn.id = "botao-bege";
-        }
-
-        // Posicionamento e dimensões
-        btn.style.left = `${info.x}%`;
-        btn.style.top = `${info.y}%`;
-        btn.style.width = `${info.w}%`;
-        btn.style.height = `${info.h}%`;
-        btn.style.fontSize = `${info.fs}vw`;
-
-        // Evento de clique
-        btn.onclick = () => {
-            if (typeof mostrarInfoSala === 'function') {
-                mostrarInfoSala(info.nome);
-            } else {
-                console.error("Função mostrarInfoSala não encontrada!");
-            }
-        };
-
-        wrapper.appendChild(btn);
-    });
-});*/
+];*/

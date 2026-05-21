@@ -22,9 +22,9 @@ const botoesparaverpopup = [
 const botoesDosPopups = {
 
     "imagens/cineteatro.png": [
-        { nome:"Cine Teatro",            x:40.5, y:55, w:36, h:9, fs:24 },
-        { nome:"Camarim",                x:78.25, y:89.3, w:15, h:6, fs:13 },
-        { nome:"Cabine de Controle",     x:40.1, y:15.08, w:32, h:5, fs:13 },
+        { nome:"Cine Teatro",            x:40.5, y:53, w:36, h:9, fs:24 },
+        { nome:"Camarim",                x:78.8, y:89.9, w:15, h:6, fs:13 },
+        { nome:"Cabine de Controle",     x:40.1, y:14.44, w:32, h:5, fs:13 },
     ],
 
     "imagens/biblioteca.png": [
@@ -32,7 +32,59 @@ const botoesDosPopups = {
         { nome: "Livros fora\ndo sistema",  x: 19, y: 10.3, w: 21, h: 7, fs: 10},
         { nome: "Livros fora\ndo sistema",  x: 19, y: 23.5, w: 21, h: 7, fs: 10},
         { nome: "Sala de\nEstudos",         x: 19, y: 37, w: 21.1, h: 7, fs: 10},
-    ]
+    ],
+
+    "imagens/blocoAeB.png": [
+        { nome:"Lab. de\nMáquinas\nElétricas",           x:22.87, y:6.5, w:20, h:6.5, fs:12 },
+        { nome:"Lab. de\nMedidas\nElétricas",            x:22.87, y:15.25, w:20, h:6.5, fs:12 },
+        { nome:"Lab. de\nFísica e\nEletrônica",          x:22.87, y:24.1, w:20, h:6.5, fs:12 },
+        { nome:"Lab. de\nInformática\n(Superior)",       x:22.87, y:33.1, w:20, h:6.5, fs:12 },
+        { nome:"Fábrica de\nInovações",                  x:22.87, y:42, w:20, h:4.5, fs:12},
+        { nome:"Lab. de\nQuímica",                       x:22.87, y:57.1, w:20, h:4.5, fs:12 },
+        { nome:"Lab. de\nBiologia",                      x:22.87, y:65.7, w:20, h:4.5, fs:12 },
+        { nome:"Lab. de\nDesenho\nTécnico",              x:22.87, y:74.3, w:20, h:4.5, fs:12 },
+        { nome:"Lab. de\nInformática",                   x:22.87, y:83.5, w:20, h:4.5, fs:12 },
+        { nome:"Lab. de\nInformática",                   x:22.87, y:93.1, w:20, h:4.5, fs:12},
+
+        { nome:"Sala 46",                       x:77, y:9.5, w:17, h:3, fs:12},
+        { nome:"Sala 47",                       x:77, y:18.5, w:17, h:3, fs:12},
+        { nome:"Sala 48",                       x:77, y:27.2, w:17, h:3, fs:12},
+        { nome:"Sala 49",                       x:77, y:35.9, w:17, h:3, fs:12},
+        { nome:"Banheiro M.\ne Acessível",      x:77, y:43.1, w:20, h:4.75, fs:12},
+        { nome:"Banheiro F.\ne Acessível",      x:77, y:55.6, w:20, h:4.75, fs:12},
+        { nome:"Sala 50",                       x:77, y:63.56, w:17, h:3, fs:12},
+        { nome:"Sala 51",                       x:77, y:72.5, w:17, h:3, fs:12},
+        { nome:"Sala 52",                       x:77, y:81.6, w:17, h:3, fs:12},
+        { nome:"Sala 53",                       x:77, y:90.6, w:17, h:3, fs:12},
+    ],
+
+    "imagens/blocoCeD.png": [
+        { nome:"Lab. de\nProdução\nMecânica",  x:25.09, y:8, w:20, h:7.8, fs:15 },
+        { nome:"SAA",                          x:25.09, y:18.7, w:20, h:4.5, fs:15 },
+        { nome:"Lab. de\nSoldagem",            x:25.09, y:31, w:20, h:6.5, fs:15 },
+        { nome:"Banheiro M.\ne Acessível",     x:25.09, y:40.9, w:21, h:6.5, fs:15 },
+        { nome:"Banheiro F.\ne Acessível",     x:25.09, y:57.32, w:21, h:6.5, fs:15 },
+        { nome:"Sala 58",                      x:25.09, y:67.6, w:20, h:4.5, fs:15 },
+        { nome:"Sala 59",                      x:25.09, y:79.45, w:20, h:4.5, fs:15 },
+        { nome:"Sala 60",                      x:25.09, y:92, w:20, h:4.5, fs:15 },
+        { nome: "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",     x:82.4, y:50.5, w:12, h:67, fs:20},
+    ],
+
+    "imagens/refeitorio.png": [
+        { nome: "Refeitório",     x:58, y:50.6, w:49, h:20, fs:30},
+    ],
+
+    "imagens/quadra.png": [
+        { nome: "-",     x:58, y:50.6, w:49, h:20, fs:30},
+    ],
+
+    "imagens/hall.png": [
+        { nome: "-",     x:58, y:50.6, w:49, h:20, fs:30},
+    ],
+
+    "imagens/cantina.png": [
+        { nome: "-",     x:58, y:50.6, w:49, h:20, fs:30},
+    ],
 
 };
 

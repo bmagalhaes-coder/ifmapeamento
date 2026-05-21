@@ -28,6 +28,12 @@ const diasSemana = {
 
 const dadosSalas = {
 /*salas sem botão na pesquisa, mas com botão no mapa por terem \n e abreviações, se não o botão fica grande, para aparecerem no mapa basta alterar a lista de nomes de salas no topo desse arquivo*/
+"B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO": {
+    local: "Térreo",
+    horarios: { "Geral": "Horário indefinido" },
+    descricao: "Bloco com os futuros novos laboratórios para os cursos técnicos e superiores.",
+    equipamentos: "-"
+},
 "Servidor\nCTIC": {
     local: "1° Andar",
     horarios: { "Geral": "Horário indefinido" },
@@ -40,7 +46,7 @@ const dadosSalas = {
         descricao: "Área de convivência e apoio para os funcionários terceirizados e servidores da instituição.",
         equipamentos: "Poltronas, sofás, micro-ondas, cafeteira, frigobar."
     },  
-"Sala de\nVivência dos\nServidores": {
+"Sala de Vivência\ndos Servidores\n(em construção)": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre Aberto" },
         descricao: "Área de convivência para servidores da instituição.",

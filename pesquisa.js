@@ -1,6 +1,6 @@
 const salas = [
     "DDE/DAP", "CTIC", "Servidor CTIC", "Coordenações", "Arquivo CGP", "NRH", "CGP", "CAPI/SCDP/Balcão Digital",
-    "Sala de Vivência dos Servidores (em construção)", "CCTTII/CEEC/CCSAQ", "DAP", "Sala dos Funcionários e Servidores", 
+    "Sala de Vivência dos Servidores\n(em construção)", "CCTTII/CEEC/CCSAQ", "DAP", "Sala dos Funcionários e Servidores", 
     "SAA","Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DGP/NGP", "AEE/NAPNE", "Copa", 
     "Serviço Social", "Banheiro Feminino com Chuveiro", "Banheiro Masculino com Chuveiro", "Banheiro Feminino e Acessível", 
     "Banheiro Masculino e Acessível", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", 
@@ -10,7 +10,7 @@ const salas = [
     "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60",
     "Psicóloga", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
     "Sala de Línguas", "Incubadora", "E - Games", "CAE", "Psicóloga","Protocolo com almoxarifado","DPG/NPGP",
-    "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior",
+    "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", "Sala dos Professores\nDERI/PRONATEC/NPPG", "Bloco em Construção", "Diretoria",
 ];
 
 const searchInput = document.getElementById('searchInput');
@@ -28,6 +28,41 @@ const diasSemana = {
 
 const dadosSalas = {
 /*salas sem botão na pesquisa, mas com botão no mapa por terem \n e abreviações, se não o botão fica grande, para aparecerem no mapa basta alterar a lista de nomes de salas no topo desse arquivo*/
+"Sala dos\nProfessores/DERI\nPRONATEC/NPPG": {
+    local: "Sala 14 - Térreo",
+    horarios: { "Geral": "Horário indefinido" },
+    descricao: "-",
+    equipamentos: "-"
+},
+"Protocolo\ncom almoxarifado": {
+    local: "Sala 08 - Térreo",
+    horarios: {
+        "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
+        "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
+        "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
+    },
+    descricao: "Setor de protocolo e almoxarifado - Recebimento e expedição de documentos e materiais.",
+    equipamentos: "Estantes para arquivamento, balcão de atendimento."
+},
+"DRCA/Controle\nAcadêmico": {
+    local: "Sala 10 - Térreo",
+    horarios: {
+        "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
+        "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
+        "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
+    },
+    descricao: "Diretoria de Registro e Controle Acadêmico - Emissão de documentos, matrículas e histórico escolar, qualquer problema com documentação deve ser resolvido aqui, como no caso da entrega de boletins e históricos escolares.",
+},
+"Almoxarifado\nde Material\nde Expediente": {
+    local: "Térreo",
+    horarios: {
+        "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
+        "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
+        "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
+    },
+    descricao: "Armazenamento e distribuição de materiais de expediente para os setores do campus.",
+    equipamentos: "Prateleiras, estoque de papel, canetas, pastas e materiais diversos."
+},
 "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO": {
     local: "Térreo",
     horarios: { "Geral": "Horário indefinido" },
@@ -158,7 +193,7 @@ const dadosSalas = {
         descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
         equipamentos: "Terminais de atendimento, impressoras e notebooks."
     },
-    "Sala de Vivência dos Servidores (em construção)": {
+    "Sala de Vivência dos Servidores\n(em construção)": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Espaço em fase de implementação destinado à integração, repouso e lazer dos servidores durante intervalos.",
@@ -213,6 +248,18 @@ const dadosSalas = {
         observacoes: "Centralização de processos relativos à vida funcional do servidor."
     },
     /* TÉRREO */
+    "Bloco em Construção": {
+    local: "Térreo",
+    horarios: { "Geral": "Horário indefinido" },
+    descricao: "Bloco com os futuros novos laboratórios para os cursos técnicos e superiores.",
+    equipamentos: "-"
+},
+    "Sala dos Professores\nDERI/PRONATEC/NPPG": {
+        local: "Sala 07 - Térreo",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "-",
+        equipamentos: "-"
+    },
     "AEE/NAPNE": {
         local: "Sala 66 - Térreo",
         horarios: { "Geral": "Horário indefinido" },
@@ -229,7 +276,7 @@ const dadosSalas = {
         observacoes: "Local de armazenamento de itens perdidos no campus. Qualquer objeto achado de titular desconhecido deve ser entregue neste departamento."
     },
     "Serviço Social": {
-        local: "Sala 13 - Térreo",
+        local: "Sala 06 - Térreo",
         horarios: {
             "Domingo": "Fechado", "Segunda": "07:00 às 12:00 e 14:00 às 22:00",
             "Terça": "07:00 às 12:00 e 14:00 às 22:00", "Quarta": "07:00 às 12:00 e 14:00 às 22:00",
@@ -239,18 +286,23 @@ const dadosSalas = {
         equipamentos: "Mobiliário para atendimento individual sigiloso, computadores e telefone."
     },
     "Psicóloga": {
-        local: "Térreo",
+        local: "Sala ? - Térreo",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "Atendimento psicológico para estudantes e servidores.",
         observacoes: "Atendimento confidencial."
     },
     "Setor Médico": {
-        local: "Térreo",
+        local: "Sala ? - Térreo",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "Criado para o atendimento médico básico e primeiros socorros.",
         equipamentos: "Maca, materiais de primeiros socorros, medicamentos básicos."
     },
-
+    "Diretoria": {
+        local: "Sala ? - Térreo",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "-",
+        equipamentos: "-"
+    },
     // Banheiros e outras áreas
     "Banheiro Feminino com Chuveiro": {
         local: "Próximo à quadra",

@@ -75,15 +75,37 @@ const botoesDosPopups = {
     ],
 
     "imagens/quadra.png": [
-        { nome: "-",     x:58, y:50.6, w:49, h:20, fs:30},
+        { nome: "Quadra\nPoliesportiva",     x:82.4, y:50.6, w:20.5, h:20.5, fs:12 },
+        { nome: "Dispensa\nda Quadra",       x:55.91, y:36.2, w:13, h:10, fs:8 },
+        { nome: "Banheiro F.\ncom chuveiro", x:55.91, y:49.7, w:13, h:10, fs:8 },
+        { nome: "Banheiro M.\ncom chuveiro", x:55.91, y:64.5, w:13, h:10, fs:8 },
+        { nome: "Piscina",                   x:24.5, y:50.3, w:14, h:14, fs:12 },
     ],
 
     "imagens/hall.png": [
-        { nome: "-",     x:58, y:50.6, w:49, h:20, fs:30},
+        { nome:"Banheiro M.\ne Acessível",                  x:44.7, y:10, w:15, h:4, fs:8 },
+        { nome:"E - Games",                                 x:62.1, y:10, w:15, h:4, fs:10 },
+        { nome:"Psicóloga",                                 x:83.2, y:10, w:15, h:4, fs:8 },
+        { nome:"Setor Médico",                              x:83.2, y:10, w:15, h:4, fs:8 },
+        { nome:"Serviço Social",                            x:86.9, y:22, w:15, h:4, fs:8 },
+        { nome:"Sala dos\nProfessores/DERI\nPRONATEC/NPPG", x:86.98, y:31.45, w:16, h:6.5, fs:7 },
+        { nome:"Protocolo com\nalmoxarifado",               x:86.9, y:41, w:15, h:4, fs:8 },
+        { nome:"DRCA/Controle\nAcadêmico",                  x:86.9, y:62.4, w:15, h:4, fs:8 },
+        { nome:"Fechada",                                   x:86.9, y:72, w:15, h:4, fs:9 },
+        { nome:"Almoxarifado\nde Material\nde Expediente",  x:83.2, y:90, w:16, h:6, fs:8 },
+        { nome:"Diretoria",                                 x:62.2, y:90, w:15, h:4, fs:8 },
+        { nome:"Banheiro F.\ne Acessível",                  x:44.7, y:90, w:15, h:4, fs:8 },
     ],
 
     "imagens/cantina.png": [
-        { nome: "-",     x:58, y:50.6, w:49, h:20, fs:30},
+        { nome: "Cantina",                  x:49.5, y:15, w:26, h:4.9, fs:20},
+        { nome: "Sala de Línguas",          x:59.97, y:89.66, w:21, h:6.5, fs:14},
+        { nome: "Sala de Robótica",         x:26.3, y:89.66, w:37, h:5.5, fs:14},
+        { nome: "AEE\nNAPNE",               x:83.48, y:67.7, w:20, h:8, fs:14},
+        { nome: "Incubadora",               x:16.65, y:78.4, w:20.7, h:4.9, fs:12},
+        { nome: "IFCast",                   x:16.65, y:65.9, w:20, h:4.9, fs:14},
+        { nome:"Banheiro F.\ne Acessível",  x:22.2, y:15, w:16, h:4, fs:8 },
+        { nome:"Banheiro M.\ne Acessível",  x:76.4, y:15, w:16, h:4, fs:8 },
     ],
 
 };
@@ -219,72 +241,3 @@ function criarBotao(info, classe){
     });
 
 });
-
-
-/*const botoesTerreo = [ 
-    // a esquerda do hall
-    { nome: "Livros fora\ndo sistema",      x: 3.6, y: 33.6, w: 2.8, h: 1.6, fs: 0.5 },
-    { nome: "Livros fora\ndo sistema",      x: 3.6, y: 36.3, w: 2.8, h: 1.6, fs: 0.5 },
-    { nome: "Sala de\nEstudos",             x: 3.6, y: 39.1, w: 2.8, h: 1.6, fs: 0.5 },
-    { nome: "Biblioteca",                   x: 7.6, y: 43.0, w: 9.7, h: 3.5, fs: 1.7 },
-
-    // Próximo a quadra
-    { nome: "Quadra\nPoliesportiva",        x: 75.7, y: 9.9, w: 12.7, h: 4.5, fs: 1.7 },
-    { nome: "Dispensa\nda Quadra",          x: 59.1,  y: 7.344, w: 8,    h: 2.25, fs: 1.05 },
-    { nome: "Banheiro F.\ncom chuveiro",    x: 59.1,  y: 14.13, w: 8,    h: 2.5,  fs: 1.05 },
-    { nome: "Banheiro M.\ncom chuveiro",    x: 59.1,  y: 10.54, w: 8,    h: 2.5,  fs: 1.05 },
-    { nome: "Piscina",                      x: 39.7,  y: 10.6, w: 9.7,  h: 4,    fs: 1.7 },
-
-    //a direita do hall
-    { nome: "Cine Teatro",                  x: 7.6, y: 91, w: 9.7, h: 3.5, fs: 1.5 },
-    { nome: "Cabine de Controle",           x: 7.44, y: 83.15, w: 6, h: 1, fs: 0.6 }, 
-    { nome: "Camarim",                      x: 15.5, y: 97.75, w: 3.5, h: 1.2, fs: 0.7 },
-
-    //a frente do hall
-    { nome: "Sala de Línguas",              x: 29.9, y: 76.54, w: 6.7, h: 1.8, fs: 0.8 },
-    { nome: "Sala de\nrobótica",            x: 35.71, y: 76.45, w: 3.8, h: 1.8, fs: 0.8 },
-    { nome: "AEE\nNAPNE",                   x: 39.7, y: 71.15, w: 3.1, h: 1.8, fs: 0.7 },
-    { nome: "Incub-\nadora",                   x: 28.1, y: 73.9, w: 2.99, h: 1.8, fs: 0.8 },
-    { nome: "Refeitório",                   x: 35.31, y: 86.7, w: 10.0, h: 3.5, fs: 1.7 },
-    { nome: "IFCast",                       x: 28.11, y: 71, w: 2.99, h: 1.8, fs: 0.9 },
-
-    // Bloco A
-    { nome: "Lab. de\nMáquinas\nElétricas",     x: 53.88, y: 46.25, w: 5.1, h: 3.5, fs: 0.8 },
-    { nome: "Lab. de\nMedidas\nElétricas",      x: 53.88, y: 50.36, w: 5.1, h: 3.5, fs: 0.8 },
-    { nome: "Lab. de\nFísica e\nEletrônica",    x: 53.88, y: 54.5, w: 5.1, h: 3.5, fs: 0.8 },
-    { nome: "Lab. de\nInformática\n(Superior)", x: 53.88, y: 58.76, w: 5.1, h: 3.5, fs: 0.8 },
-    { nome: "Fábrica de\nInovações",            x: 53.88, y: 62.9,   w: 5.1, h: 3.3, fs: 0.8 },
-    { nome: "Lab. de\nQuímica",                 x: 53.88, y: 70.03, w: 5.1, h: 3.5, fs: 0.8 },
-    { nome: "Lab. de\nBiologia",                x: 53.88, y: 74.19, w: 5.1, h: 3., fs: 0.8 },
-    { nome: "Lab. de\nDesenho\nTécnico",         x: 53.88, y: 78.19, w: 5.1, h: 3.5, fs: 0.8 },
-    { nome: "Lab. de\nInformática",             x: 53.88, y: 82.55, w: 5.1, h: 3, fs: 0.8 },
-    { nome: "Lab. de\nInformática",             x: 53.88, y: 87.1, w: 5.1, h: 3, fs: 0.8 },
-
-    // Bloco B
-    { nome: "Sala 46",                      x: 67.32, y: 47.65, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 47",                      x: 67.32, y: 51.8, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 48",                      x: 67.32, y: 56.,   w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 49",                      x: 67.32, y: 60.11, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 50",                      x: 67.32, y: 73.1,  w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 51",                      x: 67.32, y: 77.4, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 52",                      x: 67.32, y: 81.75, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 53",                      x: 67.32, y: 85.9,  w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Banheiro F.\ne Acessível",     x: 67.32, y: 69.39, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Banheiro M.\ne Acessível",     x: 67.32, y: 63.53, w: 5, h: 2.3, fs: 0.8 },
-
-    // Bloco C
-    { nome: "Lab. de\nProdução\nMecânica",  x: 83.59, y: 51.94,    w: 5, h: 3.5, fs: 0.8 },
-    { nome: "SAA",                          x: 83.59, y: 55.87, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Lab. de\nSoldagem",            x: 83.59, y: 59.9,  w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 58",                      x: 83.59, y: 72.9,  w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 59",                      x: 83.59, y: 77.1,  w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Sala 60",                      x: 83.59, y: 81.3,  w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Banheiro F.\ne Acessível",     x: 83.59, y: 69.28, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Banheiro M.\ne Acessível",     x: 83.59, y: 63.53, w: 5, h: 2.3, fs: 0.8 },
-    { nome: "Banheiro F.\ncom chuveiro",    x: 28.11, y: 71, w: 2.99, h: 1.8, fs: 0.9 }, 
-    { nome: "Banheiro M.\ncom chuveiro",     x: 83.59, y: 63.53, w: 5, h: 2.3, fs: 0.8 },
-
-
-    //Bloco D
-    { nome: "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",     x: 96.2, y: 66.85, w: 3, h: 28, fs: 1.2 },
-];*/

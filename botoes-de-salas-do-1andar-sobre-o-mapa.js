@@ -4,7 +4,7 @@ const botoesGirado = [
     { nome: "Copa", x: 123, y: 54.5, w: 12, h: 3, fs: 0.8 },
     { nome: "Sala dos\nFuncionários\ne Servidores", x: 123, y: 44.3, w: 17, h: 5.5, fs: 0.8 },
     { nome: "DAP", x: 95, y: 37.5, w: 12, h: 3, fs: 0.8 },
-    { nome: "Sala de Vivência\ndos Servidores\n(em construção)", x: 94, y: 52.5, w: 15, h: 5.5, fs: 0.8 },
+    { nome: "Sala de Vivência\ndos Servidores\n(em construção)", x: 94, y: 52.5, w: 17, h: 5.5, fs: 0.8 },
     { nome: "Coordenação\nSuperior", x: 69.5, y: 35.6, w: 17, h: 4, fs: 0.8 },
     { nome: "CGP", x: 51.1, y: 35.6, w: 12, h: 3, fs: 0.8 },
     { nome: "CAPI/SCDP\nBalcão\nDigital", x: 35.67, y: 35.6, w: 13, h: 5.5, fs: 0.8 },

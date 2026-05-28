@@ -4,14 +4,14 @@
 
 const botoesparaverpopup = [
 
-    { nome:"B",  x:7.55, y:41.7,  w:12,   h:20,   imagem:"imagens/biblioteca.png" },
-    { nome:"Q",  x:55.85,y:9.9,   w:58.7, h:20.3, imagem:"imagens/quadra.png" },
-    { nome:"ci", x:9.99, y:90.4,  w:16.5, h:20,   imagem:"imagens/cineteatro.png" },
-    { nome:"H",  x:9.8,  y:65.86, w:19.5, h:23,   imagem:"imagens/hall.png" },
-    { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   imagem:"imagens/cantina.png" },
-    { nome:"R",  x:35,   y:86.5,  w:14,   h:11.5, imagem:"imagens/refeitorio.png" },
-    { nome:"AB", x:60.7, y:66.6,  w:24,   h:45.6, imagem:"imagens/blocoAeB.png" },
-    { nome:"CD", x:89.5, y:66.5,  w:23,   h:34,   imagem:"imagens/blocoCeD.png" },
+    { nome:"B",  x:7.55, y:41.7,  w:12,   h:20,  scale: 1.4, imagem:"imagens/biblioteca.png" },
+    { nome:"Q",  x:55.85,y:9.9,   w:58.7, h:20.3, scale: 1.4, imagem:"imagens/quadra.png" },
+    { nome:"ci", x:9.99, y:90.4,  w:16.5, h:20,   scale: 1.2, imagem:"imagens/cineteatro.png" },
+    { nome:"H",  x:9.8,  y:65.86, w:19.5, h:23,   scale: 1.26, imagem:"imagens/hall.png" },
+    { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, imagem:"imagens/cantina.png" },
+    { nome:"R",  x:35,   y:86.5,  w:14,   h:11.5, scale: 1.4, imagem:"imagens/refeitorio.png" },
+    { nome:"AB", x:60.7, y:66.6,  w:24,   h:45.6, scale: 1, imagem:"imagens/blocoAeB.png" },
+    { nome:"CD", x:89.5, y:66.5,  w:23,   h:34,   scale: 1, imagem:"imagens/blocoCeD.png" },
 
 ];
 
@@ -23,8 +23,8 @@ const botoesDosPopups = {
 
     "imagens/cineteatro.png": [
         { nome:"Cine Teatro",            x:40.5, y:53, w:36, h:9, fs:24 },
-        { nome:"Camarim",                x:78.8, y:89.9, w:15, h:6, fs:13 },
-        { nome:"Cabine de Controle",     x:40.1, y:14.44, w:32, h:5, fs:13 },
+        { nome:"Camarim",                x:78.8, y:89.9, w:14, h:6, fs:12 },
+        { nome:"Cabine de Controle",     x:40.1, y:14.44, w:32, h:5, fs:12 },
     ],
 
     "imagens/biblioteca.png": [
@@ -35,27 +35,26 @@ const botoesDosPopups = {
     ],
 
     "imagens/blocoAeB.png": [
-        { nome:"Lab. de\nMáquinas\nElétricas",           x:22.87, y:6.5, w:20, h:6.5, fs:12 },
-        { nome:"Lab. de\nMedidas\nElétricas",            x:22.87, y:15.25, w:20, h:6.5, fs:12 },
-        { nome:"Lab. de\nFísica e\nEletrônica",          x:22.87, y:24.1, w:20, h:6.5, fs:12 },
-        { nome:"Lab. de\nInformática\n(Superior)",       x:22.87, y:33.1, w:20, h:6.5, fs:12 },
-        { nome:"Fábrica de\nInovações",                  x:22.87, y:42, w:20, h:4.5, fs:12},
-        { nome:"Lab. de\nQuímica",                       x:22.87, y:57.1, w:20, h:4.5, fs:12 },
-        { nome:"Lab. de\nBiologia",                      x:22.87, y:65.7, w:20, h:4.5, fs:12 },
-        { nome:"Lab. de\nDesenho\nTécnico",              x:22.87, y:74.3, w:20, h:4.5, fs:12 },
-        { nome:"Lab. de\nInformática",                   x:22.87, y:83.5, w:20, h:4.5, fs:12 },
-        { nome:"Lab. de\nInformática",                   x:22.87, y:93.1, w:20, h:4.5, fs:12},
-
-        { nome:"Sala 46",                       x:77, y:9.5, w:17, h:3, fs:12},
-        { nome:"Sala 47",                       x:77, y:18.5, w:17, h:3, fs:12},
-        { nome:"Sala 48",                       x:77, y:27.2, w:17, h:3, fs:12},
-        { nome:"Sala 49",                       x:77, y:35.9, w:17, h:3, fs:12},
-        { nome:"Banheiro M.\ne Acessível",      x:77, y:43.1, w:20, h:4.75, fs:12},
-        { nome:"Banheiro F.\ne Acessível",      x:77, y:55.6, w:20, h:4.75, fs:12},
-        { nome:"Sala 50",                       x:77, y:63.56, w:17, h:3, fs:12},
-        { nome:"Sala 51",                       x:77, y:72.5, w:17, h:3, fs:12},
-        { nome:"Sala 52",                       x:77, y:81.6, w:17, h:3, fs:12},
-        { nome:"Sala 53",                       x:77, y:90.6, w:17, h:3, fs:12},
+        { nome:"Lab. de\nMáquinas\nElétricas",           x:22.87, y:6.5, w:20, h:6.5, fs:11},
+        { nome:"Lab. de\nMedidas\nElétricas",            x:22.87, y:15.25, w:20, h:6.5, fs:11},
+        { nome:"Lab. de\nFísica e\nEletrônica",          x:22.87, y:24.1, w:20, h:6.5, fs:11},
+        { nome:"Lab. de\nInformática\n(Superior)",       x:22.87, y:33.1, w:20, h:6.5, fs:11},
+        { nome:"Fábrica de\nInovações",                  x:22.87, y:42, w:20, h:4.5, fs:11},
+        { nome:"Lab. de\nQuímica",                       x:22.87, y:57.1, w:20, h:4.5, fs:11},
+        { nome:"Lab. de\nBiologia",                      x:22.87, y:65.7, w:20, h:4.5, fs:11},
+        { nome:"Lab. de\nDesenho\nTécnico",              x:22.87, y:74.3, w:20, h:6.5, fs:11},
+        { nome:"Lab. de\nInformática",                   x:22.87, y:83.5, w:20, h:4.5, fs:11},
+        { nome:"Lab. de\nInformática",                   x:22.87, y:93.1, w:20, h:4.5, fs:11},
+        { nome:"Sala 46",                       x:77, y:9.5, w:17, h:3, fs:11},
+        { nome:"Sala 47",                       x:77, y:18.5, w:17, h:3, fs:11},
+        { nome:"Sala 48",                       x:77, y:27.2, w:17, h:3, fs:11},
+        { nome:"Sala 49",                       x:77, y:35.9, w:17, h:3, fs:11},
+        { nome:"Banheiro M.\ne Acessível",      x:77, y:43.1, w:20, h:4.75, fs:11},
+        { nome:"Banheiro F.\ne Acessível",      x:77, y:55.6, w:20, h:4.75, fs:11},
+        { nome:"Sala 50",                       x:77, y:63.56, w:17, h:3, fs:11},
+        { nome:"Sala 51",                       x:77, y:72.5, w:17, h:3, fs:11},
+        { nome:"Sala 52",                       x:77, y:81.6, w:17, h:3, fs:11},
+        { nome:"Sala 53",                       x:77, y:90.6, w:17, h:3, fs:11},
     ],
 
     "imagens/blocoCeD.png": [
@@ -76,25 +75,25 @@ const botoesDosPopups = {
 
     "imagens/quadra.png": [
         { nome: "Quadra\nPoliesportiva",     x:82.4, y:50.6, w:20.5, h:20.5, fs:12 },
-        { nome: "Dispensa\nda Quadra",       x:55.91, y:36.2, w:13, h:10, fs:8 },
-        { nome: "Banheiro F.\ncom chuveiro", x:55.91, y:49.7, w:13, h:10, fs:8 },
-        { nome: "Banheiro M.\ncom chuveiro", x:55.91, y:64.5, w:13, h:10, fs:8 },
+        { nome: "Dispensa\nda Quadra",       x:55.91, y:36.2, w:13, h:10, fs:7 },
+        { nome: "Banheiro F.\ncom chuveiro", x:55.91, y:49.7, w:13, h:10, fs:7 },
+        { nome: "Banheiro M.\ncom chuveiro", x:55.91, y:64.5, w:13, h:10, fs:7 },
         { nome: "Piscina",                   x:24.5, y:50.3, w:14, h:14, fs:12 },
     ],
 
     "imagens/hall.png": [
-        { nome:"Banheiro M.\ne Acessível",                  x:44.7, y:10, w:15, h:4, fs:8 },
-        { nome:"E - Games",                                 x:62.1, y:10, w:15, h:4, fs:10 },
-        { nome:"Psicóloga",                                 x:83.2, y:10, w:15, h:4, fs:8 },
-        { nome:"Setor Médico",                              x:83.2, y:10, w:15, h:4, fs:8 },
-        { nome:"Serviço Social",                            x:86.9, y:22, w:15, h:4, fs:8 },
-        { nome:"Sala dos\nProfessores/DERI\nPRONATEC/NPPG", x:86.98, y:31.45, w:16, h:6.5, fs:7 },
-        { nome:"Protocolo com\nalmoxarifado",               x:86.9, y:41, w:15, h:4, fs:8 },
-        { nome:"DRCA/Controle\nAcadêmico",                  x:86.9, y:62.4, w:15, h:4, fs:8 },
-        { nome:"Fechada",                                   x:86.9, y:72, w:15, h:4, fs:9 },
-        { nome:"Almoxarifado\nde Material\nde Expediente",  x:83.2, y:90, w:16, h:6, fs:8 },
-        { nome:"Diretoria",                                 x:62.2, y:90, w:15, h:4, fs:8 },
-        { nome:"Banheiro F.\ne Acessível",                  x:44.7, y:90, w:15, h:4, fs:8 },
+        { nome:"Banheiro M.\ne Acessível",                  x:44.7, y:10, w:15, h:4, fs:7 },
+        { nome:"E - Games",                                 x:62.1, y:10, w:12, h:3, fs:7 },
+        { nome:"Psicóloga",                                 x:83.2, y:10, w:15, h:3, fs:7 },
+        { nome:"Setor Médico",                              x:83.2, y:10, w:15, h:3, fs:7 },
+        { nome:"Serviço Social",                            x:86.9, y:22, w:15, h:3, fs:7 },
+        { nome:"Sala dos\nProfessores/DERI\nPRONATEC/NPPG", x:86.98, y:31.45, w:16, h:6, fs:7 },
+        { nome:"Protocolo com\nalmoxarifado",               x:86.9, y:41, w:15, h:4, fs:7 },
+        { nome:"DRCA/Controle\nAcadêmico",                  x:86.9, y:62.4, w:15, h:4, fs:7 },
+        { nome:"Fechada",                                   x:86.9, y:72, w:10, h:3, fs:7 },
+        { nome:"Almoxarifado\nde Material\nde Expediente",  x:83.2, y:90, w:16, h:5.6, fs:7 },
+        { nome:"Diretoria",                                 x:62.2, y:90, w:11, h:3, fs:7 },
+        { nome:"Banheiro F.\ne Acessível",                  x:44.7, y:90, w:15, h:4, fs:7 },
     ],
 
     "imagens/cantina.png": [
@@ -205,9 +204,15 @@ function criarBotao(info, classe){
             'ponto-mapa ponto-mapa-terreo'
         );
 
-        btn.addEventListener('click', () => {
+btn.addEventListener('click', () => {
 
-            imagemPopup.src = info.imagem;
+    imagemPopup.src = info.imagem;
+
+    // ESCALA DO POPUP
+    const escala = info.scale || 1;
+
+    popupConteudo.style.transform = `scale(${escala})`;
+    popupConteudo.style.transformOrigin = 'center center';
 
             // remove antigos
             popup.querySelectorAll('.botao-popup')
@@ -217,20 +222,31 @@ function criarBotao(info, classe){
             const botoes = botoesDosPopups[info.imagem];
 
             // cria botões do popup
-            if(botoes){
+// cria botões do popup
+if (botoes) {
 
-                botoes.forEach(infoBtn => {
+    botoes.forEach(infoBtn => {
 
-                    const novoBotao = criarBotao(
-                        infoBtn,
-                        'botao-popup'
-                    );
+        const novoBotao = criarBotao(
+            infoBtn,
+            'botao-popup'
+        );
 
-                    popupConteudo.appendChild(novoBotao);
+        // AO CLICAR NO BOTÃO → ABRE O POPUP DA SALA
+        novoBotao.addEventListener('click', (e) => {
 
-                });
+            // impede fechar popup principal
+            e.stopPropagation();
 
-            }
+            mostrarInfoSala(infoBtn.nome);
+
+        });
+
+        popupConteudo.appendChild(novoBotao);
+
+    });
+
+}
 
             popup.classList.add('ativo');
 

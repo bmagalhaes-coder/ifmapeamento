@@ -10,7 +10,8 @@ const salas = [
     "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60",
     "Psicóloga", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
     "Sala de Línguas", "Incubadora", "E - Games", "CAE", "Psicóloga","Protocolo com almoxarifado","DPG/NPGP",
-    "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", "Sala dos Professores\nDERI/PRONATEC/NPPG", "Bloco em Construção", "Diretoria",
+    "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", 
+    "Sala dos Professores\nDERI/PRONATEC/NPPG", "Bloco em Construção", "Diretoria",
 ];
 
 const searchInput = document.getElementById('searchInput');

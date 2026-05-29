@@ -11,7 +11,7 @@ const salas = [
     "Psicóloga", "Setor Médico", "Quadra Poliesportiva", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
     "Sala de Línguas", "Incubadora", "E - Games", "CAE", "Psicóloga","Protocolo com almoxarifado","DPG/NPGP",
     "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", 
-    "Sala dos Professores/DERI/\nPRONATEC/NPPG", "Bloco em Construção", "Diretoria", "Cantina"
+    "Sala dos Professores/DERI/\nPRONATEC/NPPG", "Bloco em Construção", "Diretoria", "Cantina", "Sala de Estudos", "Livros fora do sistema"
 ];
 
 const searchInput = document.getElementById('searchInput');
@@ -38,14 +38,14 @@ const dadosSalas = {
 // banheiros no primeiro andar e no térreo.
 "Banheiro F. com Chuveiro": {
         local: "Próximo à quadra",
-        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
+        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou piscina" },
         descricao: "Sanitário feminino contendo 4 chuveiros, 2 pias e 2 cabines com um vaso sanitário em cada uma.",
         equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
 
 "Banheiro M. com Chuveiro": {
         local: "Próximo à quadra",
-        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
+        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou piscina" },
         descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
         equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
@@ -170,6 +170,12 @@ const dadosSalas = {
         horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Local onde são armazenados livros e materiais bibliográficos que ainda não estão disponíveis para consulta.",
     },
+    "Sala de Estudos": {
+        local: "Biblioteca",
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Local onde alunos podem estudar em um local mais reservado.",
+        equipamentos: "Uma mesa, quatro cadeiras e tomadas para uso de equipamentos eletrônicos."
+    },
     "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO": {
     local: "Térreo",
     horarios: { "Geral": "Horário indefinido" },
@@ -234,32 +240,27 @@ const dadosSalas = {
     "Cine Teatro": {
         local: "Próximo a lateral do hall de entrada (Térreo)",
         horarios: {
-            "Geral": "Aberto em dias de evento, fora isso é necessário a autorização do SAA ou de um superior para entrar."
-        },
+            "Geral": "Aberto em dias de evento, fora isso é necessário a autorização de um docente ou servidor."},
         descricao: "Espaço multiuso para apresentações, palestras, formaturas e eventos culturais com capacidade para 200 pessoas.",
         equipamentos: "Projetor, tela retrátil, sistema de som profissional, palco, iluminação cênica, camarins."
     },
     "Cabine de Controle": {
         local: "Próximo a lateral do hall de entrada (Térreo)",
-        horarios: {
-            "Geral": "Aberto em dias de evento, fora isso é necessário a autorização do SAA ou de um superior para entrar."
-        },
+       horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Espaço multiuso para apresentações, palestras, formaturas e eventos culturais com capacidade para 200 pessoas.",
         equipamentos: "Projetor, tela retrátil, sistema de som profissional, palco, iluminação cênica, camarins.",
         observacoes: "Somente pessoas autorizadas."
     },
     "Camarim": {
         local: "Na lateral do palco do Cine Teatro (Térreo)",
-        horarios: {
-            "Geral": "Aberto em dias de evento."
-        },
+        horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Espaço para preparação dos artistas antes das apresentações no Cine Teatro.",
         equipamentos: "Espelhos iluminados, cabideiros, pia, bancada, cadeiras.",
         observacoes: "Somente pessoas autorizadas que irão se apresentar no palco."
     },
     "IFCast": {
         local: "Térreo",
-        horarios: { "Geral": "Entrada permitida somente para pessoas autorizadas." },
+        horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Estúdio de podcast e produção de conteúdo audiovisual do campus.",
         equipamentos: "Microfones profissionais, mesa de som, computador para edição, câmeras, isolamento acústico."
     },
@@ -494,39 +495,24 @@ const dadosSalas = {
     },
     "Sala de Robótica": {
         local: "Sala 64 - Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
+        horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Laboratório de Robótica Educacional - Desenvolvimento de projetos com robôs e automação.",
         equipamentos: "Kits de robótica (Lego, Arduino, etc.), computadores, impressoras 3D, componentes eletrônicos."
     },
     "Sala de Línguas": {
         local: "Sala 65 - Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 21:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 21:00", "Quarta": "08:00 às 12:00 e 14:00 às 21:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 21:00", "Sexta": "08:00 às 12:00 e 14:00 às 21:00", "Sábado": "Fechado"
-        },
+        horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Centro de Línguas - Espaço para ensino e prática de idiomas.",
-        equipamentos: "Laboratório de áudio, fones de ouvido, computadores com softwares de idiomas, acervo de livros em língua estrangeira."
     },
     "Incubadora": {
         local: "Sala 68 - Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 18:00", "Terça": "08:00 às 18:00",
-            "Quarta": "08:00 às 18:00", "Quinta": "08:00 às 18:00", "Sexta": "08:00 às 18:00", "Sábado": "Fechado"
-        },
+        horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Incubadora de Empresas - Apoio a startups e empreendedorismo.",
         equipamentos: "Salas para empresas incubadas, espaço de coworking, salas de reunião, internet de alta velocidade."
     },
     "E - Games": {
         local: "Sala 02 - Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "13:00 às 18:00", "Terça": "13:00 às 18:00",
-            "Quarta": "13:00 às 18:00", "Quinta": "13:00 às 18:00", "Sexta": "13:00 às 18:00", "Sábado": "Fechado"
-        },
+        horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Espaço de jogos e gameficação - Projetos e pesquisa em jogos digitais.",
         equipamentos: "Computadores gamers, consoles de videogame, óculos de realidade virtual, acervo de jogos."
     },

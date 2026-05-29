@@ -1,12 +1,13 @@
 
 // ==========================================
-// BOTÕES SOBRE OS RECORTES DO MAPA DO TÉRREO
+// BOTÕES SOBRE OS RECORTES DO MAPA DO TÉRREO 
+// B, AB, CD e ci estão do tamanho correto, só falta diminuir fonte das letras
 // ==========================================
 
 const botoesparaverpopup = [
 
-    { nome:"B",  x:7.55, y:41.7,  w:12,   h:20,   scale: 1.4, scalecelular: 0.9, imagem:"imagens/biblioteca.png" },
-    { nome:"Q",  x:55.85,y:9.9,   w:58.7, h:20.3, scale: 1.4, scalecelular: 0.9, imagem:"imagens/quadra.png" },
+    { nome:"B",  x:7.55, y:41.7,  w:12,   h:20,   scale: 1.4, scalecelular: 1, imagem:"imagens/biblioteca.png" },
+    { nome:"Q",  x:55.85,y:9.9,   w:58.7, h:20.3, scale: 1.4, scalecelular: 1, imagem:"imagens/quadra.png" },
     { nome:"ci", x:9.99, y:90.4,  w:16.5, h:20,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cineteatro.png" },
     { nome:"H",  x:9.8,  y:65.86, w:19.5, h:23,   scale: 1.26,scalecelular: 0.9, imagem:"imagens/hall.png" },
     { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },

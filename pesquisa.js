@@ -1,25 +1,32 @@
 const salas = [
     "DDE/DAP", "CTIC", "Servidor CTIC", "Coordenações", "Arquivo CGP", "NRH", "CGP", "CAPI/SCDP/Balcão Digital",
-    "Sala de Vivência dos Servidores\n(em construção)", "CCTTII/CEEC/CCSAQ", "DAP", "Sala dos Funcionários e Servidores", 
-    "SAA","Camarim", "IFCast", "Refeitório", "Lanchonete", "Biblioteca", "DGP/NGP", "AEE/NAPNE", "Copa", 
+    "Sala de Vivência dos Servidores (em construção)", "CCTTII/CEEC/CCSAQ", "DAP", "Sala dos Funcionários e Servidores", 
+    "SAA","Camarim", "IFCast", "Refeitório (em construção)", "Lanchonete", "Biblioteca", "DGP/NGP", "AEE/NAPNE", "Copa", 
     "Serviço Social", "Banheiro Feminino com Chuveiro", "Banheiro Masculino com Chuveiro", "Banheiro Feminino e Acessível", 
     "Banheiro Masculino e Acessível", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", 
     "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", 
     "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Cine Teatro", 
     "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
     "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60",
-    "Psicóloga", "Setor Médico", "Quadra", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
+    "Psicóloga", "Setor Médico", "Quadra Poliesportiva", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
     "Sala de Línguas", "Incubadora", "E - Games", "CAE", "Psicóloga","Protocolo com almoxarifado","DPG/NPGP",
     "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", 
-    "Sala dos Professores\nDERI/PRONATEC/NPPG", "Bloco em Construção", "Diretoria",
+    "Sala dos Professores/DERI/\nPRONATEC/NPPG", "Bloco em Construção", "Diretoria", "Cantina"
 ];
 
 const searchInput = document.getElementById('searchInput');
 const menuList = document.getElementById('menuList');
 const clearBtn = document.getElementById('clearBtn');
 
-// Normalização para busca (remove acentos e converte para minúsculas)
-const normalizar = (txt) => txt.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+const normalizar = (txt) => {
+    return txt
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, "") // remove acentos
+        .replace(/\n/g, ' ')             // troca quebra de linha por espaço
+        .replace(/\s+/g, ' ')            // remove espaços duplicados
+        .trim();
+};
 
 // Mapeamento de dias da semana (inglês -> português)
 const diasSemana = {
@@ -28,130 +35,39 @@ const diasSemana = {
 };
 
 const dadosSalas = {
-/*salas sem botão na pesquisa, mas com botão no mapa por terem \n e abreviações, se não o botão fica grande, para aparecerem no mapa basta alterar a lista de nomes de salas no topo desse arquivo*/
-"Sala dos\nProfessores/DERI\nPRONATEC/NPPG": {
-    local: "Sala 14 - Térreo",
-    horarios: { "Geral": "Horário indefinido" },
-    descricao: "-",
-    equipamentos: "-"
-},
-"Protocolo\ncom almoxarifado": {
-    local: "Sala 08 - Térreo",
-    horarios: {
-        "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-        "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-        "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-    },
-    descricao: "Setor de protocolo e almoxarifado - Recebimento e expedição de documentos e materiais.",
-    equipamentos: "Estantes para arquivamento, balcão de atendimento."
-},
-"DRCA/Controle\nAcadêmico": {
-    local: "Sala 10 - Térreo",
-    horarios: {
-        "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-        "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-        "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-    },
-    descricao: "Diretoria de Registro e Controle Acadêmico - Emissão de documentos, matrículas e histórico escolar, qualquer problema com documentação deve ser resolvido aqui, como no caso da entrega de boletins e históricos escolares.",
-},
-"Almoxarifado\nde Material\nde Expediente": {
-    local: "Térreo",
-    horarios: {
-        "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-        "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-        "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-    },
-    descricao: "Armazenamento e distribuição de materiais de expediente para os setores do campus.",
-    equipamentos: "Prateleiras, estoque de papel, canetas, pastas e materiais diversos."
-},
-"B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO": {
-    local: "Térreo",
-    horarios: { "Geral": "Horário indefinido" },
-    descricao: "Bloco com os futuros novos laboratórios para os cursos técnicos e superiores.",
-    equipamentos: "-"
-},
-"Servidor\nCTIC": {
-    local: "1° Andar",
-    horarios: { "Geral": "Horário indefinido" },
-    descricao: "Sala técnica que abriga o datacenter, servidores de rede e equipamentos de conectividade central do campus.",
-    equipamentos: "Racks de servidores, switches core, nobreaks de alta capacidade e sistema de climatização de precisão."
-},
-"Sala dos\nFuncionários\ne Servidores": {
-        local: "1° Andar",
-        horarios: { "Geral": "Sempre Aberto" },
-        descricao: "Área de convivência e apoio para os funcionários terceirizados e servidores da instituição.",
-        equipamentos: "Poltronas, sofás, micro-ondas, cafeteira, frigobar."
-    },  
-"Sala de Vivência\ndos Servidores\n(em construção)": {
-        local: "1° Andar",
-        horarios: { "Geral": "Sempre Aberto" },
-        descricao: "Área de convivência para servidores da instituição.",
-        equipamentos: "-"
-    },
-"Coordenação\nSuperior": {
-        local: "1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "Gabinete responsável pela articulação e gestão das coordenações de cursos de nível superior e pós-graduação.",
-        observacoes: "Atendimento a coordenadores e docentes da graduação."
-    },
-"CAPI/SCDP\nBalcão Digital": {
-        local: "Sala 26 - 1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
-        equipamentos: "Terminais de atendimento, impressoras e notebooks."
-    },
-"CAPI/SCDP\nBalcão\nDigital": {
-        local: "Sala 26 - 1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
-        equipamentos: "Terminais de atendimento, impressoras e notebooks."
-    },
-"CCTTII\nCEEC\nCCSAQ": {
-        local: "Sala 25 - 1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "CCTTII (Coordenação de Curso Técnico em Informática) <br> CEEC (Coordenação de Especialização em Ensino de Ciências) <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas).",
-        equipamentos: "Computadores de gestão acadêmica e arquivos de planos de ensino."
-    },
-"Arquivo\nCGP": {
-        local: "Sala 24 - 1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "Local de guarda e organização de documentos históricos e ativos da Coordenadoria de Gestão de Pessoas.",
-        equipamentos: "Arquivos deslizantes, estantes metálicas e mesas de consulta."
-    },
-    "Banheiro F.\ne Acessível": {
-        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Local com 5 cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
-    },
-    "Banheiro M.\ne Acessível": {
-        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Local com mictórios, cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
-        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
-    },
-    "Banheiro F. com Chuveiro": {
+// banheiros no primeiro andar e no térreo.
+"Banheiro F. com Chuveiro": {
         local: "Próximo à quadra",
         horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
         descricao: "Sanitário feminino contendo 4 chuveiros, 2 pias e 2 cabines com um vaso sanitário em cada uma.",
         equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
 
-    "Banheiro M. com Chuveiro": {
+"Banheiro M. com Chuveiro": {
         local: "Próximo à quadra",
         horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
         descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
         equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
-
-    "Livros fora\ndo sistema": {
-        local: "Próximo à quadra",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
-        descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
-        equipamentos: "Papel higienico, sabonete líquido, lixeira."
+"Banheiro F. e Acessível": {
+        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Local com 5 cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
-// salas com botões no mapa e na pesquisa
+"Banheiro M. e Acessível": {
+        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Local com mictórios, cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
+    },
 // 1° ANDAR
+"CCTTII CEEC CCSAQ": {
+        local: "Sala 25 - 1° Andar",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "CCTTII (Coordenação de Curso Técnico em Informática) <br> CEEC (Coordenação de Especialização em Ensino de Ciências) <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas).",
+        equipamentos: "Computadores de gestão acadêmica e arquivos de planos de ensino."
+    },
     "Copa": {
         local: "1° Andar",
         horarios: { "Geral": "Sempre aberto" },
@@ -171,7 +87,7 @@ const dadosSalas = {
         observacoes: "Suporte para rede Wi-Fi e sistemas acadêmicos."
     },
     "Servidor CTIC": {
-        local: "1° Andar",
+        local: "Sala 21 - 1° Andar",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "Sala técnica que abriga o datacenter, servidores de rede e equipamentos de conectividade central do campus.",
         equipamentos: "Racks de servidores, switches core, nobreaks de alta capacidade e sistema de climatização de precisão."
@@ -188,7 +104,7 @@ const dadosSalas = {
         descricao: "Coordenadoria de Gestão de Pessoas - Responsável pela vida funcional dos servidores, processos de contratação e capacitação.",
         equipamentos: "Computadores, impressoras e armários de arquivos funcionais."
     },
-    "CAPI/SCDP/Balcão Digital": {
+    "CAPI/SCDP Balcão Digital": {
         local: "Sala 26 - 1° Andar",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
@@ -249,19 +165,30 @@ const dadosSalas = {
         observacoes: "Centralização de processos relativos à vida funcional do servidor."
     },
     /* TÉRREO */
-    "Bloco em Construção": {
+    "Livros fora do sistema": {
+        local: "Biblioteca",
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
+        descricao: "Local onde são armazenados livros e materiais bibliográficos que ainda não estão disponíveis para consulta.",
+    },
+    "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO": {
     local: "Térreo",
     horarios: { "Geral": "Horário indefinido" },
     descricao: "Bloco com os futuros novos laboratórios para os cursos técnicos e superiores.",
     equipamentos: "-"
-},
-    "Sala dos Professores\nDERI/PRONATEC/NPPG": {
+    },
+    "Sala dos Professores/DERI/\nPRONATEC/NPPG": {
         local: "Sala 07 - Térreo",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "-",
         equipamentos: "-"
     },
     "AEE/NAPNE": {
+        local: "Sala 66 - Térreo",
+        horarios: { "Geral": "Horário indefinido" },
+        descricao: "NAPNE (Núcleo de Apoio às Pessoas com Necessidades Educacionais Específicas).",
+        equipamentos: "Materiais pedagógicos adaptados, recursos de acessibilidade."
+    },
+        "AEE/\nNAPNE": {
         local: "Sala 66 - Térreo",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "NAPNE (Núcleo de Apoio às Pessoas com Necessidades Educacionais Específicas).",
@@ -304,33 +231,6 @@ const dadosSalas = {
         descricao: "-",
         equipamentos: "-"
     },
-    // Banheiros e outras áreas
-    "Banheiro Feminino com Chuveiro": {
-        local: "Próximo à quadra",
-        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
-        descricao: "Sanitário feminino contendo 4 chuveiros, 2 pias e 2 cabines com um vaso sanitário em cada uma.",
-        equipamentos: "Papel higienico, sabonete líquido, lixeira."
-    },
-
-    "Banheiro Masculino com Chuveiro": {
-        local: "Próximo à quadra",
-        horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou pscina" },
-        descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
-        equipamentos: "Papel higienico, sabonete líquido, lixeira."
-    },
-    
-    "Banheiro Feminino e Acessível": {
-        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Local com 5 cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
-        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
-    },
-    "Banheiro Masculino e Acessível": {
-        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
-        horarios: { "Geral": "Sempre aberto" },
-        descricao: "Local com mictórios, cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
-        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
-    },
     "Cine Teatro": {
         local: "Próximo a lateral do hall de entrada (Térreo)",
         horarios: {
@@ -363,11 +263,17 @@ const dadosSalas = {
         descricao: "Estúdio de podcast e produção de conteúdo audiovisual do campus.",
         equipamentos: "Microfones profissionais, mesa de som, computador para edição, câmeras, isolamento acústico."
     },
-    "Refeitório": {
+    "Refeitório (em construção)": {
+        local: "Térreo",
+        horarios: {"Geral": "Horário indefinido"},
+        descricao: "Servirá lanches, almoço e jantar aos alunos e servidores.",
+        equipamentos: "-"
+    },
+    "Cantina": {
         local: "Térreo",
         horarios: {"Geral": "Sempre Aberto"},
-        descricao: "Serve lanches, almoço e jantar aos alunos e servidores.",
-        equipamentos: "Mesas coletivas, balcão de distribuição, bebedouros."
+        descricao: "Serve lanches como misto, bolos, frutas (gratuitas), salgados e sucos aos alunos e servidores.",
+        equipamentos: "Mesas coletivas, balcão de distribuição, geladeira, fogão e outros utensílios de cozinha."
     },
     "Lanchonete": {
         local: "Térreo, área externa coberta",
@@ -388,7 +294,7 @@ const dadosSalas = {
         equipamentos: "Computadores, cadeiras, mesas, estantes, acervo de livros, periódicos e TCCs.",
         observacoes: "Mantenha o silêncio, sem ruídos altos para não retirar a concentração dos outros."
     },
-    "Quadra\nPoliesportiva": {
+    "Quadra Poliesportiva": {
         local: "Área Externa",
         horarios: { "Geral": "Conforme cronograma de aulas de Educação Física" },
         descricao: "Quadra coberta para diversas aulas práticas de educação física, treinos e eventos esportivos.",
@@ -397,16 +303,9 @@ const dadosSalas = {
     },
     "Dispensa da Quadra": {
         local: "Área Externa",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Depósito de materiais esportivos e equipamentos da quadra.",
         equipamentos: "Bolas, coletes, cones, apitos, redes, etc."
-    },
-    "Dispensa da Cozinha": {
-        local: "Anexo interno à cozinha (Térreo)",
-        horarios: { "Geral": "Fechado" },
-        descricao: "Depósito de alimentos não perecíveis, utensílios e materiais de limpeza da cozinha.",
-        equipamentos: "Prateleiras metálicas, freezer, câmara fria.",
-        observacoes: "Entrada permitida somente para pessoas autorizadas."
     },
     "Espaço Infantil": {
         local: "Local atrás da escada - Térreo",
@@ -418,55 +317,55 @@ const dadosSalas = {
     //Laboratórios do bloco A
     "Laboratório de Máquinas Elétricas": {
         local: "Sala 36 - Bloco A - Térreo",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Espaço para práticas com máquinas elétricas e instalações.",
         equipamentos: "Motores elétricos, geradores, transformadores, painéis de comando, instrumentos de medição."
     },
     "Laboratório de Medidas Elétricas": {
         local: "Sala 37 - Bloco A (Térreo)",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Práticas com instrumentos de medição elétrica e calibração.",
         equipamentos: "Multímetros, osciloscópios, geradores de função, fontes de alimentação, pontas de prova diversas."
     },
     "Laboratório de Física e Eletrônica": {
         local: "Sala 38 - Bloco A (Térreo)",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Criado para experimentos de física e circuitos de potência.",
         equipamentos: "Bancadas para experimentos de física, componentes eletrônicos de potência, dissipadores, fontes de alta corrente."
     },
     "Laboratório de Informática (Nível Superior)": {
         local: "Sala 39 - Bloco A (Térreo)",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Usado para programação, projetos e pesquisas.",
         equipamentos: "Computadores, televisão, cadeiras, mesas, mouses e gabinetes."
     },
     "Fábrica de Inovações": {
         local: "Sala 40 - Bloco A - Térreo",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Fábrica de Inovações - Espaço de criatividade e inovação para desenvolvimento de projetos interdisciplinares.",
         equipamentos: "Televisão, jogos de caráter lúdico, mesas, cadeiras, gavetas, materiais para prototipagem."
     },
     "Laboratório de Química": {
         local: "Sala 41 - Bloco A (Térreo)",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Criado para práticas de química geral, orgânica e analítica.",
         equipamentos: "Capelas, bancadas com pontos de água e gás, vidrarias diversas, balanças analíticas, reagentes, mesas e cadeiras."
     },
     "Laboratório de Biologia": {
         local: "Sala 42 - Bloco A - Térreo",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Criado para estudos de microbiologia, botânica, zoologia, anatomia, etc.",
         equipamentos: "Microscópios ópticos, lâminas preparadas, modelos anatômicos, estufa, geladeira para amostras."
     },
     "Laboratório de Desenho Técnico": {
         local: "Sala 43 - Bloco A - Térreo",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Ambiente equipado com pranchas apropriadas para o desenvolvimento de projetos gráficos e desenhos industriais manuais.",
         equipamentos: "Pranchas de desenho com réguas paralelas, banquetas, luminárias articuladas e projetor multimídia."
     },
-    "Laboratórios de Informática": {
+    "Laboratório de Informática": {
         local: "Sala 44 e 45 - Bloco A - Térreo",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Laboratórios de Informática para aulas práticas de informática e programação.",
         equipamentos: "Computadores, televisões, gabinetes, mouses e teclados em ambas as salas, totalizando aproximadamente 80 máquinas."
     },
@@ -554,13 +453,13 @@ const dadosSalas = {
     },
     "Laboratório de Produção Mecânica": {
         local: "Sala 54 - Bloco C - Térreo",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Laboratório de Produção Mecânica - Práticas de usinagem, soldagem e processos de fabricação mecânica.",
         equipamentos: "Tornos mecânicos, fresadoras, furadeiras de bancada, esmerilhadeiras, máquinas de solda, instrumentos de medição."
     },
     "Laboratório de Soldagem": {
         local: "Sala 56 - Bloco C - Térreo",
-        horarios: { "Geral": "Entrada permitida só com a autorização do docente." },
+        horarios: { "Geral": "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Laboratório de Soldagem - Práticas de processos de soldagem e corte.",
         equipamentos: "Máquinas de solda MIG/MAG, TIG, eletrodo revestido, equipamentos de proteção, bancadas, exaustores."
     },
@@ -681,7 +580,11 @@ const dadosSalas = {
     },
   
 };
+const dadosSalasNormalizados = {};
 
+for (const nome in dadosSalas) {
+    dadosSalasNormalizados[normalizar(nome)] = dadosSalas[nome];
+}
 //FUNÇÕES DE INICIALIZAÇÃO E FILTRO
 function renderizarSalas() {
     menuList.innerHTML = '';
@@ -776,7 +679,7 @@ function getDiaAtual() {
 
 // FUNÇÃO DO POP-UP (MODAL)
 function mostrarInfoSala(nomeSala) {
-    const dados = dadosSalas[nomeSala] || {
+    const dados = dadosSalasNormalizados[normalizar(nomeSala)] || {
         local: "Informações não disponíveis",
         horarios: {},
         descricao: "Detalhes deste local serão atualizados em breve.",

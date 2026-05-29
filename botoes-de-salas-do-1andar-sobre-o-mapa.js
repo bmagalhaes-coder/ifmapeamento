@@ -16,7 +16,7 @@ const botoesGirado = [
     { nome: "DDE/DAP", x: -22.5, y: 54.1, w: 15, h: 3, fs: 0.8 },
 ];
 
-const botoesTerreo = [
+const botoes1andar = [
     { nome: "Banheiro F.\ne Acessível", x: 23.5, y: 91, w: 16, h: 4.5, fs: 2.3 },
     { nome: "Banheiro M.\ne Acessível", x: 23.5, y: 9.3, w: 16, h: 4.5, fs: 2.3 },
     { nome: "Copa", x: 42.3, y: 91, w: 16, h: 3, fs: 2.3 },
@@ -54,7 +54,7 @@ function renderBotoes(wrapper, img) {
     // escolhe quais botões mostrar
     const lista = telaGrande
         ? botoesGirado
-        : botoesTerreo;
+        : botoes1andar;
 
     // cria os botões
     lista.forEach(info => {

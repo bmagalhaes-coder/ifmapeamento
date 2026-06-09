@@ -176,7 +176,7 @@ const dadosSalas = {
         descricao: "Local onde alunos podem estudar em um local mais reservado.",
         equipamentos: "Uma mesa, quatro cadeiras e tomadas para uso de equipamentos eletrônicos."
     },
-    "B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO": {
+    "Bloco em Construção": {
     local: "Térreo",
     horarios: { "Geral": "Horário indefinido" },
     descricao: "Bloco com os futuros novos laboratórios para os cursos técnicos e superiores.",

@@ -14,7 +14,7 @@ const botoesparaverpopup = [
     { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
     { nome:"R",  x:35,   y:86.5,  w:14,   h:11.5, scale: 1.4, scalecelular: 0.9, imagem:"imagens/refeitorio.png" },
     { nome:"AB", x:60.7, y:66.6,  w:24,   h:45.6, scale: 1,   scalecelular: 0.9, imagem:"imagens/blocoAeB.png" },
-    { nome:"CD", x:89.5, y:66.5,  w:23,   h:33,   scale: 1,   scalecelular: 1, imagem:"imagens/blocoCeD.png" },
+    { nome:"CD", x:89.5, y:66.5,  w:23,   h:33,   scale: 1,   scalecelular: 0.9, imagem:"imagens/blocoCeD.png" },
 
 ];
 
@@ -158,6 +158,7 @@ const botoesDosPopups = {
 
         {
             nome:"B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",
+            pesquisa:"Bloco em Construção",
             x:82.4, y:50.5, w:12, h:67, fs:18.5
         },
     ],
@@ -167,11 +168,11 @@ const botoesDosPopups = {
     ],
 
     "imagens/quadra.png": [
-        { nome:"Quadra\nPoliesportiva",     x:82.4, y:50.6, w:20.5, h:20.5, fs:12 },
+        { nome:"Quadra\nPoliesportiva",     x:82.4, y:50.6, w:22, h:20.5, fs:11 },
         { nome:"Dispensa\nda Quadra",       x:55.91, y:36.2, w:13, h:10, fs:7 },
         { nome:"Banheiro F.\ncom chuveiro", x:55.91, y:49.7, w:13, h:10, fs:7 },
         { nome:"Banheiro M.\ncom chuveiro", x:55.91, y:64.5, w:13, h:10, fs:7 },
-        { nome:"Piscina",                   x:24.5, y:50.3, w:14, h:14, fs:12 },
+        { nome:"Piscina",                   x:24.5, y:50.3, w:15, h:14, fs:11 },
     ],
 
     "imagens/hall.png": [

@@ -42,74 +42,74 @@ const botoesDosPopups = {
         {
             nome:"Lab. de\nMáquinas\nElétricas",
             pesquisa:"Laboratório de Máquinas Elétricas",
-            x:22.87, y:6.5, w:20, h:6.5, fs:10
+            x:23.3, y:6.9, w:20, h:6.5, fs:10
         },
 
         {
             nome:"Lab. de\nMedidas\nElétricas",
             pesquisa:"Laboratório de Medidas Elétricas",
-            x:22.87, y:15.25, w:20, h:6.5, fs:10
+            x:23.3, y:15.25, w:20, h:6.5, fs:10
         },
 
         {
             nome:"Lab. de\nFísica e\nEletrônica",
             pesquisa:"Laboratório de Física e Eletrônica",
-            x:22.87, y:24.1, w:20, h:6.5, fs:10
+            x:23.3, y:24.1, w:20, h:6.5, fs:10
         },
 
         {
             nome:"Lab. de\nInformática\n(Superior)",
             pesquisa:"Laboratório de Informática",
-            x:22.87, y:33.1, w:20, h:6.5, fs:10
+            x:23.3, y:33.1, w:20, h:6.6, fs:10
         },
 
         {
             nome:"Fábrica de\nInovações",
-            x:22.87, y:42, w:20, h:4.5, fs:10
+            x:23.3, y:42, w:20, h:4.5, fs:10
         },
 
         {
             nome:"Lab. de\nQuímica",
             pesquisa:"Laboratório de Química",
-            x:22.87, y:57.1, w:20, h:4.5, fs:10
+            x:23.3, y:57.1, w:20, h:4.5, fs:10
         },
 
         {
             nome:"Lab. de\nBiologia",
             pesquisa:"Laboratório de Biologia",
-            x:22.87, y:65.7, w:20, h:4.5, fs:10
+            x:23.3, y:65.7, w:20, h:4.5, fs:10
         },
 
         {
             nome:"Lab. de\nDesenho\nTécnico",
             pesquisa:"Laboratório de Desenho Técnico",
-            x:22.87, y:74.3, w:20, h:6.5, fs:10
+            x: 23.3, y:74.3, w:20, h:6.5, fs:10
         },
 
         {
             nome:"Lab. de\nInformática",
             pesquisa:"Laboratório de Informática",
-            x:22.87, y:83.5, w:20, h:4.5, fs:10
+            x:23.3, y:83.5, w:20, h:4.5, fs:10
         },
 
         {
             nome:"Lab. de\nInformática",
             pesquisa:"Laboratório de Informática",
-            x:22.87, y:93.1, w:20, h:4.5, fs:10
+            x:23.3, y:93.1, w:20, h:4.5, fs:10
         },
 
-        { nome:"Sala 46", x:77, y:9.5, w:17, h:3, fs:10 },
-        { nome:"Sala 47", x:77, y:18.5, w:17, h:3, fs:10 },
-        { nome:"Sala 48", x:77, y:27.2, w:17, h:3, fs:10 },
-        { nome:"Sala 49", x:77, y:35.9, w:17, h:3, fs:10 },
+        { nome:"Sala 46", x:76.46, y:9.5, w:17, h:3, fs:10 },
+        { nome:"Sala 47", x:76.46, y:18.5, w:17, h:3, fs:10 },
+        { nome:"Sala 48", x:76.46, y:27.2, w:17, h:3, fs:10 },
+        { nome:"Sala 49", x:76.46, y:35.9, w:17, h:3, fs:10 },
 
-        { nome:"Banheiro M.\ne Acessível", x:77, y:43.1, w:20, h:4.75, fs:10 },
-        { nome:"Banheiro F.\ne Acessível", x:77, y:55.6, w:20, h:4.75, fs:10 },
+        { nome:"Banheiro M.\ne Acessível", x:76.46, y:43.1, w:20, h:4.75, fs:10 },
+        { nome:"Banheiro F.\ne Acessível", x:76.46, y:55.6, w:20, h:4.75, fs:10 },
 
-        { nome:"Sala 50", x:77, y:63.56, w:17, h:3, fs:10 },
-        { nome:"Sala 51", x:77, y:72.5, w:17, h:3, fs:10 },
-        { nome:"Sala 52", x:77, y:81.6, w:17, h:3, fs:10 },
-        { nome:"Sala 53", x:77, y:90.6, w:17, h:3, fs:10 },
+        { nome:"Sala 50", x:76.46, y:63.56, w:17, h:3, fs:10 },
+        { nome:"Sala 51", x:76.46, y:72.5, w:17, h:3, fs:10 },
+        { nome:"Sala 52", x:76.46, y:81.6, w:17, h:3, fs:10 },
+        { nome:"Sala 53", x:76.46, y:90.2, w:17, h:3, fs:10 },
     ],
 
     "imagens/blocoCeD.png": [

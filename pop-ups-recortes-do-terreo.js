@@ -14,7 +14,7 @@ const botoesparaverpopup = [
     { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
     { nome:"R",  x:35,   y:86.5,  w:14,   h:11.5, scale: 1.4, scalecelular: 0.9, imagem:"imagens/refeitorio.png" },
     { nome:"AB", x:60.7, y:66.6,  w:24,   h:45.6, scale: 1,   scalecelular: 0.9, imagem:"imagens/blocoAeB.png" },
-    { nome:"CD", x:89.5, y:66.5,  w:23,   h:34,   scale: 1,   scalecelular: 0.9, imagem:"imagens/blocoCeD.png" },
+    { nome:"CD", x:89.5, y:66.5,  w:23,   h:33,   scale: 1,   scalecelular: 1, imagem:"imagens/blocoCeD.png" },
 
 ];
 
@@ -117,48 +117,48 @@ const botoesDosPopups = {
         {
             nome:"Lab. de\nProdução\nMecânica",
             pesquisa:"Laboratório de Produção Mecânica",
-            x:25.09, y:8, w:20, h:7.8, fs:15
+            x:25.09, y:8, w:20, h:7.8, fs:14
         },
 
         {
             nome:"SAA",
-            x:25.09, y:18.7, w:20, h:4.5, fs:15
+            x:25.09, y:18.7, w:20, h:4.5, fs:14
         },
 
         {
             nome:"Lab. de\nSoldagem",
             pesquisa:"Laboratório de Soldagem",
-            x:25.09, y:31, w:20, h:6.5, fs:15
+            x:25.09, y:31, w:20, h:6.5, fs:14
         },
 
         {
             nome:"Banheiro M.\ne Acessível",
-            x:25.09, y:40.9, w:21, h:6.5, fs:15
+            x:25.09, y:40.9, w:21, h:6.5, fs:14
         },
 
         {
             nome:"Banheiro F.\ne Acessível",
-            x:25.09, y:57.32, w:21, h:6.5, fs:15
+            x:25.09, y:57.32, w:21, h:6.5, fs:14
         },
 
         {
             nome:"Sala 58",
-            x:25.09, y:67.6, w:20, h:4.5, fs:15
+            x:25.09, y:67.6, w:20, h:4.5, fs:14
         },
 
         {
             nome:"Sala 59",
-            x:25.09, y:79.45, w:20, h:4.5, fs:15
+            x:25.09, y:79.45, w:20, h:4.5, fs:14
         },
 
         {
             nome:"Sala 60",
-            x:25.09, y:92, w:20, h:4.5, fs:15
+            x:25.09, y:92, w:20, h:4.5, fs:14
         },
 
         {
             nome:"B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",
-            x:82.4, y:50.5, w:12, h:67, fs:20
+            x:82.4, y:50.5, w:12, h:67, fs:18.5
         },
     ],
 

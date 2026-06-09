@@ -299,7 +299,6 @@ const dadosSalas = {
         local: "Área Externa",
         horarios: { "Geral": "Conforme cronograma de aulas de Educação Física" },
         descricao: "Quadra coberta para diversas aulas práticas de educação física, treinos e eventos esportivos.",
-        equipamentos: "Tabelas de basquete, traves de futsal, redes de vôlei, arquibancada.",
         observacoes: "Discentes só podem adentrar o local se um docente também estiver na quadra."
     },
     "Dispensa da Quadra": {

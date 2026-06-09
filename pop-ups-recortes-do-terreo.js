@@ -168,11 +168,11 @@ const botoesDosPopups = {
     ],
 
     "imagens/quadra.png": [
-        { nome:"Quadra\nPoliesportiva",     x:82.4, y:50.6, w:22, h:20.5, fs:11 },
-        { nome:"Dispensa\nda Quadra",       x:55.91, y:36.2, w:13, h:10, fs:7 },
-        { nome:"Banheiro F.\ncom chuveiro", x:55.91, y:49.7, w:13, h:10, fs:7 },
-        { nome:"Banheiro M.\ncom chuveiro", x:55.91, y:64.5, w:13, h:10, fs:7 },
-        { nome:"Piscina",                   x:24.5, y:50.3, w:15, h:14, fs:11 },
+        { nome:"Quadra\nPoliesportiva",     x:82, y:50.6, w:21, h:19, fs:11 },
+        { nome:"Dispensa\nda Quadra",       x:55.91, y:36.6, w:12, h:8.5, fs:6.6 },
+        { nome:"Banheiro F.\ncom chuveiro", x:55.91, y:49.7, w:12, h:9, fs:6.6 },
+        { nome:"Banheiro M.\ncom chuveiro", x:55.91, y:64.5, w:12, h:9, fs:6.6 },
+        { nome:"Piscina",                   x:25, y:50.3, w:15, h:14, fs:11 },
     ],
 
     "imagens/hall.png": [

@@ -26,8 +26,8 @@ const botoesDosPopups = {
 
     "imagens/cineteatro.png": [
         { nome:"Cine Teatro",            x:40.5, y:53, w:37, h:9, fs:24 },
-        { nome:"Camarim",                x:78.4, y:89.4, w:15.5, h:6, fs:12 },
-        { nome:"Cabine de Controle",     x:40.1, y:14.63, w:32, h:5, fs:12 },
+        { nome:"Camarim",                x:78.6, y:89.4, w:15.5, h:6, fs:12 },
+        { nome:"Cabine de Controle",     x:40.1, y:14.3, w:32, h:5, fs:12 },
     ],
 
     "imagens/biblioteca.png": [

@@ -133,12 +133,12 @@ const botoesDosPopups = {
 
         {
             nome:"Banheiro M.\ne Acessível",
-            x:25.09, y:40.9, w:21, h:6.5, fs:14
+            x:25.09, y:40.9, w:21, h:6.5, fs:13
         },
 
         {
             nome:"Banheiro F.\ne Acessível",
-            x:25.09, y:57.32, w:21, h:6.5, fs:14
+            x:25.09, y:57.32, w:21, h:6.5, fs:13
         },
 
         {

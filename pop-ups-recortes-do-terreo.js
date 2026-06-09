@@ -184,7 +184,7 @@ const botoesDosPopups = {
 
         {
             nome:"Sala dos Professores/DERI/\nPRONATEC/NPPG",
-            x:86.9, y:31.45, w:16, h:6, fs:7
+            x:86.8, y:31.45, w:16, h:6, fs:7
         },
 
         {

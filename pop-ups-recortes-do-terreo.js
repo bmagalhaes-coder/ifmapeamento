@@ -117,18 +117,18 @@ const botoesDosPopups = {
         {
             nome:"Lab. de\nProdução\nMecânica",
             pesquisa:"Laboratório de Produção Mecânica",
-            x:25.09, y:8, w:20, h:7.8, fs:14
+            x:25.09, y:8, w:20, h:7.8, fs:13
         },
 
         {
             nome:"SAA",
-            x:25.09, y:18.7, w:20, h:4.5, fs:14
+            x:25.09, y:18.7, w:20, h:4.5, fs:13
         },
 
         {
             nome:"Lab. de\nSoldagem",
             pesquisa:"Laboratório de Soldagem",
-            x:25.09, y:31, w:20, h:6.5, fs:14
+            x:25.09, y:31, w:20, h:6.5, fs:13
         },
 
         {
@@ -143,23 +143,23 @@ const botoesDosPopups = {
 
         {
             nome:"Sala 58",
-            x:25.09, y:67.6, w:20, h:4.5, fs:14
+            x:25.09, y:67.6, w:20, h:4.5, fs:13
         },
 
         {
             nome:"Sala 59",
-            x:25.09, y:79.45, w:20, h:4.5, fs:14
+            x:25.09, y:79.45, w:20, h:4.5, fs:13
         },
 
         {
             nome:"Sala 60",
-            x:25.09, y:92, w:20, h:4.5, fs:14
+            x:25.09, y:92, w:20, h:4.5, fs:13
         },
 
         {
             nome:"B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",
             pesquisa:"Bloco em Construção",
-            x:82.4, y:50.5, w:12, h:67, fs:18.5
+            x:82.4, y:50.5, w:12, h:67, fs:18
         },
     ],
 

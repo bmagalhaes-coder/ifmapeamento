@@ -176,39 +176,38 @@ const botoesDosPopups = {
     ],
 
     "imagens/hall.png": [
-        { nome:"Banheiro M.\ne Acessível", x:44.7, y:10, w:15, h:4, fs:7 },
-        { nome:"E - Games", x:62.1, y:10, w:12, h:3, fs:7 },
-        { nome:"Psicóloga", x:83.2, y:10, w:15, h:3, fs:7 },
-        { nome:"Setor Médico", x:83.2, y:10, w:15, h:3, fs:7 },
-        { nome:"Serviço Social", x:86.9, y:22, w:15, h:3, fs:7 },
+        { nome:"Banheiro M.\ne Acessível", x:44.7, y:10, w:14.6, h:4, fs:8 },
+        { nome:"E - Games", x:62.1, y:10, w:12, h:3, fs:8 },
+        { nome:"Setor Médico\ne Pscicológico", x:83.2, y:10, w:15, h:5, fs:8 },
+        { nome:"Serviço Social", x:86.9, y:22, w:15, h:3, fs:8 },
 
         {
-            nome:"Sala dos Professores/DERI/\nPRONATEC/NPPG",
-            x:86.8, y:31.45, w:16, h:6, fs:7
+            nome:"Sala dos\nProfessores",
+            x:86.8, y:31.45, w:15.4, h:4.5, fs:8
         },
 
         {
             nome:"Protocolo com\nalmoxarifado",
-            x:86.9, y:41, w:15, h:4, fs:7
+            x:86.9, y:41, w:15.4, h:4.5, fs:8
         },
 
         {
             nome:"DRCA/Controle\nAcadêmico",
-            x:86.9, y:62.4, w:15, h:4, fs:7
+            x:86.9, y:62.4, w:15.6, h:4.5, fs:8
         },
 
-        { nome:"Fechada", x:86.9, y:72, w:10, h:3, fs:7 },
+        { nome:"Fechada", x:86.9, y:72, w:14, h:4, fs:8 },
 
         {
             nome:"Almoxarifado\nde Material\nde Expediente",
-            x:83.2, y:90, w:16, h:5.6, fs:7
+            x:83.2, y:90, w:16, h:6, fs:8
         },
 
-        { nome:"Diretoria", x:62.2, y:90, w:11, h:3, fs:7 },
+        { nome:"Diretoria", x:62.2, y:90, w:11, h:3, fs:8 },
 
         {
             nome:"Banheiro F.\ne Acessível",
-            x:44.7, y:90, w:15, h:4, fs:7
+            x:44.7, y:90, w:15, h:4, fs:8
         },
     ],
 
@@ -247,7 +246,7 @@ const botoesDosPopups = {
 
         {
             nome:"Banheiro M.\ne Acessível",
-            x:76.4, y:15, w:16, h:4, fs:8
+            x:76.4, y:15, w:14.6, h:4, fs:8
         },
     ],
 

@@ -7,11 +7,10 @@ const salas = [
     "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", 
     "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Cine Teatro", 
     "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
-    "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60",
-    "Psicóloga", "Setor Médico", "Quadra Poliesportiva", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
-    "Sala de Línguas", "Incubadora", "E - Games", "CAE", "Psicóloga","Protocolo com almoxarifado","DPG/NPGP",
+    "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60", "Setor Médico e Pscicológico", "Quadra Poliesportiva", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
+    "Sala de Línguas", "Incubadora", "E - Games", "CAE","Protocolo com almoxarifado","DPG/NPGP",
     "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", 
-    "Sala dos Professores/DERI/\nPRONATEC/NPPG", "Bloco em Construção", "Diretoria", "Cantina", "Sala de Estudos", "Livros fora do sistema"
+    "Sala dos Professores", "Bloco em Construção", "Diretoria", "Cantina", "Sala de Estudos", "Livros fora do sistema"
 ];
 
 const searchInput = document.getElementById('searchInput');
@@ -182,7 +181,7 @@ const dadosSalas = {
     descricao: "Bloco com os futuros novos laboratórios para os cursos técnicos e superiores.",
     equipamentos: "-"
     },
-    "Sala dos Professores/DERI/\nPRONATEC/NPPG": {
+    "Sala dos Professores": {
         local: "Sala 07 - Térreo",
         horarios: { "Geral": "Horário indefinido" },
         descricao: "-",
@@ -219,16 +218,10 @@ const dadosSalas = {
         descricao: "Setor voltado à garantia de direitos e bem-estar dos estudantes, realizando triagens para auxílios e programas de assistência.",
         equipamentos: "Mobiliário para atendimento individual sigiloso, computadores e telefone."
     },
-    "Psicóloga": {
+    "Setor Médico e Pscicológico": {
         local: "Sala ? - Térreo",
         horarios: { "Geral": "Horário indefinido" },
-        descricao: "Atendimento psicológico para estudantes e servidores.",
-        observacoes: "Atendimento confidencial."
-    },
-    "Setor Médico": {
-        local: "Sala ? - Térreo",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "Criado para o atendimento médico básico e primeiros socorros.",
+        descricao: "Criado para o atendimento médico básico e primeiros socorros, além disso, contém uma área de atendimento psicológico para estudantes e servidores.",
         equipamentos: "Maca, materiais de primeiros socorros, medicamentos básicos."
     },
     "Diretoria": {
@@ -523,16 +516,6 @@ const dadosSalas = {
             "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
         },
         descricao: "Centro de atendimento estudantil - Suporte às atividades acadêmicas.",
-    },
-    "Psicóloga": {
-        local: "Sala 03 - Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "Atendimento psicológico - Sala da psicóloga do campus.",
-        equipamentos: "Sala de atendimento individual, materiais para terapia."
     },
     "Protocolo com almoxarifado": {
         local: "Sala 08 - Térreo",

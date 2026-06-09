@@ -14,7 +14,7 @@ const botoesparaverpopup = [
     { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
     { nome:"R",  x:35,   y:86.5,  w:14,   h:11.5, scale: 1.4, scalecelular: 0.9, imagem:"imagens/refeitorio.png" },
     { nome:"AB", x:60.7, y:66.6,  w:24,   h:45.6, scale: 1,   scalecelular: 0.9, imagem:"imagens/blocoAeB.png" },
-    { nome:"CD", x:89.5, y:66.5,  w:23,   h:33,   scale: 1,   scalecelular: 0.9, imagem:"imagens/blocoCeD.png" },
+    { nome:"CD", x:89.5, y:66.5,  w:23,   h:33,   scale: 1,   scalecelular: 0.8, imagem:"imagens/blocoCeD.png" },
 
 ];
 
@@ -26,8 +26,8 @@ const botoesDosPopups = {
 
     "imagens/cineteatro.png": [
         { nome:"Cine Teatro",            x:40.5, y:53, w:37, h:9, fs:24 },
-        { nome:"Camarim",                x:78.67, y:89.6, w:15.5, h:6, fs:12 },
-        { nome:"Cabine de Controle",     x:40.1, y:14.3, w:32, h:5, fs:12 },
+        { nome:"Camarim",                x:78.4, y:89.4, w:15.5, h:6, fs:12 },
+        { nome:"Cabine de Controle",     x:40.1, y:14.63, w:32, h:5, fs:12 },
     ],
 
     "imagens/biblioteca.png": [

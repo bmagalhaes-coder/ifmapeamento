@@ -159,7 +159,7 @@ const botoesDosPopups = {
         {
             nome:"B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",
             pesquisa:"Bloco em Construção",
-            x:82.4, y:50.5, w:12, h:67, fs:18
+            x:82.4, y:50.5, w:12, h:67, fs:17
         },
     ],
 
@@ -184,7 +184,7 @@ const botoesDosPopups = {
 
         {
             nome:"Sala dos Professores/DERI/\nPRONATEC/NPPG",
-            x:86.98, y:31.45, w:16, h:6, fs:7
+            x:86.9, y:31.45, w:16, h:6, fs:7
         },
 
         {

@@ -9,7 +9,7 @@ const botoesparaverpopup = [
     { nome:"B",  x:7.55, y:41.7,  w:12,   h:20,   scale: 1.4, scalecelular: 1, imagem:"imagens/biblioteca.png" },
     { nome:"Q",  x:55.85,y:9.9,   w:58.7, h:20.3, scale: 1.4, scalecelular: 1, imagem:"imagens/quadra.png" },
     { nome:"ci", x:9.99, y:90.4,  w:16.5, h:20,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cineteatro.png" },
-    { nome:"H",  x:9.8,  y:65.86, w:19.5, h:23,   scale: 1.26,scalecelular: 1.3, imagem:"imagens/hall.png" },
+    { nome:"H",  x:9.8,  y:65.86, w:19.5, h:23,   scale: 1.26,scalecelular: 1, imagem:"imagens/hall.png" },
     { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
     { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
     { nome:"R",  x:35,   y:86.5,  w:14,   h:11.5, scale: 1.4, scalecelular: 0.9, imagem:"imagens/refeitorio.png" },
@@ -178,7 +178,7 @@ const botoesDosPopups = {
     "imagens/hall.png": [
         { nome:"Banheiro M.\ne Acessível", x:44.7, y:10, w:14.6, h:4, fs:8 },
         { nome:"E - Games", x:62.1, y:10, w:12, h:3, fs:8 },
-        { nome:"Setor Médico\ne Pscicológico", x:83.2, y:10, w:15, h:5, fs:8 },
+        { nome:"Setor Médico\ne Pscicológico", x:83.2, y:10, w:15.5, h:5, fs:8 },
         { nome:"Serviço Social", x:86.9, y:22, w:15, h:3, fs:8 },
 
         {

@@ -178,7 +178,7 @@ const botoesDosPopups = {
     "imagens/hall.png": [
         { nome:"Banheiro M.\ne Acessível", x:44.7, y:10, w:14.6, h:4, fs:8 },
         { nome:"E - Games", x:62.1, y:10, w:12, h:3, fs:8 },
-        { nome:"Setor Médico\ne Pscicológico", x:83.2, y:10, w:15.5, h:5, fs:8 },
+        { nome:"Setor Médico\ne Pscicológico", x:83.2, y:10, w:16, h:5, fs:8 },
         { nome:"Serviço Social", x:86.9, y:22, w:15, h:3, fs:8 },
 
         {

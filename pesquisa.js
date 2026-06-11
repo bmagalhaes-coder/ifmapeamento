@@ -7,7 +7,7 @@ const salas = [
     "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", 
     "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Cine Teatro", 
     "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
-    "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60", "Setor Médico e Pscicológico", "Quadra Poliesportiva", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
+    "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60", "Quadra Poliesportiva", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
     "Sala de Línguas", "Incubadora", "E - Games", "CAE","Protocolo com almoxarifado","DPG/NPGP",
     "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", 
     "Sala dos Professores", "Bloco em Construção", "Diretoria", "Cantina", "Sala de Estudos", "Livros fora do sistema"
@@ -207,15 +207,12 @@ const dadosSalas = {
         descricao: "-",
         equipamentos: "-"
     },
-    "AEE/NAPNE": {
+    "AEE/ NAPNE": {
         local: "Sala 66 - Térreo",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "NAPNE (Núcleo de Apoio às Pessoas com Necessidades Educacionais Específicas).",
-        equipamentos: "Materiais pedagógicos adaptados, recursos de acessibilidade."
-    },
-        "AEE/\nNAPNE": {
-        local: "Sala 66 - Térreo",
-        horarios: { "Geral": "Horário indefinido" },
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 19:00", "Terça": "08:00 às 12:00 e 14:00 às 19:00",
+            "Quarta": "08:00 às 12:00 e 14:00 às 19:00", "Quinta": "08:00 às 12:00 e 14:00 às 19:00", "Sexta": "08:00 às 12:00 e 14:00 às 19:00", "Sábado": "Aberto em dias de de evento"
+        },
         descricao: "NAPNE (Núcleo de Apoio às Pessoas com Necessidades Educacionais Específicas).",
         equipamentos: "Materiais pedagógicos adaptados, recursos de acessibilidade."
     },
@@ -238,10 +235,14 @@ const dadosSalas = {
         descricao: "Setor voltado à garantia de direitos e bem-estar dos estudantes, realizando triagens para auxílios e programas de assistência.",
         equipamentos: "Mobiliário para atendimento individual sigiloso, computadores e telefone."
     },
-    "Setor Médico e Pscicológico": {
-        local: "Sala ? - Térreo",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "Criado para o atendimento médico básico e primeiros socorros, além disso, contém uma área de atendimento psicológico para estudantes e servidores.",
+    "CAE": {
+        local: "Sala 03 - Térreo",
+        cursos: [
+            { nome: "Serviço de enfermagem", horarios: { "Domingo": "Fechado", "Segunda": "08:00 às 21:00", "Terça": "08:00 às 21:00", "Quarta": "08:00 às 21:00", "Quinta": "08:00 às 21:00", "Sexta": "09:00 às 21:00", "Sábado": "Fechado" } },
+            { nome: "Serviço médico", horarios: { "Domingo": "Fechado", "Segunda": "08:00 às 13:00", "Terça": "-", "Quarta": "-", "Quinta": "-", "Sexta": "15:00 às 20:00", "Sábado": "Fechado" } },
+            { nome: "Serviço de psicologia", horarios: { "Domingo": "Fechado", "Segunda": "08:00 às 20:00", "Terça": "08:00 às 14:00 e 15:00 às 21:00", "Quarta": "08:00 às 20:00", "Quinta": "08:00 às 19:00", "Sexta": "08:00 às 16:30", "Sábado": "Fechado" } }
+        ],
+        descricao: "O Centro de atendimento estudantil (CAE) foi criado para o atendimento médico básico e primeiros socorros, além disso, contém uma área de atendimento psicológico para estudantes e servidores.",
         equipamentos: "Maca, materiais de primeiros socorros, medicamentos básicos."
     },
     "Diretoria": {
@@ -527,15 +528,6 @@ const dadosSalas = {
         horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Espaço de jogos e gameficação - Projetos e pesquisa em jogos digitais.",
         equipamentos: "Computadores gamers, consoles de videogame, óculos de realidade virtual, acervo de jogos."
-    },
-    "CAE": {
-        local: "Sala 03 - Térreo",
-        horarios: {
-            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 18:00",
-            "Terça": "08:00 às 12:00 e 14:00 às 18:00", "Quarta": "08:00 às 12:00 e 14:00 às 18:00",
-            "Quinta": "08:00 às 12:00 e 14:00 às 18:00", "Sexta": "08:00 às 12:00 e 14:00 às 18:00", "Sábado": "Fechado"
-        },
-        descricao: "Centro de atendimento estudantil - Suporte às atividades acadêmicas.",
     },
     "Protocolo com almoxarifado": {
         local: "Sala 08 - Térreo",

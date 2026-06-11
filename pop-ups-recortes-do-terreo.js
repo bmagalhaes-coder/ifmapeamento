@@ -178,33 +178,33 @@ const botoesDosPopups = {
     "imagens/hall.png": [
         { nome:"Banheiro\nMasculino\ne Acessível",
           pesquisa:"Banheiro M. e Acessível",
-          x:44.7, y:10, w:13, h:6, fs:8 },
+          x:44.7, y:10, w:13.5, h:6, fs:8 },
 
         { nome:"E - Games", x:62.1, y:10, w:12, h:3, fs:8 },
         { nome:"CAE", x:83.2, y:10, w:10, h:3, fs:8 },
-        { nome:"Serviço Social", x:86.9, y:22, w:15.5, h:3, fs:8 },
+        { nome:"Serviço Social", x:86.9, y:22, w:16, h:3, fs:8 },
 
         {
             nome:"Sala dos\nProfessores",
-            x:86.8, y:31.45, w:15.4, h:4.5, fs:8
+            x:86.8, y:31.45, w:16, h:4.5, fs:8
         },
 
         {
             nome:"Protocolo com\nalmoxarifado",
-            x:86.9, y:41, w:15.7, h:4.5, fs:8
+            x:86.9, y:41, w:16, h:4.5, fs:8
         },
 
         {
             nome:"DRCA\nControle\nAcadêmico",
             pesquisa:"DRCA/Controle Acadêmico",
-            x:86.9, y:62.4, w:13.5, h:6, fs:8
+            x:86.9, y:62.4, w:14, h:6, fs:8
         },
 
-        { nome:"Fechada", x:86.9, y:72, w:13.5, h:4, fs:8 },
+        { nome:"Fechada", x:86.9, y:72, w:14, h:4, fs:8 },
 
         {
             nome:"Almoxarifado\nde Material\nde Expediente",
-            x:83.2, y:90, w:16.5, h:6, fs:8
+            x:83.2, y:90, w:17, h:6, fs:8
         },
 
         { nome:"Diretoria", x:62.2, y:90, w:11, h:3, fs:8 },
@@ -212,7 +212,7 @@ const botoesDosPopups = {
         {
             nome:"Banheiro\nFeminino\ne Acessível",
             pesquisa:"Banheiro F. e Acessível",
-            x:44.7, y:90, w:13, h:6, fs:8
+            x:44.7, y:90, w:13.5, h:6, fs:8
         },
     ],
 

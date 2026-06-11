@@ -72,7 +72,7 @@ const dadosSalas = {
         horarios: {
             "Domingo": "Fechado", "Segunda": "07:00 às 22:00",
             "Terça": "07:00 às 22:00", "Quarta": "07:00 às 22:00",
-            "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "07:00 às 22:00"
+            "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
         },
         descricao: "Espaço destinado às refeições rápidas e descanso dos colaboradores, equipado para conservação e aquecimento de alimentos.",
         equipamentos: "Micro-ondas, geladeira, cafeteira, mesa de apoio e pias."
@@ -126,7 +126,7 @@ const dadosSalas = {
         horarios: {
             "Domingo": "Fechado", "Segunda": "07:00 às 22:00",
             "Terça": "07:00 às 22:00", "Quarta": "07:00 às 22:00",
-            "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "07:00 às 22:00"
+            "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "Fechado"
         },
         descricao: "Espaço em fase de implementação destinado à integração, repouso e lazer dos servidores durante intervalos.",
         equipamentos: "Mobiliário básico em instalação (poltronas e mesas)."
@@ -263,14 +263,12 @@ const dadosSalas = {
        horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Espaço multiuso para apresentações, palestras, formaturas e eventos culturais com capacidade para 200 pessoas.",
         equipamentos: "Projetor, tela retrátil, sistema de som profissional, palco, iluminação cênica, camarins.",
-        observacoes: "Somente pessoas autorizadas."
     },
     "Camarim": {
         local: "Na lateral do palco do Cine Teatro (Térreo)",
         horarios: { Geral: "Entrada permitida só com a autorização de um docente ou servidor." },
         descricao: "Espaço para preparação dos artistas antes das apresentações no Cine Teatro.",
         equipamentos: "Espelhos iluminados, cabideiros, pia, bancada, cadeiras.",
-        observacoes: "Somente pessoas autorizadas que irão se apresentar no palco."
     },
     "IFCast": {
         local: "Térreo",

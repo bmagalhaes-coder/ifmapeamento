@@ -117,49 +117,49 @@ const botoesDosPopups = {
         {
             nome:"Lab. de\nProdução\nMecânica",
             pesquisa:"Laboratório de Produção Mecânica",
-            x:25.09, y:8, w:20, h:7.8, fs:13
+            x:25.4, y:8, w:20, h:7.8, fs:13
         },
 
         {
             nome:"SAA",
-            x:25.09, y:18.7, w:20, h:4.5, fs:13
+            x:25.4, y:19.2, w:20, h:4.5, fs:13
         },
 
         {
             nome:"Lab. de\nSoldagem",
             pesquisa:"Laboratório de Soldagem",
-            x:25.09, y:31, w:20, h:6.5, fs:13
+            x:25.4, y:31, w:20, h:6.5, fs:13
         },
 
         {
             nome:"Banheiro M.\ne Acessível",
-            x:25.09, y:40.9, w:21, h:6.5, fs:13
+            x:25.4, y:40.9, w:21.4, h:6.5, fs:13
         },
 
         {
             nome:"Banheiro F.\ne Acessível",
-            x:25.09, y:57.32, w:21, h:6.5, fs:13
+            x:25.4, y:57.32, w:21.4, h:6.5, fs:13
         },
 
         {
             nome:"Sala 58",
-            x:25.09, y:67.6, w:20, h:4.5, fs:13
+            x:25.4, y:67.6, w:20, h:4.5, fs:13
         },
 
         {
             nome:"Sala 59",
-            x:25.09, y:79.45, w:20, h:4.5, fs:13
+            x:25.4, y:79.45, w:20, h:4.5, fs:13
         },
 
         {
             nome:"Sala 60",
-            x:25.09, y:92, w:20, h:4.5, fs:13
+            x:25.4, y:91.5, w:20, h:4.5, fs:13
         },
 
         {
             nome:"B\nL\nO\nC\nO\n \nE\nM\n \nC\nO\nN\nS\nT\nR\nU\nÇ\nÃ\nO",
             pesquisa:"Bloco em Construção",
-            x:82.4, y:50.5, w:12, h:67, fs:17
+            x:82.4, y:50.5, w:12, h:65, fs:17
         },
     ],
 
@@ -176,10 +176,13 @@ const botoesDosPopups = {
     ],
 
     "imagens/hall.png": [
-        { nome:"Banheiro M.\ne Acessível", x:44.7, y:10, w:14.6, h:4, fs:8 },
+        { nome:"Banheiro\nMasculino\ne Acessível",
+          pesquisa:"Banheiro M. e Acessível",
+          x:44.7, y:10, w:13, h:6, fs:8 },
+
         { nome:"E - Games", x:62.1, y:10, w:12, h:3, fs:8 },
-        { nome:"CAE", x:83.2, y:10, w:12, h:3, fs:8 },
-        { nome:"Serviço Social", x:86.9, y:22, w:15, h:3, fs:8 },
+        { nome:"CAE", x:83.2, y:10, w:10, h:3, fs:8 },
+        { nome:"Serviço Social", x:86.9, y:22, w:15.5, h:3, fs:8 },
 
         {
             nome:"Sala dos\nProfessores",
@@ -188,26 +191,28 @@ const botoesDosPopups = {
 
         {
             nome:"Protocolo com\nalmoxarifado",
-            x:86.9, y:41, w:15.4, h:4.5, fs:8
+            x:86.9, y:41, w:15.7, h:4.5, fs:8
         },
 
         {
-            nome:"DRCA/Controle\nAcadêmico",
-            x:86.9, y:62.4, w:15.6, h:4.5, fs:8
+            nome:"DRCA\nControle\nAcadêmico",
+            pesquisa:"DRCA/Controle Acadêmico",
+            x:86.9, y:62.4, w:13.5, h:6, fs:8
         },
 
-        { nome:"Fechada", x:86.9, y:72, w:14, h:4, fs:8 },
+        { nome:"Fechada", x:86.9, y:72, w:13.5, h:4, fs:8 },
 
         {
             nome:"Almoxarifado\nde Material\nde Expediente",
-            x:83.2, y:90, w:16, h:6, fs:8
+            x:83.2, y:90, w:16.5, h:6, fs:8
         },
 
         { nome:"Diretoria", x:62.2, y:90, w:11, h:3, fs:8 },
 
         {
-            nome:"Banheiro F.\ne Acessível",
-            x:44.7, y:90, w:15, h:4, fs:8
+            nome:"Banheiro\nFeminino\ne Acessível",
+            pesquisa:"Banheiro F. e Acessível",
+            x:44.7, y:90, w:13, h:6, fs:8
         },
     ],
 
@@ -240,13 +245,15 @@ const botoesDosPopups = {
         },
 
         {
-            nome:"Banheiro F.\ne Acessível",
-            x:22.2, y:15, w:16, h:4, fs:8
+          nome:"Banheiro\nFeminino\ne Acessível",
+          pesquisa:"Banheiro F. e Acessível",
+            x:22.2, y:14.4, w:16, h:6, fs:9
         },
 
         {
-            nome:"Banheiro M.\ne Acessível",
-            x:76.4, y:15, w:14.6, h:4, fs:8
+          nome:"Banheiro\nMasculino\ne Acessível",
+          pesquisa:"Banheiro M. e Acessível",
+            x:76.4, y:14.4, w:16, h:6, fs:9
         },
     ],
 

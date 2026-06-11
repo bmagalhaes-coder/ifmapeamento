@@ -69,7 +69,11 @@ const dadosSalas = {
     },
     "Copa": {
         local: "1° Andar",
-        horarios: { "Geral": "Sempre aberto" },
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "07:00 às 22:00",
+            "Terça": "07:00 às 22:00", "Quarta": "07:00 às 22:00",
+            "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "07:00 às 22:00"
+        },
         descricao: "Espaço destinado às refeições rápidas e descanso dos colaboradores, equipado para conservação e aquecimento de alimentos.",
         equipamentos: "Micro-ondas, geladeira, cafeteira, mesa de apoio e pias."
     },
@@ -93,31 +97,47 @@ const dadosSalas = {
     },
     "Arquivo CGP": {
         local: "Sala 24 - 1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
-        descricao: "Local de guarda e organização de documentos históricos e ativos da Coordenadoria de Gestão de Pessoas.",
+        horarios: { "Geral": "Aberto somente quando nescessário" },
+        descricao: "Local de guarda e organização de documentos históricos e restritos.",
         equipamentos: "Arquivos deslizantes, estantes metálicas e mesas de consulta."
     },
     "CGP": {
         local: "Sala 24 - 1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 17:00",
+            "Terça": "08:00 às 17:00", "Quarta": "08:00 às 17:00",
+            "Quinta": "08:00 às 17:00", "Sexta": "08:00 às 17:00", "Sábado": "Fechado"
+        },
         descricao: "Coordenadoria de Gestão de Pessoas - Responsável pela vida funcional dos servidores, processos de contratação e capacitação.",
         equipamentos: "Computadores, impressoras e armários de arquivos funcionais."
     },
     "CAPI/SCDP Balcão Digital": {
         local: "Sala 26 - 1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 17:00",
+            "Terça": "08:00 às 17:00", "Quarta": "08:00 às 17:00",
+            "Quinta": "08:00 às 17:00", "Sexta": "08:00 às 17:00", "Sábado": "Fechado"
+        },
         descricao: "Núcleo de atendimento para Pesquisa, Inovação e suporte ao Sistema de Concessão de Diárias e Passagens, além de serviços digitais.",
         equipamentos: "Terminais de atendimento, impressoras e notebooks."
     },
     "Sala de Vivência dos Servidores\n(em construção)": {
         local: "1° Andar",
-        horarios: { "Geral": "Sempre aberto" },
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "07:00 às 22:00",
+            "Terça": "07:00 às 22:00", "Quarta": "07:00 às 22:00",
+            "Quinta": "07:00 às 22:00", "Sexta": "07:00 às 22:00", "Sábado": "07:00 às 22:00"
+        },
         descricao: "Espaço em fase de implementação destinado à integração, repouso e lazer dos servidores durante intervalos.",
         equipamentos: "Mobiliário básico em instalação (poltronas e mesas)."
     },
     "DAP": {
         local: "1° Andar",
-        horarios: { "Geral": "Horário indefinido" },
+        horarios: {
+            "Domingo": "Fechado", "Segunda": "08:00 às 17:00",
+            "Terça": "08:00 às 17:00", "Quarta": "08:00 às 17:00",
+            "Quinta": "08:00 às 17:00", "Sexta": "08:00 às 17:00", "Sábado": "Fechado"
+        },
         descricao: "Departamento de Administração e Planejamento - Gerencia as compras, contratos, patrimônio e finanças da instituição.",
         equipamentos: "Estações de trabalho, arquivos e sistemas de gestão orçamentária."
     },

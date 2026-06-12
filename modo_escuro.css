@@ -1,12 +1,12 @@
 .dark-toggle{
     position: fixed;
-    top: 10px;
+    top: 15px;
     right: 15px;
     z-index: 99999;
 }
 
 .dark-btn{
-    width: 170px;
+    width: 130px;
     height: 45px;
 
     border: none;

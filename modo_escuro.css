@@ -75,3 +75,19 @@ body.modo-escuro h4,
 body.modo-escuro strong {
     color: white;
 }
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    .dark-toggle{
+        top: 8px;
+        right: 10px;
+    }
+
+    .dark-btn{
+        width: 140px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+}

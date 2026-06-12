@@ -6,7 +6,7 @@ const salas = [
     "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", 
     "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Cine Teatro", 
     "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
-    "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60", "Quadra Poliesportiva", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
+    "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60", "Quadra Poliesportiva", "Dispensa da Quadra", "Sala de Robótica",
     "Sala de Línguas", "Incubadora", "E - Games", "CAE","Protocolo com almoxarifado","DPG/NPGP",
     "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", 
     "Sala dos Professores", "Bloco em Construção", "Banheiro Feminino com Chuveiro e Acessível", "Banheiro Masculino com Chuveiro e Acessível", "Banheiro Feminino e Acessível", "Banheiro Masculino e Acessível", "Diretoria", "Cantina", "Sala de Estudos", "Livros fora do sistema"

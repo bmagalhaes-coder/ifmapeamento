@@ -9,13 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Estilo do botão
     if (btn) {
-        btn.style.width = "180px";
-        btn.style.height = "45px";
         btn.style.backgroundColor = "#39d400";
         btn.style.color = "white";
         btn.style.border = "none";
         btn.style.borderRadius = "200px";
-        btn.style.fontSize = "15px";
         btn.style.fontWeight = "bold";
         btn.style.cursor = "pointer";
 

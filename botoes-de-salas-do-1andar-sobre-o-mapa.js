@@ -82,7 +82,7 @@ function renderBotoes(wrapper, img) {
         btn.onclick = () => {
 
             if (typeof mostrarInfoSala === "function") {
-                mostrarInfoSala(info.nome);
+                mostrarInfoSala(info.pesquisa || info.nome);
             }
 
         };

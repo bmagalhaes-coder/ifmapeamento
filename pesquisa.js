@@ -2,15 +2,14 @@ const salas = [
     "DDE/DAP", "CTIC", "Servidor CTIC", "Coordenações", "Arquivo CGP", "NRH", "CGP", "CAPI/SCDP/Balcão Digital",
     "Sala de Vivência dos Servidores (em construção)", "CCTTII/CEEC/CCSAQ", "DAP", "Sala dos Funcionários e Servidores", 
     "SAA","Camarim", "IFCast", "Refeitório (em construção)", "Lanchonete", "Biblioteca", "DGP/NGP", "AEE/NAPNE", "Copa", 
-    "Serviço Social", "Banheiro Feminino com Chuveiro", "Banheiro Masculino com Chuveiro", "Banheiro Feminino e Acessível", 
-    "Banheiro Masculino e Acessível", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", 
+    "Serviço Social", "Banheiro Feminino com Chuveiro", "Banheiro Masculino com Chuveiro", "Laboratório de Máquinas Elétricas", "Laboratório de Medidas Elétricas", 
     "Laboratório de Física e Eletrônica", "Laboratório de Informática (Nível Superior)", "Fábrica de Inovações", 
     "Laboratório de Química", "Laboratório de Biologia", "Laboratório de Desenho Técnico", "Cine Teatro", 
     "Laboratórios de Informática", "Sala 46", "Sala 47", "Sala 48", "Sala 49", "Sala 50", "Sala 51", "Sala 52",
     "Sala 53", "Laboratório de Produção Mecânica", "Laboratório de Soldagem", "Sala 58", "Sala 59", "Sala 60", "Quadra Poliesportiva", "Dispensa da Quadra", "Dispensa da Cozinha", "Sala de Robótica",
     "Sala de Línguas", "Incubadora", "E - Games", "CAE","Protocolo com almoxarifado","DPG/NPGP",
     "DRCA/Controle Acadêmico", "Almoxarifado de Material de Expediente","Espaço Infantil", "Coordenação Superior", 
-    "Sala dos Professores", "Bloco em Construção", "Diretoria", "Cantina", "Sala de Estudos", "Livros fora do sistema"
+    "Sala dos Professores", "Bloco em Construção", "Banheiro Feminino com Chuveiro e Acessível", "Banheiro Masculino com Chuveiro e Acessível", "Banheiro Feminino e Acessível", "Banheiro Masculino e Acessível", "Diretoria", "Cantina", "Sala de Estudos", "Livros fora do sistema"
 ];
 
 const searchInput = document.getElementById('searchInput');
@@ -35,26 +34,38 @@ const diasSemana = {
 
 const dadosSalas = {
 // banheiros no primeiro andar e no térreo.
-"Banheiro F. com Chuveiro": {
+"Banheiro Feminino com Chuveiro e Acessível": {
+        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Local com 5 cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
+    },
+"Banheiro Masculino com Chuveiro e Acessível": {
+        local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
+        horarios: { "Geral": "Sempre aberto" },
+        descricao: "Local com mictórios, cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
+        equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
+    },
+"Banheiro Feminino com Chuveiro": {
         local: "Próximo à quadra",
         horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou piscina" },
         descricao: "Sanitário feminino contendo 4 chuveiros, 2 pias e 2 cabines com um vaso sanitário em cada uma.",
         equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
 
-"Banheiro M. com Chuveiro": {
+"Banheiro Masculino com Chuveiro": {
         local: "Próximo à quadra",
         horarios: { "Geral": "Aberto quando tem aula ou evento na quadra ou piscina" },
         descricao: "Sanitário masculino contendo mictório, 4 chuveiros 2 pias e 2 cabines com um vaso sanitário em cada uma.",
         equipamentos: "Papel higienico, sabonete líquido, lixeira."
     },
-"Banheiro F. e Acessível": {
+"Banheiro Feminino e Acessível": {
         local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Local com 5 cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas.",
         equipamentos: "Papel higienico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
-"Banheiro M. e Acessível": {
+"Banheiro Masculino e Acessível": {
         local: "1º Andar, bloco B e C, próximo à cantina e ao hall",
         horarios: { "Geral": "Sempre aberto" },
         descricao: "Local com mictórios, cabines normais com um vaso sanitário em cada e uma cabine com sanitário adaptado contendo barras de apoio e espaço para manobras com cadeiras de rodas..",
@@ -207,7 +218,7 @@ const dadosSalas = {
         descricao: "-",
         equipamentos: "-"
     },
-    "AEE/ NAPNE": {
+    "AEE/NAPNE": {
         local: "Sala 66 - Térreo",
         horarios: {
             "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 14:00 às 19:00", "Terça": "08:00 às 12:00 e 14:00 às 19:00",

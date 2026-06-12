@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa - Térreo</title>
-    
-    <!-- Importante: O CSS de botões deve ser carregado -->
+
     <link rel="stylesheet" href="dimencoes-dos-2-mapas.css">
     <link rel="stylesheet" href="botoes-de-salas-sobre-2-mapas.css">
     <link rel="stylesheet" href="pesquisa.css">
     <link rel="stylesheet" href="pop-ups-recortes-do-terreo.css">
+    <link rel="stylesheet" href="modo_escuro.css">
 </head>
 <body>
 
     <div class="mapa-container">
-        <!-- A classe 'mapa' é usada pelo JS para encontrar este elemento -->
         <img src="imagens/terreo1.png" alt="Mapa do térreo" class="mapa mapa-terreo">
+    </div>
+
+    <div class="dark-toggle">
+        <button id="btnModoEscuro" class="dark-btn">
+            🌙 Modo Escuro
+        </button>
     </div>
 
     <div class="andar-botoes">
@@ -26,10 +31,15 @@
     </div>
 
     <div class="pesquisa">
-        <button class="botao-pesquisa" onclick="window.location.href='pesquisa.html'">Pesquisar sala</button>
+        <button class="botao-pesquisa"
+                onclick="window.location.href='pesquisa.html'">
+            Pesquisar sala
+        </button>
     </div>
 
     <script src="pesquisa.js"></script>
     <script src="pop-ups-recortes-do-terreo.js"></script>
+    <script src="modo_escuro.js"></script>
+
 </body>
 </html>

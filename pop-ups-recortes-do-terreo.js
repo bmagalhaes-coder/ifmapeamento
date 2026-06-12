@@ -103,8 +103,12 @@ const botoesDosPopups = {
         { nome:"Sala 48", x:77, y:27.2, w:17, h:3, fs:10 },
         { nome:"Sala 49", x:77, y:35.9, w:17, h:3, fs:10 },
 
-        { nome:"Banheiro M.\ne Acessível", x:77, y:43.1, w:20, h:4.75, fs:10 },
-        { nome:"Banheiro F.\ne Acessível", x:77, y:55.6, w:20, h:4.75, fs:10 },
+        { nome:"Banheiro M.\ne Acessível", 
+        pesquisa:"Banheiro Masculino e Acessível",
+        x:77, y:43.1, w:20, h:4.75, fs:10 },
+        { nome:"Banheiro F.\ne Acessível",
+        pesquisa:"Banheiro Feminino e Acessível",
+        x:77, y:55.6, w:20, h:4.75, fs:10 },
 
         { nome:"Sala 50", x:77, y:63.56, w:17, h:3, fs:10 },
         { nome:"Sala 51", x:77, y:72.5, w:17, h:3, fs:10 },
@@ -133,11 +137,13 @@ const botoesDosPopups = {
 
         {
             nome:"Banheiro M.\ne Acessível",
+            pesquisa:"Banheiro Masculino e Acessível",
             x:25.4, y:40.9, w:21.4, h:6.5, fs:13
         },
 
         {
             nome:"Banheiro F.\ne Acessível",
+            pesquisa:"Banheiro Feminino e Acessível",
             x:25.4, y:57.32, w:21.4, h:6.5, fs:13
         },
 
@@ -170,14 +176,17 @@ const botoesDosPopups = {
     "imagens/quadra.png": [
         { nome:"Quadra\nPoliesportiva",     x:82.2, y:50.6, w:21, h:19, fs:11 },
         { nome:"Dispensa\nda Quadra",       x:55.87, y:36.6, w:12, h:9.6, fs:6.5 },
-        { nome:"Banheiro F.\ncom chuveiro", x:55.87, y:49.8, w:12.5, h:10, fs:6.5 },
-        { nome:"Banheiro M.\ncom chuveiro", x:55.87, y:64.2, w:12.5, h:10, fs:6.5 },
+        { nome:"Banheiro F.\ncom chuveiro", 
+          pesquisa:"Banheiro Feminino com Chuveiro",
+          x:55.87, y:49.8, w:12.5, h:10, fs:6.5 },
+        { nome:"Banheiro M.\ncom chuveiro",
+          pesquisa:"Banheiro Masculino com Chuveiro",
+          x:55.87, y:64.2, w:12.5, h:10, fs:6.5 },
         { nome:"Piscina",                   x:25, y:50.3, w:15, h:14, fs:11 },
     ],
 
     "imagens/hall.png": [
         { nome:"Banheiro\nMasculino\ne Acessível",
-          pesquisa:"Banheiro M. e Acessível",
           x:44.7, y:10, w:13.5, h:6, fs:8 },
 
         { nome:"E - Games", x:62.1, y:10, w:12, h:3, fs:8 },
@@ -211,7 +220,6 @@ const botoesDosPopups = {
 
         {
             nome:"Banheiro\nFeminino\ne Acessível",
-            pesquisa:"Banheiro F. e Acessível",
             x:44.7, y:90, w:13.5, h:6, fs:8
         },
     ],
@@ -231,6 +239,7 @@ const botoesDosPopups = {
 
         {
             nome:"AEE/\nNAPNE",
+            pesquisa:"AEE/NAPNE",
             x:83.48, y:67.7, w:20, h:8, fs:14
         },
 
@@ -245,15 +254,13 @@ const botoesDosPopups = {
         },
 
         {
-          nome:"Banheiro\nFeminino\ne Acessível",
-          pesquisa:"Banheiro F. e Acessível",
-            x:22.2, y:14.4, w:16, h:6, fs:9
+          nome:"Banheiro\nFeminino\ncom Chuveiro\ne Acessível",
+            x:22.3, y:14.4, w:16, h:11, fs:9
         },
 
         {
-          nome:"Banheiro\nMasculino\ne Acessível",
-          pesquisa:"Banheiro M. e Acessível",
-            x:76.4, y:14.4, w:16, h:6, fs:9
+          nome:"Banheiro\nMasculino\ncom Chuveiro\ne Acessível",
+            x:76.37, y:14.4, w:16, h:11, fs:9
         },
     ],
 

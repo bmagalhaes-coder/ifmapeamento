@@ -1,6 +1,10 @@
 const botoesGirado = [
-    { nome: "Banheiro F.\ne Acessível", x: 123, y: 65.2, w: 16, h: 4, fs: 0.8 },
-    { nome: "Banheiro M.\ne Acessível", x: -22.5, y: 65.2, w: 16, h: 4, fs: 0.8 },
+    { nome: "Banheiro F.\ne Acessível",
+      pesquisa:"Banheiro Feminino e Acessível",
+      x: 123, y: 65.2, w: 16, h: 4, fs: 0.8 },
+    { nome: "Banheiro M.\ne Acessível", 
+      pesquisa:"Banheiro Masculino e Acessível",
+      x: -22.5, y: 65.2, w: 16, h: 4, fs: 0.8 },
     { nome: "Copa", x: 123, y: 54.5, w: 12, h: 3, fs: 0.8 },
     { nome: "Sala dos\nFuncionários\ne Servidores", x: 123, y: 44.3, w: 17, h: 5.5, fs: 0.8 },
     { nome: "DAP", x: 95, y: 37.5, w: 12, h: 3, fs: 0.8 },
@@ -17,8 +21,12 @@ const botoesGirado = [
 ];
 
 const botoes1andar = [
-    { nome: "Banheiro F.\ne Acessível", x: 23.5, y: 91, w: 16, h: 4.5, fs: 2.3 },
-    { nome: "Banheiro M.\ne Acessível", x: 23.5, y: 9.3, w: 16, h: 4.5, fs: 2.3 },
+    { nome: "Banheiro F.\ne Acessível",
+      pesquisa:"Banheiro Feminino e Acessível",
+      x: 23.5, y: 91, w: 16, h: 4.5, fs: 2.3 },
+    { nome: "Banheiro M.\ne Acessível",
+      pesquisa:"Banheiro Masculino e Acessível",    
+      x: 23.5, y: 9.3, w: 16, h: 4.5, fs: 2.3 },
     { nome: "Copa", x: 42.3, y: 91, w: 16, h: 3, fs: 2.3 },
     { nome: "Sala dos\nFuncionários\ne Servidores", x: 60.33, y: 91, w: 16, h: 6, fs: 2.3 },
     { nome: "DAP", x: 72.5, y: 75, w: 16, h: 3, fs: 2.3 },

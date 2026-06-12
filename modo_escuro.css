@@ -20,7 +20,7 @@
 
     cursor: pointer;
 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 
     transition: all 0.3s ease;
 }
@@ -85,7 +85,7 @@ body.modo-escuro strong {
     }
 
     .dark-btn{
-        width: 140px;
+        width: 130px;
         height: 38px;
         font-size: 12px;
     }

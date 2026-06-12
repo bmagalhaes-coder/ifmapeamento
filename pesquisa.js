@@ -694,7 +694,7 @@ function mostrarInfoSala(nomeSala) {
             
             // Mantém o Laranja para avisos de acesso restrito
             if (valorGeral.includes("dias de evento")) {
-                horariosHTML = `<div class="badge-aberto" style="background: rgba(41, 171, 2, 0.3);">📅 ${valorOriginal}</div>`;
+                horariosHTML = `<div class="badge-aberto" style="background: rgba(21, 184, 0, 0.29);">📅 ${valorOriginal}</div>`;
             } else {
                 horariosHTML = `<div class="badge-aberto" style="background: rgba(41, 171, 2, 0.3);">🔒 ${valorOriginal}</div>`;
             }

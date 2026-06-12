@@ -290,14 +290,20 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.className = 'popup-mapa';
 
     popup.innerHTML = `
-        <div class="popup-conteudo">
+    <div class="popup-conteudo">
 
-            <button class="fechar-popup">X</button>
+        <button class="fechar-popup-modern">✕</button>
 
-            <img class="imagem-popup">
+        <img class="imagem-popup">
 
-        </div>
-    `;
+    </div>
+`;
+
+const btnFechar = popup.querySelector('.fechar-popup-modern');
+
+btnFechar.addEventListener('click', () => {
+    popup.classList.remove('ativo');
+});
 
     document.body.appendChild(popup);
 
@@ -307,13 +313,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // ======================================
     // FECHAR POPUP
     // ======================================
-
-    popup.querySelector('.fechar-popup')
-        .addEventListener('click', () => {
-
-            popup.classList.remove('ativo');
-
-        });
 
     popup.addEventListener('click', e => {
 

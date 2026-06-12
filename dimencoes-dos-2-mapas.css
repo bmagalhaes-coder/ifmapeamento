@@ -49,7 +49,7 @@ z-index:10;
 background:#ff6b6b;
 border:none;
 padding:10px 18px;
-border-radius:30px;
+border-radius:90px;
 color:white;
 font-weight:bold;
 cursor:pointer;
@@ -70,7 +70,7 @@ padding:12px 20px; /* crescimento menor */
 font-size:15px;
 
 transform:scale(1.03); /* menos aumento */
-box-shadow:0 3px 8px rgba(0,0,0,0.2);
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
 }
 
 .andar:hover{
@@ -132,8 +132,9 @@ background:linear-gradient(135deg,#20d600,#13a800);
 .mapa {
     width: auto;
     height: auto;
-    max-width: 100%;  /* Não passa da largura da tela */
-    max-height: 100%; /* Não passa da altura do container */
+    max-width: 100%;
+    max-height: 100%;
+    transform-origin: center;
     object-fit: contain;
 }
 

@@ -12,6 +12,35 @@
     display: block;
 }
 
+.camada-salas{
+    position:absolute;
+    inset:0;
+    z-index:2;
+    pointer-events:none;
+}
+
+.sala-mapa{
+    position:absolute;
+
+    border: clamp(0.5px, 0.15vw, 2px) solid #111;
+
+    box-sizing:border-box;
+
+    pointer-events:none;
+}
+
+/* bege claro */
+.sala-clara{
+    background:#faf8c0;
+    z-index:2;
+}
+
+/* bege escuro */
+.sala-escura{
+    background:#e7e693;
+    border: none;
+    z-index:1;
+}
 /* =========================
    BOTÕES INVISÍVEIS
 ========================= */

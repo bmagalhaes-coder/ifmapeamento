@@ -17,7 +17,7 @@ const salasTerreo = [
     { nome: "corredor9", x: 78.8, y: 49.66, w: 8, h: 33.68, cor: "escura" },
     { nome: "lab. de Produção Mecânica", x: 80.7, y: 49.66, w: 6.1, h: 4.5, cor: "clara" },
     { nome: "SAA", x: 80.7, y: 53.8, w: 6.1, h: 4.5, cor: "clara" },
-    { nome: "Lab. de Soldagem", x: 80.7, y: 58.51, w: 6.1, h: 4.5, cor: "clara" },
+    { nome: "Lab. de Soldagem", x: 80.7, y: 58.3, w: 6.1, h: 4.5, cor: "clara" },
     { nome: "Banheiro Masculino e Acessível", x: 80.7, y: 62.9, w: 6.1, h: 4.5, cor: "clara" },
     
 

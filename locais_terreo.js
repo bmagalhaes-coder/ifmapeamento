@@ -21,7 +21,7 @@ const salasTerreo = [
     { nome: "Banheiro Masculino e Acessível", x: 80.7, y: 62, w: 6.1, h: 2.8, cor: "clara" },
     { nome: "Banheiro Feminino e Acessível", x: 80.7, y: 67.5, w: 6.1, h: 2.8, cor: "clara" },
     { nome: "Sala58", x: 80.7, y: 70, w: 6.1, h: 4.5, cor: "clara" },
-    { nome: "Sala59", x: 80.7, y: 74.4, w: 6.1, h: 4.5, cor: "clara" },
+    { nome: "Sala59", x: 80.7, y: 74.3, w: 6.1, h: 4.5, cor: "clara" },
     { nome: "Sala60", x: 80.7, y: 70, w: 6.1, h: 4.5, cor: "clara" },
 
 

@@ -14,7 +14,7 @@ const salasTerreo = [
     { nome: "blocoD", x: 93.2, y: 51.6, w: 6.1, h: 30.1, cor: "clara" },
 
 //bloco C
-    { nome: "corredor9", x: 78.8, y: 49.66, w: 8, h: 33.8, cor: "escura" },
+    { nome: "corredor9", x: 78.8, y: 49.66, w: 8, h: 33.9, cor: "escura" },
     { nome: "lab. de Produção Mecânica", x: 80.7, y: 49.66, w: 6.1, h: 4.5, cor: "clara" },
     { nome: "SAA", x: 80.7, y: 53.8, w: 6.1, h: 4.5, cor: "clara" },
     { nome: "Lab. de Soldagem", x: 80.7, y: 57.9, w: 6.1, h: 4.5, cor: "clara" },

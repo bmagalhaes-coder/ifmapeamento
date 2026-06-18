@@ -7,7 +7,7 @@ const salasTerreo = [
     { nome: "piscina", x: 30.4, y: 6, w: 20, h: 9, cor: "clara" },
     { nome: "dispensa da quadra", x: 54.5, y: 5.8, w: 9.3, h: 3.5, cor: "clara" },
     { nome: "banheiro feminino com chuveiro", x: 54.5, y: 9.05, w: 9.3, h: 3.5, cor: "clara" },
-    { nome: "banheiro masculino com chuveiro", x: 54.5, y: 12.3, w: 9.3, h: 3.5, cor: "clara" },
+    { nome: "banheiro masculino com chuveiro", x: 54.5, y: 12.2, w: 9.3, h: 3.5, cor: "clara" },
     { nome: "quadra", x: 66.8, y: 0.1, w: 18, h: 18.7, cor: "clara" },
 //bloco D
     { nome: "corredor10", x: 91.3, y: 51.6, w: 8, h: 30.1, cor: "escura" },

@@ -14,13 +14,13 @@ const salasTerreo = [
     { nome: "blocoD", x: 93.2, y: 51.6, w: 6.1, h: 30.1, cor: "clara" },
 
 //bloco C
-    { nome: "corredor9", x: 78.8, y: 49.66, w: 8, h: 33.68, cor: "escura" },
+    { nome: "corredor9", x: 78.8, y: 49.66, w: 8, h: 33.69, cor: "escura" },
     { nome: "lab. de Produção Mecânica", x: 80.7, y: 49.66, w: 6.1, h: 4.5, cor: "clara" },
     { nome: "SAA", x: 80.7, y: 53.8, w: 6.1, h: 4.5, cor: "clara" },
     { nome: "Lab. de Soldagem", x: 80.7, y: 57.9, w: 6.1, h: 4.5, cor: "clara" },
     { nome: "Banheiro Masculino e Acessível", x: 80.7, y: 62, w: 6.1, h: 2.8, cor: "clara" },
     { nome: "Banheiro Feminino e Acessível", x: 80.7, y: 67.5, w: 6.1, h: 2.8, cor: "clara" },
-    { nome: "Sala58", x: 80.7, y: 70.3, w: 6.1, h: 4.5, cor: "clara" },
+    { nome: "Sala58", x: 80.7, y: 70.2, w: 6.1, h: 4.5, cor: "clara" },
 
 
 

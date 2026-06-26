@@ -5,15 +5,15 @@
 
 const botoesparaverpopup = [
 
-    { nome:"B",  x:7.55, y:41.7,  w:12,   h:20,   scale: 1.4, scalecelular: 1, imagem:"imagens/biblioteca.png" },
-    { nome:"Q",  x:55.85,y:9.9,   w:58.7, h:20.3, scale: 1.4, scalecelular: 1, imagem:"imagens/quadra.png" },
-    { nome:"ci", x:9.99, y:90.4,  w:16.5, h:20,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cineteatro.png" },
-    { nome:"H",  x:9.8,  y:65.86, w:19.5, h:23,   scale: 1.26,scalecelular: 1, imagem:"imagens/hall.png" },
-    { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
-    { nome:"Ca", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
-    { nome:"R",  x:35,   y:86.5,  w:14,   h:11.5, scale: 1.4, scalecelular: 0.9, imagem:"imagens/refeitorio.png" },
-    { nome:"AB", x:60.7, y:66.6,  w:24,   h:45.6, scale: 1,   scalecelular: 0.9, imagem:"imagens/blocoAeB.png" },
-    { nome:"CD", x:89.5, y:66.5,  w:23,   h:33,   scale: 1,   scalecelular: 0.8, imagem:"imagens/blocoCeD.png" },
+    { nome:" ",  x:7.55, y:41.7,  w:12,   h:20,   scale: 1.4, scalecelular: 1, imagem:"imagens/biblioteca.png" },
+    { nome:" ",  x:55.85,y:9.9,   w:58.7, h:20.3, scale: 1.4, scalecelular: 1, imagem:"imagens/quadra.png" },
+    { nome:" ", x:9.99, y:90.4,  w:16.5, h:20,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cineteatro.png" },
+    { nome:" ",  x:9.8,  y:65.86, w:19.5, h:23,   scale: 1.26,scalecelular: 1, imagem:"imagens/hall.png" },
+    { nome:" ", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
+    { nome:" ", x:34,   y:65.89, w:16.5, h:25,   scale: 1.2, scalecelular: 0.9, imagem:"imagens/cantina.png" },
+    { nome:" ",  x:35,   y:86.5,  w:14,   h:11.5, scale: 1.4, scalecelular: 0.9, imagem:"imagens/refeitorio.png" },
+    { nome:" ", x:60.7, y:66.6,  w:24,   h:45.6, scale: 1,   scalecelular: 0.9, imagem:"imagens/blocoAeB.png" },
+    { nome:" ", x:89.5, y:66.5,  w:23,   h:33,   scale: 1,   scalecelular: 0.8, imagem:"imagens/blocoCeD.png" },
 
 ];
 

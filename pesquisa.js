@@ -239,8 +239,8 @@ const dadosSalas = {
     "Serviço Social": {
         local: "Sala 06 - Térreo",
         horarios: {
-            "Domingo": "Fechado", "Segunda": "07:00 às 12:00 e 14:00 às 22:00",
-            "Terça": "07:00 às 12:00 e 14:00 às 22:00", "Quarta": "07:00 às 12:00 e 14:00 às 22:00",
+            "Domingo": "Fechado", "Segunda": "08:00 às 12:00 e 15:00 às 21:00",
+            "Terça": "09:00 às 13:00 e 14:00 às 22:00", "Quarta": "07:00 às 14:00 e 14:00 às 22:00",
             "Quinta": "07:00 às 12:00 e 14:00 às 22:00", "Sexta": "07:00 às 12:00 e 14:00 às 22:00", "Sábado": "Fechado"
         },
         descricao: "Setor voltado à garantia de direitos e bem-estar dos estudantes, realizando triagens para auxílios e programas de assistência.",

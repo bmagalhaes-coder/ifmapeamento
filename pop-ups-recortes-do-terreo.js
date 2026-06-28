@@ -1,6 +1,5 @@
 // ==========================================
 // BOTÕES SOBRE OS RECORTES DO MAPA DO TÉRREO 
-// B, AB, CD e ci estão do tamanho correto, só falta diminuir fonte das letras
 // ==========================================
 
 const botoesparaverpopup = [

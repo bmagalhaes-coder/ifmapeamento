@@ -15,9 +15,9 @@ const salasTerreo = [
 
 //bloco C
     { nome: "corredor 9", x: 78.8, y: 49.64, w: 8, h: 33.35, cor: "escura" },
-    { nome: "lab. de Produção Mecânica", x: 80.7, y: 49.6, w: 6.1, h: 4.3, cor: "clara" },
+    { nome: "lab. de Produção Mecânica", x: 80.7, y: 49.64, w: 6.1, h: 4.3, cor: "clara" },
     { nome: "SAA", x: 80.7, y: 53.6, w: 6.1, h: 4.3, cor: "clara" },
-    { nome: "Lab. de Soldagem", x: 80.7, y: 57.7, w: 6.1, h: 4.3, cor: "clara" },
+    { nome: "Lab. de Soldagem", x: 80.7, y: 57.81, w: 6.1, h: 4.3, cor: "clara" },
     { nome: "Banheiro Masculino e Acessível", x: 80.7, y: 61.8, w: 6.1, h: 3.2, cor: "clara" },
     { nome: "Banheiro Feminino e Acessível", x: 80.7, y: 67.59, w: 6.1, h: 3.2, cor: "clara" },
     { nome: "Sala 58", x: 80.7, y: 70.5, w: 6.1, h: 4.3, cor: "clara" },
@@ -55,9 +55,18 @@ const salasTerreo = [
     { nome: "IFCast", x: 26, y: 68.4, w: 4.4, h: 3.4, cor: "clara" },
     { nome: "Incubadora", x: 26, y: 71.58, w: 4.4, h: 3.5, cor: "clara" },
     { nome: "Sala de línguas", x: 26, y: 74.77, w: 8, h: 2.78, cor: "clara" },
-    { nome: "Sala de línguas", x: 33.7, y: 74.77, w: 8, h: 2.78, cor: "clara" },
-    { nome: "AEE/NAPNE", x: 37.3, y: 68.4, w: 4.4, h: 6.65, cor: "clara" },
+    { nome: "Robótica", x: 33.7, y: 74.77, w: 8, h: 2.78, cor: "clara" },
+    { nome: "AEE/NAPNE", x: 37.3, y: 68.4, w: 4.4, h: 6.57, cor: "clara" },
     { nome: "Refeitório", x: 28.9, y: 80.8, w: 12.8, h: 11.4, cor: "clara" },
+
+    { nome: "corredor 5", x: 0.62, y: 54.75, w: 18.5, h: 22.37, cor: "escura" },  
+
+
+    { nome: "corredor 4", x: 1.8, y: 50, w: 11.6, h: 6, cor: "escura" },
+    { nome: "biblioteca", x: 1.8, y: 32, w: 11.6, h: 19.19, cor: "clara" },
+    { nome: "sala de livros fora do sistema 1", x: 1.8, y: 32, w: 3.5, h: 3, cor: "clara" },
+    { nome: "sala de livros fora do sistema 2", x: 1.8, y: 34.8, w: 3.5, h: 3, cor: "clara" },
+    { nome: "sala de estudos", x: 1.8, y: 37.7, w: 3.5, h: 3, cor: "clara" },
 ];
 
 function desenharSalasTerreo() {

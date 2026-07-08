@@ -22,7 +22,7 @@
 .sala-mapa{
     position:absolute;
 
-    border: clamp(0.5px, 0.15vw, 2px) solid #111;
+    border: 1px solid #111;
 
     box-sizing:border-box;
 

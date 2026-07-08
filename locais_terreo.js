@@ -1,6 +1,6 @@
 const salasTerreo = [
 //corredores maiores
-{ nome: "corredor que leva até a quadra", x: 75.3, y: 21, w: 2.2, h: 44, cor: "escura" },
+{ nome: "corredor que leva até a quadr", x: 75.3, y: 21, w: 2.2, h: 44, cor: "escura" },
 { nome: "corredor central que liga todo o campus", x: 19, y: 65, w: 75, h: 2.5, cor: "escura" },
 { nome: "corredor que vai do cineteatro até o bloco A", x: 14, y: 78.5, w: 40, h: 2.5, cor: "escura" },
 //quadra

@@ -69,9 +69,9 @@ const salasTerreo = [
 //áreas próximas ao hall e à escada para o primeiro andar
     { nome: "corredor 5", x: 0.5, y: 54.713, w: 18.5, h: 22.37, cor: "escura" },  
     { nome: "Banheiro Masculino e Acessível", x: 7.2, y:54.713, w: 3.5, h: 3, cor: "clara" },
-    { nome: "E-Games", x: 10.5, y:54.7, w: 4, h: 3, cor: "clara" },
+    { nome: "E-Games", x: 10.5, y:54.713, w: 4, h: 3, cor: "clara" },
     { nome: "CAE", x: 14.3, y:54.713, w: 4.8, h: 3, cor: "clara" },
-    { nome: "Serviço Social", x: 15.6, y:57.45, w: 3.5, h: 3, cor: "clara" },
+    { nome: "Serviço Social", x: 15.6, y:57.52, w: 3.5, h: 3, cor: "clara" },
     { nome: "Sala dos Professores", x: 15.6, y:60.05, w: 3.5, h: 3, cor: "clara" },
     { nome: "Protocolo com almoxarifado", x: 15.6, y:62.5, w: 3.5, h: 2.5, cor: "clara" },
     { nome: "DRCA/Controle Acadêmico", x: 15.6, y:67.4, w: 3.5, h: 2.5, cor: "clara" },

@@ -10,7 +10,7 @@ quem for editar o projeto não precise abrir um arquivo aleatório
 
 ## Como o site funciona (fluxo das páginas)
 
-1. `logo_da_primeira_tela_do_site.html` — tela de abertura com a
+1. `index.html` (antigo `temporizador_logo.html`) — tela de abertura com a
    logo. Depois de alguns segundos, redireciona sozinha para
    `terreo.html`.
 2. `terreo.html` — mapa do térreo do campus.
@@ -22,13 +22,15 @@ botão de modo claro/escuro, e no rodapé, o botão "Pesquisar sala"
 que leva para `pesquisa.html`. Os dois também têm um botão para
 trocar entre os dois mapas ("1º andar" / "Térreo").
 
+---
+
 ## Onde mexer em cada coisa
 
-### Tela de logo inicial
+### Tela de logo inicial (index.html)
 
 | Quero editar... | Arquivo |
 |---|---|
-| A imagem da logo, o fundo da tela | `logo_da_primeira_tela_do_site.html` / `logo_da_primeira_tela_do_site.css` |
+| A imagem da logo, o fundo da tela | `index.html` / `logo_da_primeira_tela_do_site.css` |
 | Quanto tempo a logo fica na tela antes de sumir, e quanto tempo demora até ir para o mapa do térreo | `temporizador_logo_da_primeira_tela_do_site.js` (os números estão comentados no arquivo, é só trocar) |
 
 ### Mapa do térreo (`terreo.html`)
@@ -43,19 +45,9 @@ trocar entre os dois mapas ("1º andar" / "Térreo").
 
 | Quero editar... | Arquivo |
 |---|---|
-| Tamanho/posição do mapa na tela, os botões fixos "1º andar"/"Térreo", o botão "Pesquisar sala" do rodapé, e o "giro" do mapa quando a tela fica larga | `dimensões_png_primeiro_andar.css` (tamanho/CSS do giro) e `dimensões_png_primeiro_andar.js` (o giro em si é feito pelo CSS; o JS só acompanha isso — veja o comentário no topo do arquivo) |
+| Tamanho/posição do mapa na tela, os botões fixos "1º andar"/"Térreo", o botão "Pesquisar sala" do rodapé, e o "giro" do mapa quando a tela fica larga | `dimensões_png_primeiro_andar.css` (tamanho/CSS do giro) e `dimensões_png_primeiro_andar.js` (o giro em si é feito pelo CSS; o JS só acompanha isso) |
 | Os botões verdes que mostram o nome de cada sala e abrem os dados dela | `botões_verdes_primeiro_andar.js` (posição de cada botão — repare que existem **duas listas**: uma para celular e outra para quando o mapa gira em telas largas) e `botões_verdes_primeiro_andar.css` (aparência dos botões) |
 | Os quadradinhos claros (salas) e escuros (corredores) desenhados sobre o mapa do 1º andar | `quadradinhos_que_simbolizam_salas_e_corredores_primeiro_andar.js` (também tem as duas listas, celular e mapa girado) e `.css` (cor/aparência) |
-
-> **Atenção com as "duas listas" do 1º andar:** como o mapa do 1º
-> andar gira -90° em telas grandes, todo elemento posicionado sobre
-> ele (botões verdes e quadradinhos) precisa de duas versões de
-> coordenadas: uma para quando o mapa está na vertical (celular) e
-> outra para quando ele já girou (tablet/PC). Isso já vem pronto
-> nos botões verdes; nos quadradinhos as posições foram estimadas a
-> partir da planta e podem precisar de pequenos ajustes finos — é
-> só alterar os números de `x`, `y`, `w` e `h` de cada item até o
-> quadradinho encaixar direitinho em cima da sala/corredor certo.
 
 ### Página de pesquisa (`pesquisa.html`)
 
@@ -72,9 +64,18 @@ trocar entre os dois mapas ("1º andar" / "Térreo").
 | Cores do modo escuro | `modo_escuro.css` |
 | Comportamento do botão (salvar preferência, aplicar ao abrir a página) | `modo_escuro.js` |
 
-Esses dois arquivos não têm um "andar" específico porque são usados
-igualmente nas três páginas — por isso ficaram com o nome mais
-simples, sem "_terreo" ou "_primeiro_andar".
+### Destaque de salas no mapa (nova funcionalidade)
+
+| Quero editar... | Arquivo |
+|---|---|
+| Lógica de destacar/limpar salas, criação do botão "Voltar ao normal", e adição do botão "Destacar" dentro dos pop-ups | `destaque_quadradinho_sala.js` |
+| Estilo dos quadradinhos destacados (roxo transparente) e do botão "Voltar ao normal" | `destaque_quadradinho_sala.css` |
+
+**Para que o destaque funcione:**
+- Cada quadradinho (`.sala-mapa`) deve ter um atributo `data-sala` com o nome exato da sala (igual ao usado nos dados do `pesquisa.js`).
+- No `pesquisa.js`, após montar o corpo do modal, chame `window.adicionarBotaoDestacarAoModal(modalBody, nomeDaSala)` para inserir o botão "Destacar no mapa".
+
+---
 
 ## Sobre os nomes "dimensões", "botões verdes" e "quadradinhos"
 

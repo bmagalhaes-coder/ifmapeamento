@@ -1,0 +1,35 @@
+/* =========================================================
+   CAMADA QUE FICA POR CIMA DO MAPA COM OS QUADRADINHOS
+   Essa camada fica atrás dos botões verdes (pointer-events:none
+   significa que ela não bloqueia o clique nos botões).
+========================================================= */
+.camada-salas {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Quadradinho genérico (sala ou corredor) */
+.sala-mapa {
+    position: absolute;
+
+    border: 1px solid #111;
+
+    box-sizing: border-box;
+
+    pointer-events: none;
+}
+
+/* Quadradinho CLARO = sala */
+.sala-clara {
+    background: #faf8c0;
+    z-index: 2;
+}
+
+/* Quadradinho ESCURO = corredor */
+.sala-escura {
+    background: #e7e693;
+    border: none;
+    z-index: 1;
+}

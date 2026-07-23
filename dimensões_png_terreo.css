@@ -1,0 +1,145 @@
+/* =========================================================
+   RESET GERAL (aplicado em toda a página do térreo)
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   TAMANHO/CENTRALIZAÇÃO DO MAPA DO TÉRREO (o .png)
+   Se quiser mudar o tamanho do mapa na tela, mexa aqui.
+========================================================= */
+.mapa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.mapa {
+    display: block;      /* remove espaço fantasma do inline */
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Impede o zoom exagerado do mapa do térreo em telas maiores */
+@media (min-width: 768px) {
+    .mapa-terreo {
+        max-width: 100% !important;
+        max-height: 85vh !important;
+        width: auto !important;
+        height: auto !important;
+        transform: none !important;
+        object-fit: contain;
+    }
+}
+
+/* =========================================================
+   BOTÕES "1º ANDAR" / "TÉRREO" (troca de mapa)
+   Esses botões aparecem tanto no térreo quanto no 1º andar,
+   por isso o mesmo bloco de CSS existe duplicado no arquivo
+   dimensões_png_primeiro_andar.css. Se mudar aqui, lembre de
+   mudar lá também.
+========================================================= */
+.andar-botoes {
+    position: fixed;
+    right: 10px;
+    bottom: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 8px;
+    z-index: 10;
+}
+
+.andar {
+    background: #ff6b6b;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 90px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+
+    transition: 0.2s;
+
+    min-width: 90px;
+    text-align: center;
+}
+
+/* andar ativo (o mapa que está sendo exibido no momento) */
+.ativo {
+    background: #ff3b3b;
+
+    padding: 12px 20px;
+    font-size: 15px;
+
+    transform: scale(1.03);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.andar:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   BARRA/BOTÃO "PESQUISAR SALA" FIXO NA PARTE DE BAIXO
+   (não confundir com o pesquisa.css, que estiliza a PÁGINA
+   de pesquisa em si — isso aqui é só o botão fixo do rodapé)
+========================================================= */
+.pesquisa {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 15px;
+
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.botao-pesquisa {
+    width: 90%;
+    max-width: 500px;
+
+    padding: 14px;
+
+    border-radius: 40px;
+    border: none;
+
+    background: linear-gradient(135deg,#19c400,#12a000);
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-pesquisa:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg,#20d600,#13a800);
+}

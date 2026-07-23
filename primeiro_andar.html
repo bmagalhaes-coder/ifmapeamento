@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mapa - 1º Andar</title>
+
+<link rel="stylesheet" href="dimensões_png_primeiro_andar.css">
+<link rel="stylesheet" href="botões_verdes_primeiro_andar.css">
+<link rel="stylesheet" href="pesquisa.css">
+<link rel="stylesheet" href="quadradinhos_que_simbolizam_salas_e_corredores_primeiro_andar.css">
+<link rel="stylesheet" href="modo_escuro.css">
+
+</head>
+
+<body>
+
+<div class="mapa-container">
+    <div class="mapa-wrapper">
+        <img src="imagens/primeiroandar.png" alt="Mapa do 1º andar" class="mapa rotacionar">
+    </div>
+</div>
+
+<div class="dark-toggle">
+    <button id="btnModoEscuro" class="dark-btn">
+        🌙 Modo Escuro
+    </button>
+</div>
+
+<div class="andar-botoes">
+    <button class="andar ativo">1º andar</button>
+
+    <a href="terreo.html">
+        <button class="andar">Térreo</button>
+    </a>
+</div>
+
+<div class="pesquisa">
+    <button class="botao-pesquisa" onclick="window.location.href='pesquisa.html'">
+        Pesquisar sala
+    </button>
+</div>
+
+<script src="pesquisa.js"></script>
+<script src="dimensões_png_primeiro_andar.js"></script>
+<script src="botões_verdes_primeiro_andar.js"></script>
+<script src="quadradinhos_que_simbolizam_salas_e_corredores_primeiro_andar.js"></script>
+<script src="modo_escuro.js"></script>
+</body>
+</html>

@@ -73,11 +73,11 @@ const dadosSalas = {
         equipamentos: "Papel higiênico, sabonete líquido, álcool em gel, papeleiras e lixeira."
     },
 // 1° ANDAR
-"CCTTII/CEEC/CCSAQ": {
+"CCTTII CEEC CCSAQ": {
         local: "Sala 25 - 1° Andar",
         horarios: { "Geral": "Horário indefinido" },
-        descricao: "CCTTII (Coordenação de Curso Técnico em Informática) / CEEC (Coordenação de Especialização em Ensino de Ciências) / CCSAQ (Coordenação de Curso Superior em Análise de Sistemas). Responsáveis pela articulação pedagógica, coordenação curricular e atendimento aos discentes e docentes.",
-        equipamentos: "-"
+        descricao: "CCTTII (Coordenação de Curso Técnico em Informática) <br> CEEC (Coordenação de Especialização em Ensino de Ciências) <br> CCSAQ (Coordenação de Curso Superior em Análises Químicas).",
+        equipamentos: "Computadores de gestão acadêmica e arquivos de planos de ensino."
     },
     "Copa": {
         local: "1° Andar",

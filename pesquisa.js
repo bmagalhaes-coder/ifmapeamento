@@ -684,34 +684,26 @@ function mostrarInfoSala(nomeSala) {
     };
 
     const diaHoje = getDiaAtual();
-    
-    // Lógica de estilização dos badges
+    let horariosHTML;
+
     if (dados.horarios && dados.horarios["Geral"]) {
         const valorOriginal = dados.horarios["Geral"];
         const valorGeral = valorOriginal.toLowerCase();
 
         if (valorGeral === "sempre aberto") {
             horariosHTML = `<div class="badge-aberto">🟢 Sempre Aberto</div>`;
-
         } else if (valorGeral.includes("indefinido")) {
-
             horariosHTML = `<div class="badge-aberto" style="background: rgba(41, 171, 2, 0.3);">🕒 ${valorOriginal}</div>`;
-
         } else if (valorGeral.includes("autoriza") || valorGeral.includes("fechado")) {
-            
-            // Mantém o Laranja para avisos de acesso restrito
             if (valorGeral.includes("dias de evento")) {
                 horariosHTML = `<div class="badge-aberto" style="background: rgba(21, 184, 0, 0.29);">📅 ${valorOriginal}</div>`;
             } else {
                 horariosHTML = `<div class="badge-aberto" style="background: rgba(41, 171, 2, 0.3);">🔒 ${valorOriginal}</div>`;
             }
-
         } else {
             horariosHTML = `<p>${valorOriginal}</p>`;
         }
-    }
-    // Se tem cursos
-    else if (dados.cursos && dados.cursos.length > 0) {
+    } else if (dados.cursos && dados.cursos.length > 0) {
         horariosHTML = '<div class="cursos-container">';
         dados.cursos.forEach(curso => {
             horariosHTML += `<div class="curso-card"><h4>${curso.nome}</h4><ul>`;
@@ -722,22 +714,17 @@ function mostrarInfoSala(nomeSala) {
             horariosHTML += `</ul></div>`;
         });
         horariosHTML += '</div>';
-    }
-    // Se tem horários semanais
-    else if (dados.horarios && Object.keys(dados.horarios).length > 0 && !dados.horarios["Geral"]) {
+    } else if (dados.horarios && Object.keys(dados.horarios).length > 0 && !dados.horarios["Geral"]) {
         horariosHTML = '<ul>';
         for (let dia in dados.horarios) {
             const classeHoje = (dia === diaHoje) ? 'dia-atual' : '';
             horariosHTML += `<li class="${classeHoje}"><strong>${dia}:</strong> ${dados.horarios[dia]}</li>`;
         }
         horariosHTML += '</ul>';
-    }
-    // Fallback
-    else {
+    } else {
         horariosHTML = `<div class="badge-aberto" style="background:#607d8b;">🕒 Horário não definido</div>`;
     }
 
-    // O restante do código do modal (Equipamentos, Localização, etc) permanece IGUAL
     let equipamentosHTML = '';
     if (dados.equipamentos && dados.equipamentos !== '-') {
         equipamentosHTML = `
@@ -783,10 +770,16 @@ function mostrarInfoSala(nomeSala) {
 `;
 
     document.body.appendChild(modal);
+
+    // ===== NOVO: Adiciona o botão "Destacar no mapa" =====
+    const modalBody = modal.querySelector('.modal-body');
+    if (modalBody && typeof window.adicionarBotaoDestacarAoModal === 'function') {
+        window.adicionarBotaoDestacarAoModal(modalBody, nomeSala);
+    }
+
     modal.querySelector('.close-modal').onclick = () => modal.remove();
     modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
-}
-
+        }
 // EVENTOS
 searchInput.addEventListener('input', filtrar);
 clearBtn.addEventListener('click', () => {

@@ -98,7 +98,7 @@ function desenharSalasPrimeiroAndar() {
         div.style.height = sala.h + "%";
 
         div.title = sala.nome;
-
+        div.dataset.sala = sala.nome;
         div.style.zIndex =
             sala.cor === "escura"
             ? "1"

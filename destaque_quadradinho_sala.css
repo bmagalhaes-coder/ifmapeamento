@@ -1,0 +1,19 @@
+/* destaque_quadradinho_sala.css */
+
+/* Estilo do quadradinho destacado (roxo transparente) */
+.sala-mapa.destaque-roxo {
+    background-color: rgba(128, 0, 128, 0.6) !important;
+    border: 2px solid #6a0dad !important;
+    box-shadow: 0 0 15px rgba(128, 0, 128, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Estilo extra para o botão "Voltar ao normal" (já estilizado via JS, mas pode sobrescrever aqui) */
+#btnVoltarNormal {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+#btnVoltarNormal:hover {
+    background-color: #7b1fa2 !important;
+    transform: scale(1.05);
+}

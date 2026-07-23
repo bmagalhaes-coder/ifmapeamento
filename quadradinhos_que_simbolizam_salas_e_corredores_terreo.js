@@ -126,7 +126,7 @@ function desenharSalasTerreo() {
         div.style.height = sala.h + "%";
 
         div.title = sala.nome;
-
+        div.dataset.sala = sala.nome;
         // z-index
         div.style.zIndex =
             sala.cor === "escura"

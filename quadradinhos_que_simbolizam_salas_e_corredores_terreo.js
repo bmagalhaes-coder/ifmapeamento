@@ -83,7 +83,7 @@ const salasTerreo = [
     { nome: "Sala dos Professores", x: 15.6, y:60.05, w: 3.5, h: 3, cor: "clara" },
     { nome: "Protocolo com almoxarifado", x: 15.6, y:62.5, w: 3.5, h: 2.5, cor: "clara" },
     { nome: "DRCA/Controle Acadêmico", x: 15.6, y:67.4, w: 3.5, h: 2.5, cor: "clara" },
-    { nome: "Fechada", x: 15.6, y:69.6, w: 3.5, h: 2.5, cor: "clara" semBorda: ["baixo"] },
+    { nome: "Fechada", x: 15.6, y:69.6, w: 3.5, h: 2.5, cor: "clara", semBorda: ["baixo"] },
     { nome: "Almoxarifado de Material de Expediente", x: 15.6, y:71.9, w: 3.5, h: 2.5, cor: "clara" },
     { nome: "Almoxarifado de Material de Expediente", x: 14.3, y:74.2, w: 4.8, h: 3, cor: "clara" },
     { nome: "Diretoria", x: 10.5, y:74.2, w: 4, h: 3, cor: "clara" },
